@@ -1,0 +1,112 @@
+---
+title             : "Uncertain Science is Bad Science: Lay Perceptions of Crowd-Scientific Findings"
+shorttitle        : "The Sway and Credibility of Multi-Analyst Studies"
+
+author: 
+  - name          : "Shilaan Alzahawi"
+    affiliation   : "1"
+    corresponding : yes    # Define only one corresponding author
+    address       : "655 Knight Way, Stanford, CA 94305"
+    email         : "shilaan@stanford.edu"
+  - name          : "Benoît Monin"
+    affiliation   : "1"
+
+affiliation:
+  - id            : "1"
+    institution   : "Stanford University, Graduate School of Business"
+
+abstract: |
+  A recent movement towards crowd science has emerged in the behavioral sciences. Crowd science aims to increase the rigor, reliability, and credibility of scientific research. Does it meet its promises in reality? We report the results of an experiment in which we explore whether scientific findings emerging from a crowd of researchers (vs. a typical research collaboration) are more likely to sway the prior beliefs of research consumers, increase ratings of credibility and confidence, and decrease ratings of bias and error. We focus on crowdsourced data analysis (also known as the 'many analysts' or 'multi-analyst' approach): giving the same dataset to different teams of scientists, who independently analyze it to answer the same research question.  
+  In line with our hypotheses, we find that lay consumers of multi-analyst studies with inconsistent results (compared to single-analyst studies) are less likely to be swayed, have less confidence in the average effect size estimate, find the results less credible, and believe the results are more likely to stem from bias and error. Contrary to our hypotheses, we do not find that multi-analyst studies with consistent results (compared to single-analyst studies) increase the sway and credibility of scientific research. 
+  
+keywords          : "Meta-science, Crowd science, Many analysts, Multi-analyst, Research credibility"
+wordcount         : "X"
+
+bibliography      : ["r-references.bib", "library.bib"]
+
+floatsintext      : no
+figurelist        : no
+tablelist         : no
+footnotelist      : no
+linenumbers       : yes
+mask              : no
+draft             : no
+
+documentclass     : "apa6"
+classoption       : "man"
+output            : papaja::apa6_word
+---
+
+```{r setup, include = FALSE}
+# devtools::install_github("crsh/papaja@devel")
+library(papaja)
+library(tidyverse)
+library(rmarkdown)
+library(here)
+r_refs("r-references.bib")
+```
+
+The credibility of scientific research is in doubt, among lay consumer and scientist alike. From man-made climate change to the safety and effectiveness of Covid-19 vaccinations, important scientific findings are rejected at large [@hornsey2017]. In addition to widespread science skepticism among the general public, doubts about the credibility of scientific research have emerged from within the scientific community itself. Reliance on widely followed research practices, some scientists have come to realize, can generate impossible results, such as the ability of humans to feel what’s in the future [@bem2011] or to become younger in age from listening to certain music [@simmons2011: p. 1360].  
+What can be done about this "crisis of confidence" [@pashler2012: p. 528]? Several tools have been proposed to improve the rigor and reliability of scientific research and, consequently, combat the crisis of confidence. One such tool is the crowd or big team science approach, which leverages a large number of individuals or teams at specific stages of the research process [@uhlmann2019].   
+Crowd science aims to improve the rigor, reliability, and credibility of scientific research. Does it meet its promises in reality? In this commentary, we focus on crowdsourced data analysis (also known as the 'many analysts' or 'multi-analyst' approach): giving the same dataset to different teams of scientists, who independently analyze it to answer the same research question. We explore whether multi-analyst studies increase the sway and credibility of scientific research. That is, are scientific findings emerging from a crowd of researchers (vs. a typical science collaboration) more likely to sway the prior beliefs of research consumers, increase ratings of credibility and confidence, and decrease ratings of bias and error?     
+
+# Methods
+The preregistration of our experiment can be found in the Open Science Foundation (OSF) Registries at https://osf.io/rpu98. All data and code needed to reproduce this article can be found on GitHub at https://github.com/shilaan/many-analysts and the OSF at https://osf.io/vedb4/. We report how we determined our sample size, all data exclusions (if any), all manipulations, and all measures in the study.    
+
+## Participants
+We sampled participants from the Prolific participant pool. We included participants from the United States or the United Kingdom who were at least 18 years old and spoke English as a first language. Participants were paid $2 for 8-12 minutes of their time.   
+Our target sample size was 1500 participants after exclusions due to failing the attention check, not completing the attention check, or attempting to take the survey more than once. We aimed to sample until reaching the desired number of valid participants or until 2 weeks passed (whichever came first). We expected relatively small effect sizes and decided on an upper limit on the number of participants based on monetary constraints.   
+
+## Procedure and materials
+The Survey Materials can be found on the OSF at https://osf.io/md9z5/. After a brief introduction to a research question ("Do religious people report higher well-being?"), participants were first asked to report their prior beliefs ("How likely do you think it is that people who are more religious generally report higher well-being?") on a slider from 0% (not likely at all) to 100% (extremely likely).  
+After reporting their prior beliefs, participants were randomly allocated to one of three experimental conditions in which they learned about the approach and findings of a single-analyst study (the "single-analyst" condition); a multi-analyst study with consistent results (the "multi-analyst: consistent" condition); or a multi-analyst study with inconsistent results (the "multi-analyst: inconsistent" condition).  
+Afterwards, participants rated (1) their final beliefs about the research question, (2) the credibility of the results, (3) their confidence in the effect size estimate, and how likely it is that the estimate was influenced by (4) bias, (5) error, and (6) degrees of freedom. All questions were answered on a slider from 0% (not likely/credible/confident at all) to 100% (extremely likely/credible/confident). 
+
+
+## Data analysis
+For all six dependent variables, we ran linear regression models with condition as the independent variable (with the single-analyst condition as the reference category) and prior beliefs as a covariate. All statistical models and code were preregistered at https://osf.io/rpu98. An overview of our preregistered, directional hypotheses can be found in Table 1. We did not preregister any hypotheses for the last measure ("degrees of freedom"). Thus, the findingds concerning the impact of experimental condition on ratings of degrees of freedom are exploratory, and should be treated as such.  
+
+```{r, echo = FALSE}
+table1 <- data.frame(
+  Measure = c("1. Final beliefs",
+              "2. Credibility", 
+              "3. Confidence",
+              "4. Bias",
+              "5. Error"),
+  Multi_Consistent = c("+", "+", "-", "-", "-"),
+  Multi_Inconsistent = c("-", "-", "-", "+", "+"))
+  
+knitr::kable(table1,
+             col.names = c("Measure", 
+                           "Many-analysts: Consistent", 
+                           "Many-analysts: Inconsistent"),
+             align = "lcc",
+             caption = "Table 1")
+```
+
+
+
+# Results
+
+## Participants 
+
+
+
+# Discussion
+
+## Acknowledgement
+This manuscript was created using `r cite_r("r-references.bib")`.
+
+## Data availability statement
+The data that support the findings of this study are openly available on GitHub at https://github.com/shilaan/many-analysts and the OSF at https://osf.io/vedb4/.   
+
+\newpage
+
+# References
+
+\begingroup
+\setlength{\parindent}{-0.5in}
+\setlength{\leftskip}{0.5in}
+
+<div id="refs" custom-style="Bibliography"></div>
+\endgroup
