@@ -1,0 +1,273 @@
+---
+title: "Lay Perceptions of Crowd-Scientific Findings: The Risks of Variability and Lack of Consensus"
+# subtitle: ""  
+author: 
+  - "Shilaan Alzahawi & Benoît Monin"
+date: "October 11, 2021"
+output:
+  xaringan::moon_reader:
+    seal: false
+    css: xaringan-themer.css
+    nature:
+      slideNumberFormat: "%current%"
+      highlightStyle: github
+      highlightLines: true
+      ratio: 16:9
+      countIncrementalSlides: true
+---
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(
+  fig.width=9, fig.height=3.5, fig.retina=3,
+  out.width = "100%",
+  cache = FALSE,
+  echo = TRUE,
+  message = FALSE, 
+  warning = FALSE,
+  hiline = TRUE
+)
+```
+
+```{r xaringan-themer, include=FALSE, warning=FALSE}
+library(tidyverse)
+library(xaringanthemer)
+library(xaringanExtra)
+library(icons)
+
+style_duo(primary_color = "#ffffff", 
+          secondary_color = "#035AA6")
+```
+
+```{r xaringan-tile-view, echo=FALSE}
+xaringanExtra::use_tile_view()
+```
+
+```{r xaringan-panelset, echo=FALSE}
+xaringanExtra::use_panelset()
+```
+
+```{r echo=FALSE}
+xaringanExtra::style_panelset_tabs(
+  active_foreground = "#035AA6",
+  hover_foreground = "#d22"
+ )
+```
+
+```{r xaringanExtra, echo = FALSE}
+xaringanExtra::use_progress_bar(color = "#035AA6", location = "top")
+```
+
+```{r, echo = FALSE}
+set.seed(1808)
+
+estimates <- data.frame(
+  Estimate = sample(
+    x = seq(-0.3, 0.3, .001), 
+    size = 100
+    ),
+  se = sample(
+    x = seq(0.006, 0.05, .001),
+    replace = TRUE,
+    size = 100
+  )) %>% 
+  arrange(Estimate) %>% 
+  mutate(Team = 1:100,
+         Conclusion = case_when(
+           Estimate - 1.96 * se < 0 & Estimate + 1.96 * se < 0 ~ "Negative Evidence",
+           Estimate - 1.96 * se < 0 & Estimate + 1.96 * se > 0 ~ "Inconclusive Evidence",
+           Estimate - 1.96 * se > 0 & Estimate + 1.96 * se > 0 ~ "Positive Evidence"
+         )) %>% 
+  mutate(Conclusion = factor(Conclusion,
+                             levels = c("Negative Evidence",
+                                        "Inconclusive Evidence",
+                                        "Positive Evidence")))
+
+title_plot <- ggplot(data = estimates, 
+                     mapping = aes(x = Team, y = Estimate, color = Conclusion)) +
+  geom_point(size = 2) +
+  geom_errorbar(mapping = aes(ymin = Estimate - 1.96 * se, 
+                              ymax = Estimate + 1.96 * se),
+                width = 3) + 
+  theme_classic() +
+  geom_hline(yintercept = 0, linetype = "dashed", color = "grey") +
+  labs(y = "Standardized Effect Size") +
+  scale_color_discrete(type = c("red", "orange", "green4")) +
+  theme(legend.position = c(0.3, 0.8),
+        text = element_text(size = 19))
+
+ggsave("title_plot.jpg", title_plot, 
+       width = 7, height = 5, units = "in")
+```
+
+# Lay Perceptions of Crowd-Scientific Findings
+
+**The Risks of Variability and Lack of Consensus**  
+[Shilaan Alzahawi](http://shilaan.rbind.io) & [Benoît Monin](https://www.gsb.stanford.edu/faculty-research/faculty/benoit-monin)
+
+.pull-left[
+![](title_plot.jpg)
+]
+
+.pull-right[
+[`r icon_style(icons::fontawesome("twitter"), scale = 2, fill = "#035AA6")` $~~$ twitter.com/shilaan01](https://twitter.com/shilaan01)    
+[`r icon_style(icons::fontawesome("globe"), scale = 2, fill = "#035AA6")` $~~$ shilaan.rbind.io](https://shilaan.rbind.io)     
+[`r icon_style(icons::fontawesome("github"), scale = 2, fill = "#035AA6")` $~~$ github.com/shilaan](https://github.com/shilaan)  
+[`r icon_style(icons::fontawesome("paper-plane"), scale = 2, fill = "#035AA6")` $~~$ shilaan@stanford.edu](mailto:shilaan@stanford.edu)
+
+]
+---
+# Outline 
+
+
+---
+# Open Science Statement
+
+[`r icon_style(icons::academicons("preregistered"), scale = 2, fill = "#035AA6")` $~~$ Preregistration](https://osf.io/rpu98)  
+
+[`r icon_style(icons::academicons("open-materials"), scale = 2, fill = "#035AA6")` $~~$ Open materials](https://osf.io/6vze3)  
+
+[`r icon_style(icons::academicons("open-data"), scale = 2, fill = "#035AA6")` $~~$ Open data](https://osf.io/b527v/)  
+
+[`r icon_style(icons::fontawesome("r-project"), scale = 2, fill = "#035AA6")` $~$ Reproducible manuscript](https://github.com/shilaan/Many-Analysts/tree/main/manuscript)    
+
+[`r icon_style(icons::academicons("osf"), scale = 2, fill = "#035AA6")` $~~$ osf.io/vedb4](https://osf.io/vedb4)    
+
+[`r icon_style(icons::fontawesome("github"), scale = 2, fill = "#035AA6")` $~~$ github.com/shilaan/many-analysts](https://github.com/shilaan/many-analysts)    
+
+---
+# Crowdsourced Data Analysis 
+
+
+
+---
+# Methods 
+
+---
+.panelset.sideways[
+.panel[.panel-name[Introduction]
+```{r, echo = FALSE, out.width='90%'}
+knitr::include_graphics("images/introduction.png")
+```
+]
+
+.panel[.panel-name[Prior Beliefs]
+
+![](images/prior_beliefs.png)
+]
+
+.panel[.panel-name[Thanks!]
+
+![](images/thanks.png)
+]
+]
+
+???
+
+Participants had to wait 30 seconds before proceeding to the next slide. 
+---
+.panelset.sideways[
+.panel[.panel-name[Study design & research approach (Single-analyst)]
+```{r, echo = FALSE, out.width='93%'}
+knitr::include_graphics("images/design_single.png")
+```
+]
+
+.panel[.panel-name[Study design & research approach (Multi-analyst)]
+```{r, echo = FALSE, out.width='91%'}
+knitr::include_graphics("images/design_multi.png")
+```
+]
+]
+
+---
+
+.panelset[
+.panel[.panel-name[Results (Single-analyst)]
+```{r, echo = FALSE, out.width='80%'}
+knitr::include_graphics("images/results_single.png")
+```
+]
+
+.panel[.panel-name[Results (Multi-consistent)]
+```{r, echo = FALSE, out.width='80%'}
+knitr::include_graphics("images/results_multi-consistent.png")
+```
+]
+
+.panel[.panel-name[Results (Multi-inconsistent)]
+```{r, echo = FALSE, out.width='80%'}
+knitr::include_graphics("images/results_multi-inconsistent.png")
+```
+]
+]
+
+---
+
+.panelset.sideways[
+.panel[.panel-name[Posterior beliefs]
+```{r, echo = FALSE, out.width='100%'}
+knitr::include_graphics("images/posterior_beliefs.png")
+```
+]
+
+.panel[.panel-name[Credibility]
+```{r, echo = FALSE, out.width='100%'}
+knitr::include_graphics("images/credibility.png")
+```
+]
+
+.panel[.panel-name[Confidence]
+```{r, echo = FALSE, out.width='100%'}
+knitr::include_graphics("images/confidence.png")
+```
+]
+
+.panel[.panel-name[Bias]
+```{r, echo = FALSE, out.width='100%'}
+knitr::include_graphics("images/bias.png")
+```
+]
+.panel[.panel-name[Error]
+```{r, echo = FALSE, out.width='100%'}
+knitr::include_graphics("images/bias.png")
+```
+]
+.panel[.panel-name[Discretion]
+```{r, echo = FALSE, out.width='100%'}
+knitr::include_graphics("images/bias.png")
+```
+]
+
+.panel[.panel-name[Attention check]
+```{r, echo = FALSE, out.width='100%'}
+knitr::include_graphics("images/attention.png")
+```
+]
+
+]
+---
+exclude: true
+
+```{r}
+knitr::kable(head(mtcars), format = 'html')
+```
+
+---
+exclude: true
+
+```{r eval=requireNamespace("DT", quietly=TRUE)}
+DT::datatable(head(mtcars), fillContainer = FALSE, options = list(pageLength = 4))
+```
+
+---
+exclude: true
+
+## Square image
+
+<center><img src="https://octodex.github.com/images/labtocat.png" height="400px" /></center>
+
+.footnote[GitHub Octocat]
+
+
+
+
