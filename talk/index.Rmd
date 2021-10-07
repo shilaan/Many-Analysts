@@ -124,7 +124,7 @@ $~~$
 # Outline 
 
 `r icon_style(icons::fontawesome("users"), scale = 2, fill = "#035AA6")` $~~$ **Crowdsourcing Science** 
-`r icon_style(icons::fontawesome("chart-bar"), scale = 2, fill = "#035AA6")` $~~~$ **Crowdsourced Data Analysis**  
+`r icon_style(icons::fontawesome("chart-bar"), scale = 2, fill = "#035AA6")` $~~~$ **Crowdsourcing Data Analysis**  
 `r icon_style(icons::fontawesome("question-circle"), scale = 2, fill = "#035AA6")` $~~~$ **Lay Perceptions: Are Crowd-Scientific Findings More Credible?**   
 `r icon_style(icons::fontawesome("tools"), scale = 2, fill = "#035AA6")` $~~~$ **Method**
 `r icon_style(icons::fontawesome("chart-line"), scale = 2, fill = "#035AA6")` $~~~$ **Results**
@@ -139,7 +139,7 @@ $~~$
 
 
 
-Highly **inclusive** (sourcing citizens) or highly **selective** (sourcing specialists)    
+From highly **inclusive** (sourcing citizens) to highly **selective** (sourcing specialists)    
 
 
 
@@ -187,7 +187,7 @@ background-size: 42%
 
 
 
-Highly **inclusive** (sourcing citizens) or highly **selective** (sourcing specialists)    
+From highly **inclusive** (sourcing citizens) to highly **selective** (sourcing specialists)    
 
 
 
@@ -229,6 +229,10 @@ $~~$
 The great meteor storm of 1833: birth of *Citizen Science*
 
 ]
+
+???
+
+In 1833, Denison Olmsted used letter correspondence to recruit citizen scientists to help document a meteor shower. This led to a detailed documentation of the great meteor shower and the birth of the citizen-science movement (highly inclusive, used for data collection.
 ---
 .center[
 # Crowdsourced data analysis 
@@ -238,7 +242,33 @@ The great meteor storm of 1833: birth of *Citizen Science*
 
 ### Different teams of scientists independently analyze the same dataset
 
-Also known as the **many-analysts** or **multi-analyst** approach
+`r icon_style(icons::fontawesome("users"), scale = 2, fill = "#035AA6")` $~~$ Also known as the **many-analysts** or **multi-analyst** approach
+`r icon_style(icons::fontawesome("chart-line"), scale = 2, fill = "#035AA6")` $~~~~$ On the **rise** in behavioral science
+
+--
+
+
+```{r, echo = FALSE}
+t1 <- data.frame(
+  Authors = c(
+    "Botvinik-Nezer et al.",
+    "Schweinsberg et al.",
+    "Silberzahn et al."
+  ),
+  Year = c(
+    2020,
+    2018,
+    2018
+  ),
+  Title = c(
+    "Variability in the analysis of a single neuroimaging dataset by many teams",
+    "Same data, different conclusions: Radical dispersion in empirical results when independent analysts operationalize and test the same hypothesis",
+    "Many Analysts, One Data Set: Making Transparent How Variations in Analytic Choices Affect Results"
+  )
+)
+DT::datatable(t1, fillContainer = FALSE, options = list(pageLength = 2))
+```
+
 
 ---
 # Open Science Statement
@@ -361,29 +391,3 @@ knitr::include_graphics("images/attention.png")
 ]
 
 ]
----
-exclude: true
-
-```{r}
-knitr::kable(head(mtcars), format = 'html')
-```
-
----
-exclude: true
-
-```{r eval=requireNamespace("DT", quietly=TRUE)}
-DT::datatable(head(mtcars), fillContainer = FALSE, options = list(pageLength = 4))
-```
-
----
-exclude: true
-
-## Square image
-
-<center><img src="https://octodex.github.com/images/labtocat.png" height="400px" /></center>
-
-.footnote[GitHub Octocat]
-
-
-
-
