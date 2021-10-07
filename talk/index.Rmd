@@ -466,6 +466,16 @@ and study the **effects on**
 
 ---
 
+# Hypotheses
+
+---
+class: inverse, center, middle
+name: lay
+
+# Survey Materials
+
+---
+
 .panelset.sideways[
 .panel[.panel-name[Introduction]
 ```{r, echo = FALSE, out.width='90%'}
