@@ -243,34 +243,55 @@ In 1833, Denison Olmsted used letter correspondence to recruit citizen scientist
 ### Different teams of scientists independently analyze the same dataset
 
 `r icon_style(icons::fontawesome("users"), scale = 2, fill = "#035AA6")` $~~$ Also known as the **many-analysts** or **multi-analyst** approach
-`r icon_style(icons::fontawesome("chart-line"), scale = 2, fill = "#035AA6")` $~~~~$ On the **rise** in behavioral science
+`r icon_style(icons::fontawesome("chart-line"), scale = 2, fill = "#035AA6")` $~~~~$ On the **rise** in the social and behavioral sciences
 
 --
-
 
 ```{r, echo = FALSE}
 t1 <- data.frame(
   Authors = c(
+    "Bastiaansen et al.",
     "Botvinik-Nezer et al.",
+    "Breznau et al.",
+    "Breznau et al.",
+    "Huntington-Klein et al.",
     "Schweinsberg et al.",
     "Silberzahn et al."
   ),
   Year = c(
+    2019,
+    2020,
+    2021,
+    2021,
     2020,
     2018,
     2018
   ),
   Title = c(
+    "Time to get personal? The impact of researchers choices on the selection of
+treatment targets using the experience sampling methodology",
+    
     "Variability in the analysis of a single neuroimaging dataset by many teams",
+
+    "How many replicators does it take to achieve reliability? Investigating researcher variability in a crowdsourced replication",
+
+    "Observing many researchers using the same data and hypothesis
+reveals a hidden universe of uncertainty",
+
+    "The influence of hidden researcher decisions in applied microeconomics",
+    
     "Same data, different conclusions: Radical dispersion in empirical results when independent analysts operationalize and test the same hypothesis",
-    "Many Analysts, One Data Set: Making Transparent How Variations in Analytic Choices Affect Results"
-  )
-)
+    
+    "Many analysts, one data set: Making transparent how variations in analytic choices affect results"
+  ) 
+) %>% 
+  arrange(desc(Year))
+
 DT::datatable(t1, fillContainer = FALSE, options = list(pageLength = 2))
 ```
 
-
 ---
+
 # Open Science Statement
 
 [`r icon_style(icons::academicons("preregistered"), scale = 2, fill = "#035AA6")` $~~$ Preregistration](https://osf.io/rpu98)  
