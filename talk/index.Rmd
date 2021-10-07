@@ -62,11 +62,11 @@ set.seed(1808)
 
 estimates <- data.frame(
   Estimate = sample(
-    x = seq(-0.3, 0.3, .001), 
+    x = c(seq(-0.3, 0.3, .001), seq(-0.1, 0.1, .0001)), 
     size = 100
     ),
   se = sample(
-    x = seq(0.006, 0.05, .001),
+    x = seq(0.003, 0.04, .001),
     replace = TRUE,
     size = 100
   )) %>% 
@@ -90,9 +90,11 @@ title_plot <- ggplot(data = estimates,
                 width = 3) + 
   theme_classic() +
   geom_hline(yintercept = 0, linetype = "dashed", color = "grey") +
-  labs(y = "Standardized Effect Size") +
+  labs(x = "Science Team", 
+       y = "Obtained Effect Size",
+       color = "Conclusion of Science Team") +
   scale_color_discrete(type = c("red", "orange", "green4")) +
-  theme(legend.position = c(0.3, 0.8),
+  theme(legend.position = c(0.35, 0.8),
         text = element_text(size = 19))
 
 ggsave("title_plot.jpg", title_plot, 
@@ -109,6 +111,9 @@ ggsave("title_plot.jpg", title_plot,
 ]
 
 .pull-right[
+$~~$  
+
+
 [`r icon_style(icons::fontawesome("twitter"), scale = 2, fill = "#035AA6")` $~~$ twitter.com/shilaan01](https://twitter.com/shilaan01)    
 [`r icon_style(icons::fontawesome("globe"), scale = 2, fill = "#035AA6")` $~~$ shilaan.rbind.io](https://shilaan.rbind.io)     
 [`r icon_style(icons::fontawesome("github"), scale = 2, fill = "#035AA6")` $~~$ github.com/shilaan](https://github.com/shilaan)  
@@ -118,6 +123,122 @@ ggsave("title_plot.jpg", title_plot,
 ---
 # Outline 
 
+`r icon_style(icons::fontawesome("users"), scale = 2, fill = "#035AA6")` $~~$ **Crowdsourcing Science** 
+`r icon_style(icons::fontawesome("chart-bar"), scale = 2, fill = "#035AA6")` $~~~$ **Crowdsourced Data Analysis**  
+`r icon_style(icons::fontawesome("question-circle"), scale = 2, fill = "#035AA6")` $~~~$ **Lay Perceptions: Are Crowd-Scientific Findings More Credible?**   
+`r icon_style(icons::fontawesome("tools"), scale = 2, fill = "#035AA6")` $~~~$ **Method**
+`r icon_style(icons::fontawesome("chart-line"), scale = 2, fill = "#035AA6")` $~~~$ **Results**
+`r icon_style(icons::fontawesome("comment"), scale = 2, fill = "#035AA6")` $~~~$ **Discussion**
+
+---
+.center[
+# Crowd Science
+]
+
+### The organization of scientific research in open and collaborative projects
+
+
+
+Highly **inclusive** (sourcing citizens) or highly **selective** (sourcing specialists)    
+
+
+
+Used at different **stages** of the research process  
+
+
+.pull-left[
+
+.pull-left[
+
+`r icon_style(icons::fontawesome("coins"), scale = 1, fill = "#035AA6")` $~~~$ **Funding**
+`r icon_style(icons::fontawesome("lightbulb"), scale = 1, fill = "#035AA6")`  $~~~~$ **Ideation**
+`r icon_style(icons::fontawesome("project-diagram"), scale = 1, fill = "#035AA6")`  $~~$  **Study design**
+`r icon_style(icons::fontawesome("folder-open"), scale = 1, fill = "#035AA6")`  $~~$  **Data collection**
+
+]
+
+.pull-right[
+
+`r icon_style(icons::fontawesome("laptop-code"), scale = 1, fill = "#035AA6")`  $~~$   **Data analysis**
+`r icon_style(icons::fontawesome("feather-alt"), scale = 1, fill = "#035AA6")`  $~~~$    **Writing**
+`r icon_style(icons::fontawesome("file-pdf"), scale = 1, fill = "#035AA6")`  $~~~$    **Peer review**
+`r icon_style(icons::fontawesome("check-double"), scale = 1, fill = "#035AA6")`  $~~$   **Replication**
+
+]
+
+]
+
+.pull-right[
+
+
+
+]
+
+---
+background-image: url("images/meteor.jpeg")
+background-position: 90% 73%
+background-size: 42%
+
+.center[
+# Crowd Science
+]
+
+### The organization of scientific research in open and collaborative projects
+
+
+
+Highly **inclusive** (sourcing citizens) or highly **selective** (sourcing specialists)    
+
+
+
+Used at different **stages** of the research process  
+
+
+.pull-left[
+
+.pull-left[
+
+`r icon_style(icons::fontawesome("coins"), scale = 1, fill = "#035AA6")` $~~~$ **Funding**
+`r icon_style(icons::fontawesome("lightbulb"), scale = 1, fill = "#035AA6")`  $~~~~$ **Ideation**
+`r icon_style(icons::fontawesome("project-diagram"), scale = 1, fill = "#035AA6")`  $~~$  **Study design**
+`r icon_style(icons::fontawesome("folder-open"), scale = 1, fill = "#035AA6")`  $~~$  **Data collection**
+
+]
+
+.pull-right[
+
+`r icon_style(icons::fontawesome("laptop-code"), scale = 1, fill = "#035AA6")`  $~~$   **Data analysis**
+`r icon_style(icons::fontawesome("feather-alt"), scale = 1, fill = "#035AA6")`  $~~~$    **Writing**
+`r icon_style(icons::fontawesome("file-pdf"), scale = 1, fill = "#035AA6")`  $~~~$    **Peer review**
+`r icon_style(icons::fontawesome("check-double"), scale = 1, fill = "#035AA6")`  $~~$   **Replication**
+
+]
+
+]
+
+.pull-right[
+
+
+
+]
+
+.right[
+
+$~~$  
+$~~$  
+The great meteor storm of 1833: birth of *Citizen Science*
+
+]
+---
+.center[
+# Crowdsourced data analysis 
+
+
+]
+
+### Different teams of scientists independently analyze the same dataset
+
+Also known as the **many-analysts** or **multi-analyst** approach
 
 ---
 # Open Science Statement
@@ -133,11 +254,6 @@ ggsave("title_plot.jpg", title_plot,
 [`r icon_style(icons::academicons("osf"), scale = 2, fill = "#035AA6")` $~~$ osf.io/vedb4](https://osf.io/vedb4)    
 
 [`r icon_style(icons::fontawesome("github"), scale = 2, fill = "#035AA6")` $~~$ github.com/shilaan/many-analysts](https://github.com/shilaan/many-analysts)    
-
----
-# Crowdsourced Data Analysis 
-
-
 
 ---
 # Methods 
