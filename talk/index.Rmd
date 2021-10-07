@@ -151,6 +151,10 @@ name: openscience
 # Open Science Statement
 
 ---
+background-image: url("https://github.com/allisonhorst/stats-illustrations/raw/master/rstats-artwork/reproducibility_court.png")
+background-position: 90% 50%
+background-size: 50%
+
 # Open Science Statement
 
 --
@@ -175,6 +179,10 @@ name: openscience
 --
 
 [`r icon_style(icons::fontawesome("github"), scale = 2, fill = "#035AA6")` $~~$ github.com/shilaan/many-analysts](https://github.com/shilaan/many-analysts)    
+
+.right[
+Artwork by [@allison_horst](https://github.com/allisonhorst/stats-illustrations)
+]
 
 ---
 class: inverse, center, middle
