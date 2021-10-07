@@ -48,6 +48,8 @@ library(readr)
 library(dplyr)
 library(rmarkdown)
 library(here)
+library(icons)
+library(rsvg)
 r_refs("r-references.bib")
 ```
 
@@ -195,26 +197,16 @@ The data that support the findings of this study are openly available on GitHub 
 \newpage
 
 ## Table 2
-```{r, echo = FALSE}
-table2 <- data.frame(
-  Measure = c("1. Final beliefs",
-              "2. Credibility", 
-              "3. Confidence",
-              "4. Bias",
-              "5. Error",
-              "6. Discretion"),
-  Multi_Consistent = c("+", "+", "-", "-", "-", "No prediction"),
-  Multi_Inconsistent = c("-", "-", "-", "+", "+", "No prediction"))
-  
-knitr::kable(table2,
-             col.names = c("Measure", 
-                           "Many-analyst: Consistent", 
-                           "Many-analyst: Inconsistent"),
-             align = "lcc",
-             label = NA,
-             caption = "Predicted direction of effects for all dependent variables, compared to the single-analyst condition and controlling for prior beliefs")
-```
-*Note*. Table 2 indicates the predicted direction of the effect for each of the five dependent variables, compared to the single-analyst condition and controlling for prior beliefs. For example, we hypothesized that, compared to a single-analyst study and controlling for prior beliefs,  ratings of credibility would be greater in the multi-analyst: consistent condition and lower in the multi-analyst: inconsistent condition.  
+
+| Measure | Multi-consistent | Multi-inconsistent |
+| ------------- |  ------------- | ------------- | 
+| 1. Posterior beliefs | `r icon_style(icons::fontawesome("user-plus"), scale = 1.5, fill = "green")`  | `r icon_style(icons::fontawesome("user-minus"), scale = 1.5, fill = "red")` |
+|2. Credibility | `r icon_style(icons::fontawesome("user-plus"), scale = 1.5, fill = "green")` | `r icon_style(icons::fontawesome("user-minus"), scale = 1.5, fill = "red")` |
+| 3. Confidence  | `r icon_style(icons::fontawesome("user-minus"), scale = 1.5, fill = "red")`  | `r icon_style(icons::fontawesome("user-minus"), scale = 1.5, fill = "red")` | 
+| 4. Bias | `r icon_style(icons::fontawesome("user-minus"), scale = 1.5, fill = "red")` | `r icon_style(icons::fontawesome("user-plus"), scale = 1.5, fill = "green")` |
+| 5. Error | `r icon_style(icons::fontawesome("user-minus"), scale = 1.5, fill = "red")` | `r icon_style(icons::fontawesome("user-plus"), scale = 1.5, fill = "green")` |
+| 6. Discretion | No prediction | No prediction |
+*Note*. Table 2 indicates the predicted direction of the effect for all dependent variables, compared to the single-analyst condition and controlling for prior beliefs (a green plus stands for a positive prediction, and a red minus stands for a negative prediction). For example, we hypothesized that, compared to a single-analyst study and controlling for prior beliefs,  ratings of credibility would be greater in the multi-analyst: consistent condition and lower in the multi-analyst: inconsistent condition.  
 \newpage
 
 # Figures

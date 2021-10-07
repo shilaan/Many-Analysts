@@ -443,7 +443,7 @@ name: method
 
 --
 
-We run an experiment with **three conditions**:
+We run an experiment with **three conditions**
 --
 
 `r icon_style(icons::fontawesome("dice-one"), scale = 1.5, fill = "#035AA6")` $~~$ **Single-analyst** $~~~~~~~~~~~$ a *single, aggregate parameter estimate*
@@ -469,12 +469,216 @@ and study the **effects on**
 .pull-right[
 `r icon_style(icons::fontawesome("angle-right"), scale = 1.5, fill = "#035AA6")` Ratings of bias  
 `r icon_style(icons::fontawesome("angle-right"), scale = 1.5, fill = "#035AA6")` Ratings of error  
-`r icon_style(icons::fontawesome("angle-right"), scale = 1.5, fill = "#035AA6")` Ratings of degrees of freedom  
+`r icon_style(icons::fontawesome("angle-right"), scale = 1.5, fill = "#035AA6")` Ratings of discretion  
 ]
 
 ---
+.center[
 
 # Hypotheses
+
+]
+
+
+
+$~~$  
+
+.pull-left[
+
+`r icon_style(icons::fontawesome("compass"), scale = 1.5, fill = "#035AA6")` $~~~~$**Predicted direction of effects**
+
+`r icon_style(icons::fontawesome("users-slash"), scale = 1.5, fill = "#035AA6")` $~~~$**Compared to the single-analyst condition**  
+
+`r icon_style(icons::fontawesome("history"), scale = 1.5, fill = "#035AA6")` $~~~~$**Controlling for prior beliefs**
+
+]
+
+.pull-right[
+
+| Measure | Multi-consistent | Multi-inconsistent |
+| ------------- |  ------------- | ------------- | 
+| Posterior beliefs | .center[`r icon_style(icons::fontawesome("user-plus"), scale = 1.5, fill = "green")`]  | .center[`r icon_style(icons::fontawesome("user-minus"), scale = 1.5, fill = "red")`] |
+]
+
+???
+
+*Note*. Table indicates the predicted direction of the effect for all dependent variables, compared to the single-analyst condition and controlling for prior beliefs. For example, we hypothesized that, compared to a single-analyst study and controlling for prior beliefs,  ratings of credibility would be greater in the multi-analyst: consistent condition and lower in the multi-analyst: inconsistent condition.  
+
+---
+.center[
+
+# Hypotheses
+
+]
+
+
+
+$~~$  
+
+.pull-left[
+
+`r icon_style(icons::fontawesome("compass"), scale = 1.5, fill = "#035AA6")` $~~~~$**Predicted direction of effects**
+
+`r icon_style(icons::fontawesome("users-slash"), scale = 1.5, fill = "#035AA6")` $~~~$**Compared to the single-analyst condition**  
+
+`r icon_style(icons::fontawesome("history"), scale = 1.5, fill = "#035AA6")` $~~~~$**Controlling for prior beliefs**
+
+]
+
+.pull-right[
+
+| Measure | Multi-consistent | Multi-inconsistent |
+| ------------- |  ------------- | ------------- | 
+| Posterior beliefs | .center[`r icon_style(icons::fontawesome("user-plus"), scale = 1.5, fill = "green")`]  | .center[`r icon_style(icons::fontawesome("user-minus"), scale = 1.5, fill = "red")`] |
+|Credibility | .center[`r icon_style(icons::fontawesome("user-plus"), scale = 1.5, fill = "green")`] | .center[`r icon_style(icons::fontawesome("user-minus"), scale = 1.5, fill = "red")`] |
+]
+
+???
+
+*Note*. Table indicates the predicted direction of the effect for all dependent variables, compared to the single-analyst condition and controlling for prior beliefs. For example, we hypothesized that, compared to a single-analyst study and controlling for prior beliefs,  ratings of credibility would be greater in the multi-analyst: consistent condition and lower in the multi-analyst: inconsistent condition.  
+
+---
+.center[
+
+# Hypotheses
+
+]
+
+
+
+$~~$  
+
+.pull-left[
+
+`r icon_style(icons::fontawesome("compass"), scale = 1.5, fill = "#035AA6")` $~~~~$**Predicted direction of effects**
+
+`r icon_style(icons::fontawesome("users-slash"), scale = 1.5, fill = "#035AA6")` $~~~$**Compared to the single-analyst condition**  
+
+`r icon_style(icons::fontawesome("history"), scale = 1.5, fill = "#035AA6")` $~~~~$**Controlling for prior beliefs**
+
+]
+
+.pull-right[
+
+| Measure | Multi-consistent | Multi-inconsistent |
+| ------------- |  ------------- | ------------- | 
+| Posterior beliefs | .center[`r icon_style(icons::fontawesome("user-plus"), scale = 1.5, fill = "green")`]  | .center[`r icon_style(icons::fontawesome("user-minus"), scale = 1.5, fill = "red")`] |
+|Credibility | .center[`r icon_style(icons::fontawesome("user-plus"), scale = 1.5, fill = "green")`] | .center[`r icon_style(icons::fontawesome("user-minus"), scale = 1.5, fill = "red")`] |
+| Confidence  | .center[`r icon_style(icons::fontawesome("user-minus"), scale = 1.5, fill = "red")`]  | .center[`r icon_style(icons::fontawesome("user-minus"), scale = 1.5, fill = "red")`] | 
+]
+
+???
+
+*Note*. Table indicates the predicted direction of the effect for all dependent variables, compared to the single-analyst condition and controlling for prior beliefs. For example, we hypothesized that, compared to a single-analyst study and controlling for prior beliefs,  ratings of credibility would be greater in the multi-analyst: consistent condition and lower in the multi-analyst: inconsistent condition.  
+
+---
+.center[
+
+# Hypotheses
+
+]
+
+
+
+$~~$  
+
+.pull-left[
+
+`r icon_style(icons::fontawesome("compass"), scale = 1.5, fill = "#035AA6")` $~~~~$**Predicted direction of effects**
+
+`r icon_style(icons::fontawesome("users-slash"), scale = 1.5, fill = "#035AA6")` $~~~$**Compared to the single-analyst condition**  
+
+`r icon_style(icons::fontawesome("history"), scale = 1.5, fill = "#035AA6")` $~~~~$**Controlling for prior beliefs**
+
+]
+
+.pull-right[
+
+| Measure | Multi-consistent | Multi-inconsistent |
+| ------------- |  ------------- | ------------- | 
+| Posterior beliefs | .center[`r icon_style(icons::fontawesome("user-plus"), scale = 1.5, fill = "green")`]  | .center[`r icon_style(icons::fontawesome("user-minus"), scale = 1.5, fill = "red")`] |
+|Credibility | .center[`r icon_style(icons::fontawesome("user-plus"), scale = 1.5, fill = "green")`] | .center[`r icon_style(icons::fontawesome("user-minus"), scale = 1.5, fill = "red")`] |
+| Confidence  | .center[`r icon_style(icons::fontawesome("user-minus"), scale = 1.5, fill = "red")`]  | .center[`r icon_style(icons::fontawesome("user-minus"), scale = 1.5, fill = "red")`] | 
+| Bias | .center[`r icon_style(icons::fontawesome("user-minus"), scale = 1.5, fill = "red")`] | .center[`r icon_style(icons::fontawesome("user-plus"), scale = 1.5, fill = "green")`] |
+]
+
+???
+
+*Note*. Table indicates the predicted direction of the effect for all dependent variables, compared to the single-analyst condition and controlling for prior beliefs. For example, we hypothesized that, compared to a single-analyst study and controlling for prior beliefs,  ratings of credibility would be greater in the multi-analyst: consistent condition and lower in the multi-analyst: inconsistent condition.  
+
+---
+.center[
+
+# Hypotheses
+
+]
+
+
+
+$~~$  
+
+.pull-left[
+
+`r icon_style(icons::fontawesome("compass"), scale = 1.5, fill = "#035AA6")` $~~~~$**Predicted direction of effects**
+
+`r icon_style(icons::fontawesome("users-slash"), scale = 1.5, fill = "#035AA6")` $~~~$**Compared to the single-analyst condition**  
+
+`r icon_style(icons::fontawesome("history"), scale = 1.5, fill = "#035AA6")` $~~~~$**Controlling for prior beliefs**
+
+]
+
+.pull-right[
+
+| Measure | Multi-consistent | Multi-inconsistent |
+| ------------- |  ------------- | ------------- | 
+| Posterior beliefs | .center[`r icon_style(icons::fontawesome("user-plus"), scale = 1.5, fill = "green")`]  | .center[`r icon_style(icons::fontawesome("user-minus"), scale = 1.5, fill = "red")`] |
+|Credibility | .center[`r icon_style(icons::fontawesome("user-plus"), scale = 1.5, fill = "green")`] | .center[`r icon_style(icons::fontawesome("user-minus"), scale = 1.5, fill = "red")`] |
+| Confidence  | .center[`r icon_style(icons::fontawesome("user-minus"), scale = 1.5, fill = "red")`]  | .center[`r icon_style(icons::fontawesome("user-minus"), scale = 1.5, fill = "red")`] | 
+| Bias | .center[`r icon_style(icons::fontawesome("user-minus"), scale = 1.5, fill = "red")`] | .center[`r icon_style(icons::fontawesome("user-plus"), scale = 1.5, fill = "green")`] |
+| Error | .center[`r icon_style(icons::fontawesome("user-minus"), scale = 1.5, fill = "red")`] | .center[`r icon_style(icons::fontawesome("user-plus"), scale = 1.5, fill = "green")`] |
+]
+
+???
+
+*Note*. Table indicates the predicted direction of the effect for all dependent variables, compared to the single-analyst condition and controlling for prior beliefs. For example, we hypothesized that, compared to a single-analyst study and controlling for prior beliefs,  ratings of credibility would be greater in the multi-analyst: consistent condition and lower in the multi-analyst: inconsistent condition.  
+
+---
+.center[
+
+# Hypotheses
+
+]
+
+
+
+$~~$  
+
+.pull-left[
+
+`r icon_style(icons::fontawesome("compass"), scale = 1.5, fill = "#035AA6")` $~~~~$**Predicted direction of effects**
+
+`r icon_style(icons::fontawesome("users-slash"), scale = 1.5, fill = "#035AA6")` $~~~$**Compared to the single-analyst condition**  
+
+`r icon_style(icons::fontawesome("history"), scale = 1.5, fill = "#035AA6")` $~~~~$**Controlling for prior beliefs**
+
+]
+
+.pull-right[
+
+| Measure | Multi-consistent | Multi-inconsistent |
+| ------------- |  ------------- | ------------- | 
+| Posterior beliefs | .center[`r icon_style(icons::fontawesome("user-plus"), scale = 1.5, fill = "green")`]  | .center[`r icon_style(icons::fontawesome("user-minus"), scale = 1.5, fill = "red")`] |
+|Credibility | .center[`r icon_style(icons::fontawesome("user-plus"), scale = 1.5, fill = "green")`] | .center[`r icon_style(icons::fontawesome("user-minus"), scale = 1.5, fill = "red")`] |
+| Confidence  | .center[`r icon_style(icons::fontawesome("user-minus"), scale = 1.5, fill = "red")`]  | .center[`r icon_style(icons::fontawesome("user-minus"), scale = 1.5, fill = "red")`] | 
+| Bias | .center[`r icon_style(icons::fontawesome("user-minus"), scale = 1.5, fill = "red")`] | .center[`r icon_style(icons::fontawesome("user-plus"), scale = 1.5, fill = "green")`] |
+| Error | .center[`r icon_style(icons::fontawesome("user-minus"), scale = 1.5, fill = "red")`] | .center[`r icon_style(icons::fontawesome("user-plus"), scale = 1.5, fill = "green")`] |
+| Discretion | .center[No prediction] | .center[No prediction] |
+]
+
+???
+
+*Note*. Table indicates the predicted direction of the effect for all dependent variables, compared to the single-analyst condition and controlling for prior beliefs. For example, we hypothesized that, compared to a single-analyst study and controlling for prior beliefs,  ratings of credibility would be greater in the multi-analyst: consistent condition and lower in the multi-analyst: inconsistent condition.  
+
 
 ---
 class: inverse, center, middle
