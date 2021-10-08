@@ -33,6 +33,8 @@ library(tidyverse)
 library(xaringanthemer)
 library(xaringanExtra)
 library(icons)
+library(widgetframe)
+library(DiagrammeR)
 
 style_duo(primary_color = "#ffffff", 
           secondary_color = "#035AA6")
@@ -476,6 +478,41 @@ and study the **effects on**
 `r icon_style(icons::fontawesome("angle-right"), scale = 1.5, fill = "#035AA6")` Ratings of error  
 `r icon_style(icons::fontawesome("angle-right"), scale = 1.5, fill = "#035AA6")` Ratings of discretion  
 ]
+
+---
+class: center
+
+# Experimental Design
+
+```{r, fig.align='right', fig.retina=3, echo = FALSE}
+my_design <- DiagrammeR::mermaid("
+graph TD
+
+classDef classOne fill:#c8e2fa,stroke:#333,stroke-width:4px
+classDef classTwo fill:#e8e9eb,stroke:#333,stroke-width:4px
+
+A[<center>Introduction to research question <br> Do religious people report higher well-being?</center>] 
+A ==>B[<center>Report prior beliefs <br> How likely do you think it is that people who are more religious generally report higher well-being?</center>]
+B ==>C[<center>Single-analyst condition</center>]
+B ==>D[<center>Multi-consistent condition</center>]
+B ==>E[<center>Multi-inconsistent condition</center>]
+F[<center>Report dependent variables <br> Posterior beliefs, credibility of the results, confidence in the effect size estimate, bias, error, and discretion</center>]
+C ==>F
+D ==>F
+E ==>F
+
+class A classOne
+class B classTwo
+class C classOne
+class D classTwo
+class E classOne
+class F classTwo
+
+                           ")
+widgetframe::frameWidget(my_design)
+```
+
+
 
 ---
 .center[
