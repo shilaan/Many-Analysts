@@ -834,6 +834,17 @@ name: results
 # Results
 
 ---
+class: left
+
+# Participants
+
+--
+
+```{r, echo = FALSE, fig.retina=3, fig.align='center', out.width='110%'}
+knitr::include_graphics("images/participants.png")
+```
+
+---
 class: inverse, center, middle
 name: discussion
 
