@@ -486,11 +486,12 @@ class: left
 
 --
 
-```{r, echo=FALSE, fig.align='center', out.width='80%', fig.retina=3}
+```{r, echo=FALSE, fig.align='center', out.width='90%', fig.retina=3}
 knitr::include_graphics("images/mermaid.png")
 ```
 
 ---
+
 .center[
 
 # Hypotheses
