@@ -963,7 +963,7 @@ name: discussion
 
 # Conclusion
 
-`r icon_style(icons::fontawesome("bullseye"), scale = 1.5, fill = "#035AA6")`   $~~~$ Crowdsourced data analysis has **many worthy uses**  
+`r icon_style(icons::fontawesome("route"), scale = 1.5, fill = "#035AA6")`   $~~~$ Crowdsourced data analysis has **many worthy uses**  
 --
 
 `r icon_style(icons::fontawesome("exclamation-triangle"), scale = 1.5, fill = "#035AA6")` $~~$ However, scientific reform may have **unintended consequences**   
@@ -974,6 +974,9 @@ name: discussion
 
 ## Future directions
 `r icon_style(icons::fontawesome("flask"), scale = 1.5, fill = "#035AA6")` $~~$ Perceptions of **scientists**?  
+--
+
+`r icon_style(icons::fontawesome("comments"), scale = 1.5, fill = "#035AA6")` $~$ Importance of **science communication** and **communicating uncertainty**  
 --
 
 `r icon_style(icons::fontawesome("lightbulb"), scale = 1.5, fill = "#035AA6")` $~~~$ Other **suggestions**?
