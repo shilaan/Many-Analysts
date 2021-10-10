@@ -24,9 +24,6 @@ titletext_fontfamily: 'Cabin'
 primary_colour: "#035AA6"
 accent_colour: "#035AA6"
 sectitle2_textcol: "#035AA6"
-header-includes:
-  - \setlength{\parindent}{4em}
-  - \setlength{\parskip}{0em}
 ---
 
 ```{r setup, include=FALSE}
@@ -57,7 +54,8 @@ We explore **the effects of scientific findings emerging from a crowd of researc
 | 4. Bias | `r icon_style(icons::fontawesome("user-minus"), scale = 1.5, fill = "red")` | `r icon_style(icons::fontawesome("user-plus"), scale = 1.5, fill = "green")` |
 | 5. Error | `r icon_style(icons::fontawesome("user-minus"), scale = 1.5, fill = "red")` | `r icon_style(icons::fontawesome("user-plus"), scale = 1.5, fill = "green")` |
 | 6. Discretion | No prediction | No prediction |
-*Note*. Table 1 indicates the predicted direction of effects for all outcomes, **compared to the single-analyst condition** and **controlling for prior beliefs** (a green plus/red minus indicates a positive/negative prediction, respectively). For example, we hypothesized that, compared to a single-analyst study and controlling for prior beliefs, ratings of credibility would be greater in the multi-consistent condition and lower in the multi-inconsistent condition.
+*Note*. Table 1 indicates the predicted direction of effects for all outcomes, **compared to the single-analyst condition** and **controlling for prior beliefs** (a green plus/red minus indicates a positive/negative prediction, respectively). For example, we hypothesized that, compared to a single-analyst study and controlling for prior beliefs, ratings of credibility would be greater in the multi-consistent condition and lower in the multi-inconsistent condition.  
+
 
 # Methods
 
@@ -71,18 +69,16 @@ Multiple parameter estimates with high variance and low consensus
 
 **Experimental Design**  
 
-```{r, echo = FALSE, out.width='101%', fig.retina=3, fig.align='left'}
+```{r, echo = FALSE, out.width='100%', fig.retina=3, fig.align='left'}
 knitr::include_graphics("mermaid.png")
 ```
 
 # Results
 
-**Figure 1**: *Estimates (and 95% CIs) for all outcomes*  
-
-```{r, echo = FALSE, out.width='90%', fig.retina=3, fig.align='left'}
+**Figure 1**: *Estimates (and 95% CIs) for all outcomes*
+```{r, echo = FALSE, out.width='95%', fig.retina=3, fig.align='left'}
 knitr::include_graphics("Figure1.jpg")
 ```
-
 **In line with our hypotheses**, lay consumers of multi-analyst studies with **inconsistent** results  
 `r icon_style(icons::fontawesome("arrow-circle-down"), scale = 1.5, fill = "red")` $~~~$ Have lower posterior beliefs  
 `r icon_style(icons::fontawesome("arrow-circle-down"), scale = 1.5, fill = "red")` $~~~$ Find the results less credible  
@@ -110,7 +106,7 @@ knitr::include_graphics("Figure2.jpg")
 ```
 
 # Discussion  
-**Conclusions**  
+**Conclusion**  
 `r icon_style(icons::fontawesome("sitemap"), scale = 1.4, fill = "#035AA6")` $~$ Crowdsourced data analysis has **many worthy uses**, but...    
 `r icon_style(icons::fontawesome("exclamation-triangle"), scale = 1.4, fill = "#035AA6")` $~~$ **Variability** and  **lack of consensus** may evoke negative responses   
 
