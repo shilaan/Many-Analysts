@@ -1,0 +1,17 @@
+:root {
+  /* Fonts */
+
+  /* Colors */
+  --text-bold-color: #035AA6;
+  /*--code-highlight-color: rgba(3,90,166,0.8); */
+}
+
+strong {
+  font-weight: bold;
+  color: var(--text-bold-color);
+}
+
+/*.remark-code-line-highlighted {
+  background-color: var(--code-highlight-color);
+} */
+

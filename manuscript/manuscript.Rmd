@@ -16,7 +16,7 @@ affiliation:
     institution   : "Stanford University, Graduate School of Business"
 
 abstract: |
-  A recent movement towards crowd science has emerged in the behavioral sciences. One of the aims of crowd science is to increase the credibility of scientific research. Does it meet this promise in reality? We run an experiment to study the effects of scientific findings emerging from a crowd of researchers (vs. a typical research collaboration) on lay consumers' posterior beliefs and ratings of credibility, confidence in an aggregate effect size estimate, bias, and error. We focus on crowdsourced data analysis, also known as the 'many analysts' or 'multi-analyst' approach: giving the same dataset to different teams of scientists, who independently analyze the data to answer a research question and/or estimate a parameter of interest. We compare the effects of providing (a) a single, aggregate parameter estimate (the single-analyst condition) vs. multiple parameter estimates that (b) vary slightly and are all positive, leading to the same qualitative conclusion (the "multi-consistent" condition) or (c) vary widely and are of both signs, leading to differing qualitative conclusions (the "multi-inconsistent" condition). In line with our hypotheses, we find that lay consumers of multi-analyst studies with inconsistent results (compared to single-analyst studies) have lower posterior beliefs, find the results less credible, have less confidence in the average effect size estimate, and believe the results are more likely to stem from bias and error. Contrary to our hypotheses, we do not find that multi-analyst studies with consistent results (compared to single-analyst studies) increase the sway and credibility of scientific findings to lay consumers: instead, to our surprise, they lead to lower posterior beliefs and higher ratings of error. 
+  A recent movement towards crowd science has emerged in the behavioral sciences. One of the aims of crowd science is to increase the credibility of scientific research. Does it meet this promise in reality? We run an experiment to study the effects of scientific findings emerging from a crowd of researchers (vs. a typical research collaboration) on lay consumers' posterior beliefs and ratings of credibility, confidence in an aggregate effect size estimate, bias, and error. We focus on crowdsourced data analysis, also known as the 'many analysts' or 'multi-analyst' approach: giving the same dataset to different teams of scientists, who independently analyze the data to answer a research question and/or estimate a parameter of interest. We compare the effects of providing a single, aggregate parameter estimate (the single-analyst condition) vs. multiple parameter estimates that (a) vary slightly and are all positive, leading to the same qualitative conclusion (the "multi-consistent" condition) or (b) vary widely and are of both signs, leading to differing qualitative conclusions (the "multi-inconsistent" condition). In line with our hypotheses, we find that lay consumers of multi-analyst studies with inconsistent results (compared to single-analyst studies) have lower posterior beliefs, find the results less credible, have less confidence in the average effect size estimate, and believe the results are more likely to stem from bias and error. Contrary to our hypotheses, we do not find that multi-analyst studies with consistent results (compared to single-analyst studies) increase the sway and credibility of scientific findings to lay consumers: instead, to our surprise, they lead to lower posterior beliefs and higher ratings of error. 
   
 keywords          : "Crowd science, Many analysts, Multi-analyst, Variability, Research credibility"
 wordcount         : "3,710"
@@ -55,7 +55,7 @@ r_refs("r-references.bib")
 
 The credibility of scientific research is in doubt, among lay consumer [@hornsey2017] and scientist [@pashler2012] alike. Several tools have been proposed to combat this "crisis of confidence" (Ibid., p. 528). One such tool is the crowd science approach, which leverages a large number of individuals or teams at specific stages of the research process [@uhlmann2019].  
 Crowd science is defined as "the organization of scientific research in open and collaborative projects"  [@franzoni2014, p. 1]. Crowd-scientific projects vary in their degree of selectivity: some are open to the general public (such projects are often referred to as "citizen science"), while others require the expertise of specialists [e.g., scientists\; @uhlmann2019, p. 714]. Here, we focus on crowdsourced data analysis, also known as the 'many analysts' or 'multi-analyst' approach: giving the same dataset to different teams of scientists, who independently analyze it to answer the same research question and/or estimate a parameter of interest.  
-We explore the effects of scientific findings emerging from a crowd of researchers (vs. a typical research collaboration) on lay consumers' posterior beliefs, perceptions of credibility, confidence in an aggregate effect size estimate, and ratings of bias and error. We compare the effects of providing (a) a single, aggregate parameter estimate (the single-analyst condition) vs. multiple parameter estimates that (b) vary slightly and are all positive, leading to the same qualitative conclusion (the "multi-consistent" condition) or (c) vary widely and are of both signs, leading to differing qualitative conclusions (the "multi-inconsistent" condition).    
+We explore the effects of scientific findings emerging from a crowd of researchers (vs. a typical research collaboration) on lay consumers' posterior beliefs, perceptions of credibility, confidence in an aggregate effect size estimate, and ratings of bias and error. We compare the effects of providing a single, aggregate parameter estimate (the single-analyst condition) vs. multiple parameter estimates that (a) vary slightly and are all positive, leading to the same qualitative conclusion (the "multi-consistent" condition) or (b) vary widely and are of both signs, leading to differing qualitative conclusions (the "multi-inconsistent" condition).    
 According to previous work, crowdsourced data analysis should increase the credibility of scientific findings; Table 1 provides an overview of the proposed confidence- and credibility-related benefits of the multi-analyst approach. Does crowd science meet its promise -- to improve the credibility of scientific research -- in reality? Normatively, we expect laypeople who observe several scientists independently come to the same qualitative conclusions -- compared to a single research team that comes to a single, joint conclusion -- to be more swayed by the findings, as it seems to reflect consensus between various approaches. After all, it's a hallmark of rigorous research to triangulate various methodological approaches and provide converging evidence [@jick1979; @turner2017], and to provide a "sensitivity analysis" or "robustness checks" to examine whether and how the findings change as a result of alternative analytic specifications [@munoz2018; @steegen2016]. As argued in Aczel et al. [-@aczel2020, p. 562], "The main argument for the importance of performing robustness checks over reasonable variations in modelling choices is to increase confidence in the obtained results: ideally, results should be reasonably unaffected by a researcher's idiosyncratic choice (…) when reasonable alternatives exist." The same argument has been made for triangulation, which, according to Jick [-@jick1979, p. 608], "allows researchers to be more confident of their results."  
 We similarly expect readers of multi-analyst reports that yield consistent findings to be more confident in the results. Although lay observers, in such cases, may be less certain that the precise aggregate parameter estimate is exactly correct, they should be more likely to positively update their beliefs about the reported phenomenon, and less likely to assume that the overall estimate stems from bias or error. Thus, when the results generated by independent analysts are largely consistent, we expect an increase in the sway of scientific findings. However, when laypeople observe several scientists independently come to differing qualitative conclusions, we expect the multi-analyst method to backfire; when results across many analysts vary widely and lack consensus in their qualitative conclusions (which, arguably, often reflects the reality of large-scale science collaborations), we expect a decrease in the sway of scientific findings.  
 **[Insert Table 1 here]**  
@@ -197,6 +197,7 @@ The data that support the findings of this study are openly available on GitHub 
 \newpage
 
 ## Table 2
+*Predicted direction of effects compared to the single-analyst condition*
 
 | Measure | Multi-consistent | Multi-inconsistent |
 | ------------- |  ------------- | ------------- | 
@@ -206,13 +207,14 @@ The data that support the findings of this study are openly available on GitHub 
 | 4. Bias | `r icon_style(icons::fontawesome("user-minus"), scale = 1.5, fill = "red")` | `r icon_style(icons::fontawesome("user-plus"), scale = 1.5, fill = "green")` |
 | 5. Error | `r icon_style(icons::fontawesome("user-minus"), scale = 1.5, fill = "red")` | `r icon_style(icons::fontawesome("user-plus"), scale = 1.5, fill = "green")` |
 | 6. Discretion | No prediction | No prediction |
-*Note*. Table 2 indicates the predicted direction of the effect for all dependent variables, compared to the single-analyst condition and controlling for prior beliefs (a green plus stands for a positive prediction, and a red minus stands for a negative prediction). For example, we hypothesized that, compared to a single-analyst study and controlling for prior beliefs,  ratings of credibility would be greater in the multi-analyst: consistent condition and lower in the multi-analyst: inconsistent condition.  
+*Note*. Table 2 indicates the predicted direction of the effect for all dependent variables, compared to the single-analyst condition and controlling for prior beliefs (a green plus stands for a positive prediction, and a red minus stands for a negative prediction). For example, we hypothesized that, compared to a single-analyst study and controlling for prior beliefs, ratings of credibility would be greater in the multi-consistent condition and lower in the multi-inconsistent condition.  
+
 \newpage
 
 # Figures
 
 ## Figure 1
-*Ratings of Bias, Confidence, Credibility, Discretion, Error, and Posterior Beliefs*
+*Estimates and 95% Confidence Intervals for all outcomes*
 \noindent
 ```{r fig-1, echo=FALSE}
 tidy_df <- function(Predictor) {
@@ -242,12 +244,19 @@ tidy_results <- Predictors %>%
                                      "Confidence",
                                      "Bias",
                                      "Error",
-                                     "Discretion")))
+                                     "Discretion"))) %>% 
+  mutate(Conclusion = case_when(
+    conf.low < 0 & conf.high < 0 ~ "Negative",
+    conf.low < 0 & conf.high > 0 ~ "Inconclusive",
+    conf.low > 0 & conf.high > 0 ~ "Positive"
+  ))
 
 Measure.label = c("Posterior beliefs", Predictors %>% unlist() %>% tail(5))
 names(Measure.label) <- Predictors %>% unlist()
 
-p1 <- ggplot(mapping = aes(x = term, y = estimate), 
+p1 <- ggplot(mapping = aes(x = term, 
+                           y = estimate,
+                           color = Conclusion), 
              data = tidy_results) +
   geom_point(size = 2) +
   geom_errorbar(mapping = aes(ymin = conf.low, ymax = conf.high), 
@@ -257,16 +266,18 @@ p1 <- ggplot(mapping = aes(x = term, y = estimate),
              labeller = labeller(Measure = Measure.label)) + 
   theme_bw() + 
   theme(strip.background = element_rect(fill = "white"),
-        legend.position = "") +
+        legend.position = "",
+        text = element_text(size = 16)) +
   labs(x = "Condition", y = "Estimate and 95% Confidence Interval") +
-   scale_x_discrete(labels = c("Multi-\nconsistent", "Multi-\ninconsistent")) 
+   scale_x_discrete(labels = c("Multi-\nconsistent", "Multi-\ninconsistent"))  +
+  scale_color_discrete(type = c("darkgrey", "red", "green4"))
 
 ggsave("Figure1.jpg", p1, 
        width = 7, height = 5, units = "in")
 
 knitr::include_graphics("Figure1.jpg", dpi = 1200)
 ```
-*Note.* Figure 1 displays coefficient estimates (and 95% confidence intervals) of posterior beliefs, credibility, confidence, bias, error, and discretion in the two multi-analyst conditions, compared to the single-analyst condition (and controlling for prior beliefs).  
+*Note.* Figure 1 displays coefficient estimates (and 95% confidence intervals) of posterior beliefs, credibility, confidence, bias, error, and discretion in the two multi-analyst conditions, compared to the single-analyst condition (and controlling for prior beliefs). Green/red/gray error bars indicate positive/negative/insignificant findings, respectively.   
 
 \newpage
 
@@ -292,14 +303,14 @@ df_2x3 <- data_2x2(
   jit_distance = .09,
   jit_seed = 321) 
 
-colors <- rep(c("dodgerblue", "darkorange"), 3) #choose colors 
+colors <- rep(c("#2142d9", "darkorange"), 3) #choose colors 
 
 p2 <- raincloud_2x3_repmes(
   data = df_2x3,
   colors = colors,
   fills = colors,
   size = 1,
-  alpha = .6,
+  alpha = .7,
   ort = "h") + #set to v for vertical plot
   
   scale_x_continuous(
@@ -309,30 +320,31 @@ p2 <- raincloud_2x3_repmes(
   ylab("Rated Beliefs") +
   
   annotate(geom = "text", 
-           label = "Single-Analyst", 
-           x = 3.9, y = 13, hjust = 1) + 
+           label = "Single-analyst", 
+           x = 3.8, y = 12, size = 6) + 
   annotate(geom = "text", 
-           label = "Multi-Analyst: Consistent", 
-           x = 2.7, y = 11) + 
+           label = "Multi-consistent", 
+           x = 2.7, y = 14, size = 6) + 
   annotate(geom = "text", 
-           label = "Multi-Analyst: Inconsistent",
-           x = 1.75, y = 12) + 
+           label = "Multi-inconsistent",
+           x = 1.75, y = 16, size = 6) + 
   annotate(geom = "text", 
            label = "Prior Beliefs", 
-           x = 4.2, y = 37, size = 5, 
-           color = "dodgerblue") + 
+           x = 4.2, y = 20, size = 10, 
+           color = "#2142d9") + 
   annotate(geom = "text", 
            label = "vs.", 
-           x = 4.2, y = 50, size = 5) + 
+           x = 4.2, y = 45, size = 10) + 
   annotate(geom = "text", 
            label = "Posterior Beliefs", 
-           x = 4.2, y = 66, size = 5, 
+           x = 4.2, y = 75, size = 10, 
            color = "darkorange") + 
   
   theme_classic() +
   theme(axis.ticks.y = element_blank(),
-        axis.text = element_text(size = 9),
-        axis.title.y = element_blank())
+        #axis.text = element_text(size = 9),
+        axis.title.y = element_blank(),
+        text = element_text(size = 20))
 
 ggsave("Figure2.jpg", p2, 
        width = 7, height = 5, units = "in")

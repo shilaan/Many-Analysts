@@ -469,7 +469,7 @@ We run an experiment with **three conditions**
 --
 
 $~~$  
-and study the **effects on** 
+In all three conditions, the given estimates average to 5%. We study the **effects on** 
 
 .pull-left[
 `r icon_style(icons::fontawesome("angle-right"), scale = 1.5, fill = "#035AA6")` Posterior beliefs  
