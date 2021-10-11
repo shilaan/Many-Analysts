@@ -460,6 +460,9 @@ class: inverse, center, middle
 
 # Does Crowdsourcing Data Analysis Improve the Credibility of Scientific Findings `r icon_style(icons::fontawesome("question-circle"), scale = 1, fill = "white")`
 
+???
+
+Lofty statements and worthy goals - empirical claim, but no evidence yet. that's what we'll be looking at today.
 ---
 class: inverse, center, middle
 name: method
