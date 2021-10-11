@@ -160,27 +160,31 @@ background-size: 50%
 # Open Science Statement
 
 --
-[`r icon_style(icons::academicons("preregistered"), scale = 2, fill = "#035AA6")` $~~$ Preregistration](https://osf.io/rpu98)  
+[`r icon_style(icons::academicons("preregistered"), scale = 2, fill = "#035AA6")` $~~~$ Preregistration](https://osf.io/rpu98)  
 
 --
 
-[`r icon_style(icons::academicons("open-materials"), scale = 2, fill = "#035AA6")` $~~$ Open materials](https://osf.io/6vze3)  
+[`r icon_style(icons::academicons("open-materials"), scale = 2, fill = "#035AA6")` $~~~$ Open materials](https://osf.io/6vze3)  
 
 --
 
-[`r icon_style(icons::academicons("open-data"), scale = 2, fill = "#035AA6")` $~~$ Open data](https://osf.io/b527v/)  
+[`r icon_style(icons::academicons("open-data"), scale = 2, fill = "#035AA6")` $~~~$ Open data](https://osf.io/b527v/)  
 
 --
 
-[`r icon_style(icons::fontawesome("r-project"), scale = 2, fill = "#035AA6")` $~$ Reproducible manuscript](https://github.com/shilaan/Many-Analysts/tree/main/manuscript)    
+[`r icon_style(icons::fontawesome("r-project"), scale = 2, fill = "#035AA6")` $~~$ Reproducible manuscript](https://github.com/shilaan/Many-Analysts/tree/main/manuscript)    
 
 --
 
-[`r icon_style(icons::academicons("osf"), scale = 2, fill = "#035AA6")` $~~$ osf.io/vedb4](https://osf.io/vedb4)    
+[`r icon_style(icons::academicons("osf"), scale = 2, fill = "#035AA6")` $~~~$ osf.io/vedb4](https://osf.io/vedb4)    
 
 --
 
-[`r icon_style(icons::fontawesome("github"), scale = 2, fill = "#035AA6")` $~~$ github.com/shilaan/many-analysts](https://github.com/shilaan/many-analysts)    
+[`r icon_style(icons::fontawesome("github"), scale = 2, fill = "#035AA6")` $~~~$ github.com/shilaan/many-analysts](https://github.com/shilaan/many-analysts)    
+
+--
+
+[`r icon_style(icons::fontawesome("tv"), scale = 1.7, fill = "#035AA6")` $~~$ Slides at bit.ly/many-analysts](https://bit.ly/many-analysts)  
 
 .right[
 Artwork by [@allison_horst](https://github.com/allisonhorst/stats-illustrations)
