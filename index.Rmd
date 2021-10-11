@@ -125,6 +125,10 @@ $~~$
 ---
 # Outline 
 
+???
+
+First, I'll share a brief open science statement and links to all the available materials. Then, I'll define crowd science.
+
 --
 `r icon_style(icons::fontawesome("lock-open"), scale = 2, fill = "#035AA6")` $~~$ [**Open Science Statement**](#openscience)   
 --
@@ -146,9 +150,7 @@ $~~$
 
 `r icon_style(icons::fontawesome("comment"), scale = 2, fill = "#035AA6")` $~~~$ [**Discussion**](#discussion)
 
-???
 
-First, I'll share a brief open science statement and links to all the available materials. Then, I'll define crowd science.s
 ---
 class: inverse, middle, center
 name: openscience
