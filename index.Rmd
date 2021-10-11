@@ -99,7 +99,7 @@ title_plot <- ggplot(data = estimates,
   theme(legend.position = c(0.35, 0.8),
         text = element_text(size = 20, family = "serif"))
 
-ggsave("title_plot.jpg", title_plot, 
+ggsave("talk/title_plot.jpg", title_plot, 
        width = 7, height = 5, units = "in")
 ```
 
@@ -109,7 +109,7 @@ ggsave("title_plot.jpg", title_plot,
 [Shilaan Alzahawi](http://shilaan.rbind.io) & [Benoît Monin](https://www.gsb.stanford.edu/faculty-research/faculty/benoit-monin)
 
 .pull-left[
-![](title_plot.jpg)
+![](talk/title_plot.jpg)
 ]
 
 .pull-right[
@@ -242,7 +242,7 @@ Used at different **stages** of the research process
 ]
 
 ---
-background-image: url("images/meteor.jpeg")
+background-image: url("talk/meteor.jpeg")
 background-position: 90% 73%
 background-size: 42%
 
@@ -494,7 +494,7 @@ class: left
 --
 
 ```{r, echo=FALSE, fig.align='center', out.width='95%', fig.retina=3}
-knitr::include_graphics("images/mermaid.png")
+knitr::include_graphics("talk/mermaid.png")
 ```
 
 ---
@@ -734,17 +734,17 @@ class: inverse, center, middle
 .panelset.sideways[
 .panel[.panel-name[Introduction]
 ```{r, echo = FALSE, out.width='90%'}
-knitr::include_graphics("images/introduction.png")
+knitr::include_graphics("talk/introduction.png")
 ```
 ]
 .panel[.panel-name[Prior Beliefs]
 
-![](images/prior_beliefs.png)
+![](talk/prior_beliefs.png)
 ]
 
 .panel[.panel-name[Thanks!]
 
-![](images/thanks.png)
+![](talk/thanks.png)
 ]
 ]
 
@@ -755,13 +755,13 @@ Participants had to wait 30 seconds before proceeding to the next slide.
 .panelset.sideways[
 .panel[.panel-name[Study design & research approach (Single-analyst)]
 ```{r, echo = FALSE, out.width='93%'}
-knitr::include_graphics("images/design_single.png")
+knitr::include_graphics("talk/design_single.png")
 ```
 ]
 
 .panel[.panel-name[Study design & research approach (Multi-analyst)]
 ```{r, echo = FALSE, out.width='91%'}
-knitr::include_graphics("images/design_multi.png")
+knitr::include_graphics("talk/design_multi.png")
 ```
 ]
 ]
@@ -771,19 +771,19 @@ knitr::include_graphics("images/design_multi.png")
 .panelset[
 .panel[.panel-name[Results (Single-analyst)]
 ```{r, echo = FALSE, out.width='80%'}
-knitr::include_graphics("images/results_single.png")
+knitr::include_graphics("talk/results_single.png")
 ```
 ]
 
 .panel[.panel-name[Results (Multi-consistent)]
 ```{r, echo = FALSE, out.width='80%'}
-knitr::include_graphics("images/results_multi-consistent.png")
+knitr::include_graphics("talk/results_multi-consistent.png")
 ```
 ]
 
 .panel[.panel-name[Results (Multi-inconsistent)]
 ```{r, echo = FALSE, out.width='80%'}
-knitr::include_graphics("images/results_multi-inconsistent.png")
+knitr::include_graphics("talk/results_multi-inconsistent.png")
 ```
 ]
 ]
@@ -793,41 +793,41 @@ knitr::include_graphics("images/results_multi-inconsistent.png")
 .panelset.sideways[
 .panel[.panel-name[Posterior beliefs]
 ```{r, echo = FALSE, out.width='100%'}
-knitr::include_graphics("images/posterior_beliefs.png")
+knitr::include_graphics("talk/posterior_beliefs.png")
 ```
 ]
 
 .panel[.panel-name[Credibility]
 ```{r, echo = FALSE, out.width='100%'}
-knitr::include_graphics("images/credibility.png")
+knitr::include_graphics("talk/credibility.png")
 ```
 ]
 
 .panel[.panel-name[Confidence]
 ```{r, echo = FALSE, out.width='100%'}
-knitr::include_graphics("images/confidence.png")
+knitr::include_graphics("talk/confidence.png")
 ```
 ]
 
 .panel[.panel-name[Bias]
 ```{r, echo = FALSE, out.width='100%'}
-knitr::include_graphics("images/bias.png")
+knitr::include_graphics("talk/bias.png")
 ```
 ]
 .panel[.panel-name[Error]
 ```{r, echo = FALSE, out.width='100%'}
-knitr::include_graphics("images/bias.png")
+knitr::include_graphics("talk/bias.png")
 ```
 ]
 .panel[.panel-name[Discretion]
 ```{r, echo = FALSE, out.width='100%'}
-knitr::include_graphics("images/bias.png")
+knitr::include_graphics("talk/bias.png")
 ```
 ]
 
 .panel[.panel-name[Attention check]
 ```{r, echo = FALSE, out.width='100%'}
-knitr::include_graphics("images/attention.png")
+knitr::include_graphics("talk/attention.png")
 ```
 ]
 
@@ -847,7 +847,7 @@ class: left
 --
 
 ```{r, echo = FALSE, fig.retina=3, fig.align='center', out.width='110%'}
-knitr::include_graphics("images/participants.png")
+knitr::include_graphics("talk/participants.png")
 ```
 
 ???
@@ -860,7 +860,7 @@ class: inverse, center, middle
 # Main results
 
 ---
-background-image: url("images/Figure1.jpg")
+background-image: url("talk/Figure1.jpg")
 background-position: 50% 50%
 background-size: 78%
 
@@ -942,7 +942,7 @@ For the additional **exploratory measure**, lay consumers of multi-analyst studi
 In line with our hypotheses, lay consumers of multi-analyst studies with inconsistent results (compared to single-analyst studies) have lower posterior beliefs, find the results less credible, have less confidence in the average effect size estimate, and believe the results are more likely to stem from bias and error. Contrary to our hypotheses, we do not find that lay consumers of multi-analyst studies with consistent results (compared to single-analyst studies) have higher posterior beliefs, find the results more credible, have less confidence in the average effect size estimate, and believe the results are less likely to stem from bias and error: instead, they report significantly lower posterior beliefs and are more likely to believe the results stem from error (we did not find significant effects on ratings of credibility, confidence, or bias). 
 
 ---
-background-image: url("images/Figure2.jpg")
+background-image: url("talk/Figure2.jpg")
 background-position: 50% 50%
 background-size: 78%
 

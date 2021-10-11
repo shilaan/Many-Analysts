@@ -276,7 +276,7 @@ p1 <- ggplot(mapping = aes(x = term,
 ggsave("Figure1.jpg", p1, 
        width = 7, height = 5, units = "in") #save to manuscript folder
 
-ggsave(paste0(here(), "/talk/images/Figure1.jpg"), p1, 
+ggsave(paste0(here(), "/talk/Figure1.jpg"), p1, 
        width = 7, height = 5, units = "in") #save to talk folder
 
 ggsave(paste0(here(), "/poster/Figure1.jpg"), p1, 
@@ -364,7 +364,7 @@ p2 <- raincloud_2x3_repmes(
 ggsave("Figure2.jpg", p2, 
        width = 7, height = 5, units = "in") #save to manuscript folder
 
-ggsave(paste0(here(), "/talk/images/Figure2.jpg"), p2, 
+ggsave(paste0(here(), "/talk/Figure2.jpg"), p2, 
        width = 7, height = 5, units = "in") #save to talk folder
 
 ggsave(paste0(here(), "/poster/Figure2.jpg"), p2, 
