@@ -457,6 +457,11 @@ We similarly expect readers of multi-analyst reports that yield consistent findi
 
 ---
 class: inverse, center, middle
+
+# Does Crowdsourcing Data Analysis Improve the Credibility of Scientific Findings `r icon_style(icons::fontawesome("question-circle"), scale = 1, fill = "white")`
+
+---
+class: inverse, center, middle
 name: method
 
 # Method
