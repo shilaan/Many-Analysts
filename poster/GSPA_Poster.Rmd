@@ -35,12 +35,12 @@ library(rsvg)
 # Introduction
 
 The **credibility of scientific research** is in doubt, among lay consumer (Hornsey & Fielding, 2017) and scientist (Pashler & Wagenmakers, 2021) alike. Several tools have been proposed to combat this "crisis of confidence" (Ibid., p. 528). One such tool is the **crowd science** approach: "the organization of scientific research in open and collaborative projects" (Franzoni & Sauermann, 2014, p. 1). We focus on **crowdsourced data analysis**, also known as the **many analysts** or **multi-analyst** approach: giving the same dataset to different teams of scientists, who independently analyze it to answer the same research question and/or estimate a parameter of interest.  
- $~~~~~$ According to science reformers, crowd-scientific findings that tell a consistent story should garner more confidence in the conclusions and **increase public faith in science** (Silberzahn et al., 2018; Uhlmann et al., 2019). Here, we ask if we can find empirical evidence for these claims: **Does crowdsourcing data analysis improve the credibility of scientific research?**  
+ $~~~~~$ According to science reformers, crowd-scientific findings that tell a consistent story should garner more confidence in the conclusions and **increase public faith in science** (Silberzahn et al., 2018; Uhlmann et al., 2019). Here, we ask if we can find empirical evidence for these claims: **Does crowdsourcing data analysis improve lay perceptions of scientific findings?**  
 
 **Objectives**  
 
 We explore **the effects of scientific findings emerging from a crowd of researchers** (vs. a typical research collaboration) **on lay consumers**' posterior beliefs, perceptions of credibility, confidence in an aggregate effect size estimate, and ratings of researcher bias, error, and discretion.  
- $~~~~~$ We compare the effects of providing a single, aggregate parameter estimate (the **single-analyst** condition) vs. multiple parameter estimates that (a) vary slightly and are all positive, leading to the same qualitative conclusion (the **multi-consistent** condition) or (b) vary widely and are of both signs, leading to differing qualitative conclusions (the **multi-inconsistent** condition). In all three conditions, the given estimates average to 5%.   
+ $~~~~~$ We compare the effects of providing lay consumers with a single, aggregate parameter estimate (the **single-analyst** condition) vs. multiple parameter estimates that (a) vary slightly and are all positive, leading to the same qualitative conclusion (the **multi-consistent** condition) or (b) vary widely and are of both signs, leading to differing qualitative conclusions (the **multi-inconsistent** condition). In all three conditions, the given estimates average to 5%.   
 
 **Preregistered Hypotheses**  
 
