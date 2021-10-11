@@ -146,6 +146,9 @@ $~~$
 
 `r icon_style(icons::fontawesome("comment"), scale = 2, fill = "#035AA6")` $~~~$ [**Discussion**](#discussion)
 
+???
+
+First, I'll share a brief open science statement and links to all the available materials. Then, I'll define crowd science.s
 ---
 class: inverse, middle, center
 name: openscience
@@ -349,7 +352,7 @@ t1 <- data.frame(
     2021,
     2021,
     2020,
-    2018,
+    2021,
     2018
   ),
   Title = c(
@@ -374,6 +377,8 @@ reveals a hidden universe of uncertainty",
 
 DT::datatable(t1, fillContainer = FALSE, options = list(pageLength = 2))
 ```
+
+??? 3 papers published in 2021, one looking at variability in the analysis of replications, another one at opinions about different social policies, and one OBHDP looking at the effects of scientists’ gender and professional status on verbosity during group meetings. Two papers in 2020, one looking at variability in the analysis of fmri (neuroimaging datasets), another in applied microeconomics. One paper from 2019 that evaluated the extent to which clinical psychologists analyzing the same experience sampling data come to different conclusions about symptoms to target for treatment. And one really famous study in 2018, that looked at discrimination against darker skin toned soccer players, and arguably started the recent crowd science movement in behavioral science. 
 
 ---
 class: inverse, center, middle
