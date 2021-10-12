@@ -403,51 +403,33 @@ $~~$
 ```{r, echo = FALSE}
 t2 <- data.frame(
   Author = c(
-    "Aczel et al.",
     "Arbon et al.",
-    "Auspurg & Brüderl",
     "Breznau et al.",
-    "Breznau",
-    "Silberzahn & Uhlmann",
-    "Silberzahn et al.",
-    "Uhlmann et al."
+    "Breznau"
   ),
   
   Year = c(
-    2021,
     2019,
     2021,
-    2021,
-    2021,
-    2015,
-    2018,
-    2019
+    2021
   ),
   Quote = c(
-    "When the results of independent data analyses converge, <b>more confidence in the conclusions</b> is warranted. When the results diverge, confidence appropriately falters, and scientists can examine the reasons for these discrepancies.",
     
-    "<b>For the public to have faith in the conclusions of scientists</b> it is important that the methods they employ are robust and transparent. This study will examine robustness by recruiting teams of independent data analysts and looking at how they answer a controversial research question using the same data, effectively ‘crowd-sourcing’ the data analysis.",
+    "\"<b>For the public to have faith in the conclusions of scientists</b> it is important that the methods they employ are robust and transparent. This study will examine robustness by recruiting teams of independent data analysts and looking at how they answer a controversial research question using the same data, effectively ‘crowd-sourcing’ the data analysis.\"",
     
-    "Several researchers analyze the same research question with the same data (…) <b>Science is credible</b> if different researchers come up with a similar answer",
+    "\"Organized scientific knowledge production (…) should generate inter-researcher reliability, <b>offering consumers of scientific findings assurance</b> that they are not arbitrary flukes but that other researchers would generate similar findings given the same data.\"",
     
-    "Organized scientific knowledge production (…) should generate inter-researcher reliability, <b>offering consumers of scientific findings assurance</b> that they are not arbitrary flukes but that other researchers would generate similar findings given the same data.",
-    
-    "crowdsourcing provides a new way to <b>increase credibility</b> for political and social research—in both sample populations and among the researchers themselves (…) It is hoped that these developments are tangible outcomes that <b>increase public, private, and government views of social science</b>.",
-    
-    "the results are <b>more credible</b> (…) <b>greater certainty</b> comes from having an independent check.",
-    
-    "Scientists can have comparatively <b>more faith</b> in a finding when there is less variability in analytic approaches taken to investigating the targeted phenomenon and in results obtained using different methods. (…) In such extreme cases of little to no convergence in results, the crowdsourcing process suggests that the scientific community should have <b>no faith</b> that the hypothesis is true",
-    
-    "crowdsourced teams can conduct high-powered, precise studies and draw <b>confident conclusions</b>. (…) Crowdsourcing research is a part of a changing landscape of science that seeks to <b>improve research reliability</b> and <b>advance the credibility</b> of academic research"
+    "\"crowdsourcing provides a new way to <b>increase credibility</b> for political and social research—in both sample populations and among the researchers themselves (…) It is hoped that these developments are tangible outcomes that <b>increase public, private, and government views of social science</b>.\""
     
   )
 ) %>% 
-  arrange(desc(Year))
+  arrange(Author)
 
 DT::datatable(t2, 
               fillContainer = FALSE, 
-              options = list(pageLength = 2),
-              escape = FALSE)
+              options = list(pageLength = 3),
+              escape = FALSE,
+              autoHideNavigation = TRUE)
 ```
 
 ???
@@ -476,6 +458,11 @@ name: method
 --
 
 We run an experiment with **three conditions**
+
+???
+
+Three scenarios
+
 --
 
 `r icon_style(icons::fontawesome("dice-one"), scale = 1.5, fill = "#035AA6")` $~~$ **Single-analyst** $~~~~~~~~~~~$ a *single, aggregate parameter estimate*
@@ -494,14 +481,14 @@ $~~$
 In all three conditions, the given estimates average to 5%. We study the **effects on** 
 
 .pull-left[
-`r icon_style(icons::fontawesome("angle-right"), scale = 1.5, fill = "#035AA6")` Posterior beliefs  
-`r icon_style(icons::fontawesome("angle-right"), scale = 1.5, fill = "#035AA6")` Perceptions of credibility  
-`r icon_style(icons::fontawesome("angle-right"), scale = 1.5, fill = "#035AA6")` Confidence in the aggregate effect size estimate  
+`r icon_style(icons::fontawesome("angle-right"), scale = 1.5, fill = "#035AA6")` **Posterior beliefs** about the reported phenomenon  
+`r icon_style(icons::fontawesome("angle-right"), scale = 1.5, fill = "#035AA6")` **Credibility** of the results  
+`r icon_style(icons::fontawesome("angle-right"), scale = 1.5, fill = "#035AA6")` **Confidence** in the aggregate estimate of 5%  
 ]
 .pull-right[
-`r icon_style(icons::fontawesome("angle-right"), scale = 1.5, fill = "#035AA6")` Ratings of bias  
-`r icon_style(icons::fontawesome("angle-right"), scale = 1.5, fill = "#035AA6")` Ratings of error  
-`r icon_style(icons::fontawesome("angle-right"), scale = 1.5, fill = "#035AA6")` Ratings of discretion  
+`r icon_style(icons::fontawesome("angle-right"), scale = 1.5, fill = "#035AA6")` Perceived impact of **bias** on the 5% estimate  
+`r icon_style(icons::fontawesome("angle-right"), scale = 1.5, fill = "#035AA6")` Perceived impact of **error** on the 5% estimate  
+`r icon_style(icons::fontawesome("angle-right"), scale = 1.5, fill = "#035AA6")` Perceived impact of **discretion** on the 5% estimate   
 ]
 
 ???
@@ -788,6 +775,10 @@ knitr::include_graphics("talk/design_multi.png")
 ]
 ]
 
+???
+
+Importantly, in both the single-analyst and the multi-analyst conditions we emphasize that there are a lot of choices to be made. 
+
 ---
 
 .panelset[
@@ -882,7 +873,7 @@ class: inverse, center, middle
 # Main results
 
 ---
-background-image: url("talk/Figure1.jpg")
+background-image: url("talk/Figure1b.jpg")
 background-position: 50% 50%
 background-size: 78%
 
@@ -892,7 +883,7 @@ Our main findings are displayed in Figure 1. Controlling for prior beliefs and c
 
 ---
 background-image: url("talk/Figure1.jpg")
-background-position: 90% 60%
+background-position: 95% 57%
 background-size: 40%
 
 .center[
@@ -911,27 +902,27 @@ background-size: 40%
 `r icon_style(icons::fontawesome("arrow-circle-down"), scale = 1.5, fill = "red")` $~~~$ Find the results less credible  
 --
 
-`r icon_style(icons::fontawesome("arrow-circle-down"), scale = 1.5, fill = "red")` $~~~$ Have less confidence in the average effect size estimate  
+`r icon_style(icons::fontawesome("arrow-circle-down"), scale = 1.5, fill = "red")` $~~~$ Have less confidence in the aggregate estimate of 5%  
 --
 
-`r icon_style(icons::fontawesome("arrow-circle-up"), scale = 1.5, fill = "green")` $~~~$ Believe the results are more likely to stem from bias  
+`r icon_style(icons::fontawesome("arrow-circle-up"), scale = 1.5, fill = "green")` $~~~$ Believe the 5% estimate is more likely to stem from bias  
 --
 
-`r icon_style(icons::fontawesome("arrow-circle-up"), scale = 1.5, fill = "green")` $~~~$ Believe the results are more likely to stem from error  
+`r icon_style(icons::fontawesome("arrow-circle-up"), scale = 1.5, fill = "green")` $~~~$ Believe the 5% estimate is more likely to stem from error  
 --
 
 $~~$  
 $~~$  
 
 For the additional **exploratory measure**, lay consumers of multi-analyst studies with **inconsistent** results
-`r icon_style(icons::fontawesome("arrow-circle-up"), scale = 1.5, fill = "green")` $~~~$ Believe the results are more likely to stem from experimenter degrees of freedom
+`r icon_style(icons::fontawesome("arrow-circle-up"), scale = 1.5, fill = "green")` $~~~$ Believe the 5% estimate is more likely to stem from idiosyncratic choices
 
 ???
 
 In line with our hypotheses, lay consumers of multi-analyst studies with inconsistent results (compared to single-analyst studies) have lower posterior beliefs, find the results less credible, have less confidence in the average effect size estimate, and believe the results are more likely to stem from bias and error. Contrary to our hypotheses, we do not find that lay consumers of multi-analyst studies with consistent results (compared to single-analyst studies) have higher posterior beliefs, find the results more credible, have less confidence in the average effect size estimate, and believe the results are less likely to stem from bias and error: instead, they report significantly lower posterior beliefs and are more likely to believe the results stem from error (we did not find significant effects on ratings of credibility, confidence, or bias). 
 ---
 background-image: url("talk/Figure1.jpg")
-background-position: 90% 60%
+background-position: 95% 57%
 background-size: 40%
 
 .center[
@@ -947,7 +938,7 @@ background-size: 40%
 `r icon_style(icons::fontawesome("arrow-circle-down"), scale = 1.5, fill = "red")` $~~~$ Have lower posterior beliefs  
 --
 
-`r icon_style(icons::fontawesome("arrow-circle-up"), scale = 1.5, fill = "green")` $~~~$ Believe the results are more likely to stem from error  
+`r icon_style(icons::fontawesome("arrow-circle-up"), scale = 1.5, fill = "green")` $~~~$ Believe the 5% estimate is more likely to stem from error  
 --
 
 $~~$  
@@ -957,15 +948,15 @@ We found **no significant effects** on
 `r icon_style(icons::fontawesome("question-circle"), scale = 1.5, fill = "grey")` $~~~$ Credibility of the results  
 --
 
-`r icon_style(icons::fontawesome("question-circle"), scale = 1.5, fill = "grey")` $~~~$ Confidence in the effect size estimate  
+`r icon_style(icons::fontawesome("question-circle"), scale = 1.5, fill = "grey")` $~~~$ Confidence in the aggregate parameter estimate of 5%  
 --
 
-`r icon_style(icons::fontawesome("question-circle"), scale = 1.5, fill = "grey")` $~~~$ Ratings of bias  
+`r icon_style(icons::fontawesome("question-circle"), scale = 1.5, fill = "grey")` $~~~$ Perceived impact of bias on the 5% estimate  
 --
 
 $~~$  
 For the additional **exploratory measure**, lay consumers of multi-analyst studies with **consistent** results
-`r icon_style(icons::fontawesome("arrow-circle-up"), scale = 1.5, fill = "green")` $~~~$ Believe the results are more likely to stem from experimenter degrees of freedom
+`r icon_style(icons::fontawesome("arrow-circle-up"), scale = 1.5, fill = "green")` $~~~$ Believe the 5% estimate is more likely to stem from idiosyncratic choices
 
 
 
@@ -999,8 +990,8 @@ name: discussion
 
 ???
 
-From the proliferation of big team science and large-scale replication initiatives to preregistration and registered reports, several scientific fields have undergone significant reform with the well-intended goal of improving the reliability of scientific research. The multi-analyst approach comes with many worthy uses, from demonstrating the arbitrariness and impact of individual analytic choices to acknowledging the inherent variability of results and averaging across idiosyncratic analytic choices to obtain more accurate parameter estimates. However, as with any real-world intervention, scientific reform can have unintended consequences. Here, we focus on the effects of crowdsourcing data analysis, and find that the multi-analyst approach may have an unintended consequence.
-While partly instituted with the goal of improving the credibility of scientific research (as shown in Table 1), lay consumers appear to resist the variability and lack of consensus that often comes with multi-analyst research. To our surprise, even when results generated by independent analysts are largely consistent, lay consumers are less likely to believe in the reported phenomenon and more likely to think that the findings stem from error and experimenter degrees of freedom. Given the resource-intensity of crowdsourced data analysis (Silberzahn & Uhlmann, 2015), our findings suggest that scientists who hope to improve lay perceptions of scientific findings may need to think twice before implementing multi-analyst studies. 
+From the proliferation of big team science and large-scale replication initiatives to preregistration and registered reports, several scientific fields have undergone significant reform with the well-intended goal of improving the reliability of scientific research. However, as with any real-world intervention, scientific reform can impose high costs, lack effectiveness, or have unintended consequences. 
+While partly instituted with the goal of improving the credibility of scientific research, lay consumers appear to resist the inherent variability and lack of consensus that often reflect the reality of multi-analyst research. To our surprise, even when results generated by independent analysts are largely consistent, lay consumers are less likely to believe in the reported phenomenon and more likely to think that the findings stem from error or idiosyncratic choices. Given the resource-intensity of crowdsourced data analysis (Silberzahn & Uhlmann, 2015), our findings suggest that scientists who hope to improve lay perceptions of scientific findings may need to think twice before implementing multi-analyst studies. 
 --
 
 `r icon_style(icons::fontawesome("exclamation-triangle"), scale = 1.5, fill = "#035AA6")` $~~$ However, scientific reform may have **unintended consequences**   

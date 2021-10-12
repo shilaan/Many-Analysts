@@ -50,7 +50,7 @@ We explore **the effects of scientific findings emerging from a crowd of researc
 | ------------- |  ------------- | ------------- | 
 | 1. Posterior beliefs | $~~~~~~~~~~$ `r icon_style(icons::fontawesome("user-plus"), scale = 1.5, fill = "green")`  | $~~~~~~~~~~$ `r icon_style(icons::fontawesome("user-minus"), scale = 1.5, fill = "red")` |
 |2. Credibility of the results | $~~~~~~~~~~$ `r icon_style(icons::fontawesome("user-plus"), scale = 1.5, fill = "green")` | $~~~~~~~~~~$ `r icon_style(icons::fontawesome("user-minus"), scale = 1.5, fill = "red")` |
-| 3. Confidence in precise estimate  | $~~~~~~~~~~$ `r icon_style(icons::fontawesome("user-minus"), scale = 1.5, fill = "red")`  | $~~~~~~~~~~$ `r icon_style(icons::fontawesome("user-minus"), scale = 1.5, fill = "red")` | 
+| 3. Confidence in the precise estimate  | $~~~~~~~~~~$ `r icon_style(icons::fontawesome("user-minus"), scale = 1.5, fill = "red")`  | $~~~~~~~~~~$ `r icon_style(icons::fontawesome("user-minus"), scale = 1.5, fill = "red")` | 
 | 4. Researcher bias | $~~~~~~~~~~$ `r icon_style(icons::fontawesome("user-minus"), scale = 1.5, fill = "red")` | $~~~~~~~~~~$ `r icon_style(icons::fontawesome("user-plus"), scale = 1.5, fill = "green")` |
 | 5. Researcher error | $~~~~~~~~~~$ `r icon_style(icons::fontawesome("user-minus"), scale = 1.5, fill = "red")` | $~~~~~~~~~~$ `r icon_style(icons::fontawesome("user-plus"), scale = 1.5, fill = "green")` |
 | 6. Researcher discretion | $~~~$ No prediction | $~~~$ No prediction |
@@ -108,9 +108,9 @@ knitr::include_graphics("Figure2.jpg")
 # Discussion  
 **Conclusion**  
 `r icon_style(icons::fontawesome("sitemap"), scale = 1.3, fill = "#035AA6")` $~$ Crowdsourced data analysis has **many worthy uses**, but...    
-`r icon_style(icons::fontawesome("hand-holding-usd"), scale = 1.3, fill = "#035AA6")` $~~$ It's highly **resource-intensive**, and...    
+`r icon_style(icons::fontawesome("hand-holding-usd"), scale = 1.3, fill = "#035AA6")` $~~$ It's highly **resource-intensive**    
 `r icon_style(icons::fontawesome("exclamation-triangle"), scale = 1.3, fill = "#035AA6")` $~$ **Variability** and  **lack of consensus** may evoke negative responses
-`r icon_style(icons::fontawesome("question-circle"), scale = 1.3, fill = "#035AA6")` $~~$ Surprisingly, **multiple, consistent estimates may backfire**
+`r icon_style(icons::fontawesome("question-circle"), scale = 1.3, fill = "#035AA6")` $~~$ Surprisingly, even **multiple, consistent estimates may backfire**
 
 **Future Directions**  
 `r icon_style(icons::fontawesome("flask"), scale = 1.3, fill = "#035AA6")` $~~~$ Perceptions of **scientists**?  
