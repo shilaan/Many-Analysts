@@ -101,21 +101,22 @@ For the additional **exploratory measure**, lay consumers of multi-analyst studi
 `r icon_style(icons::fontawesome("arrow-circle-up"), scale = 1.5, fill = "green")` $~~~$ Perceive greater researcher degrees of freedom  
 
 **Figure 2**: *Distribution of prior and posterior beliefs by condition*  
-```{r, echo = FALSE, out.width='92%', fig.retina=3, fig.align='center'}
+```{r, echo = FALSE, out.width='90%', fig.retina=3, fig.align='center'}
 knitr::include_graphics("Figure2.jpg")
 ```
 
 # Discussion  
 **Conclusion**  
-`r icon_style(icons::fontawesome("sitemap"), scale = 1.4, fill = "#035AA6")` $~$ Crowdsourced data analysis has **many worthy uses**, but...    
-`r icon_style(icons::fontawesome("hand-holding-usd"), scale = 1.4, fill = "#035AA6")` $~~$ It's highly **resource-intensive**, and...    
-`r icon_style(icons::fontawesome("exclamation-triangle"), scale = 1.4, fill = "#035AA6")` $~~$ **Variability** and  **lack of consensus** may evoke negative responses   
+`r icon_style(icons::fontawesome("sitemap"), scale = 1.3, fill = "#035AA6")` $~$ Crowdsourced data analysis has **many worthy uses**, but...    
+`r icon_style(icons::fontawesome("hand-holding-usd"), scale = 1.3, fill = "#035AA6")` $~~$ It's highly **resource-intensive**, and...    
+`r icon_style(icons::fontawesome("exclamation-triangle"), scale = 1.3, fill = "#035AA6")` $~$ **Variability** and  **lack of consensus** may evoke negative responses
+`r icon_style(icons::fontawesome("question-circle"), scale = 1.3, fill = "#035AA6")` $~~$ Surprisingly, **multiple, consistent estimates may backfire**
 
 **Future Directions**  
-`r icon_style(icons::fontawesome("flask"), scale = 1.5, fill = "#035AA6")` $~~~$ Perceptions of **scientists**?  
-`r icon_style(icons::fontawesome("comments"), scale = 1.5, fill = "#035AA6")` $~~$ **Science communication** and **communicating uncertainty**  
+`r icon_style(icons::fontawesome("flask"), scale = 1.3, fill = "#035AA6")` $~~~$ Perceptions of **scientists**?  
+`r icon_style(icons::fontawesome("comments"), scale = 1.3, fill = "#035AA6")` $~~$ **Science communication** and **communicating uncertainty**  
 
 **Open Science Statement**  
 The preregistration, survey materials, data, and code that support the findings of this study are openly available on GitHub and the OSF.  
-`r icon_style(icons::fontawesome("github"), scale = 1.5, fill = "#035AA6")` $~~$ [Insert GitHub link here]   
-`r icon_style(icons::academicons("osf"), scale = 1.5, fill = "#035AA6")` $~~$ [Insert OSF link here]  
+`r icon_style(icons::fontawesome("github"), scale = 1.3, fill = "#035AA6")` $~~$ [Insert GitHub link here]   
+`r icon_style(icons::academicons("osf"), scale = 1.3, fill = "#035AA6")` $~~$ [Insert OSF link here]  
