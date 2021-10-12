@@ -19,7 +19,7 @@ abstract: |
   A recent movement towards crowd science has emerged in the behavioral sciences. One of the aims of crowd science is to increase the credibility of scientific research. Does it meet this promise in reality? We run an experiment to study the effects of scientific findings emerging from a crowd of researchers (vs. a typical research collaboration) on lay consumers' posterior beliefs and ratings of credibility, confidence in an aggregate effect size estimate, bias, and error. We focus on crowdsourced data analysis, also known as the 'many analysts' or 'multi-analyst' approach: giving the same dataset to different teams of scientists, who independently analyze the data to answer a research question and/or estimate a parameter of interest. We compare the effects of providing a single, aggregate parameter estimate (the single-analyst condition) vs. multiple parameter estimates that (a) vary slightly and are all positive, leading to the same qualitative conclusion (the "multi-consistent" condition) or (b) vary widely and are of both signs, leading to differing qualitative conclusions (the "multi-inconsistent" condition). In line with our hypotheses, we find that lay consumers of multi-analyst studies with inconsistent results (compared to single-analyst studies) have lower posterior beliefs, find the results less credible, have less confidence in the average effect size estimate, and believe the results are more likely to stem from bias and error. Contrary to our hypotheses, we do not find that multi-analyst studies with consistent results (compared to single-analyst studies) increase the sway and credibility of scientific findings to lay consumers: instead, to our surprise, they lead to lower posterior beliefs and higher ratings of error. 
   
 keywords          : "Crowd science, Many analysts, Multi-analyst, Variability, Research credibility"
-wordcount         : "3,710"
+wordcount         : "3,692"
 
 bibliography      : ["r-references.bib", "references.bib"]
 
@@ -125,31 +125,37 @@ results <- function(Predictor, Multi_Condition = "Consistent") {
     pull(df, {{ Predictor }}) ~ Condition + Prior_beliefs, data = df)
   
   apa_results <- apa_print(linear_mod)
-  
+
+
   ifelse(Multi_Condition == "Consistent",
          paste(apa_results$estimate$ConditionMulti_consistent,
-               apa_results$statistic$ConditionMulti_consistent,
-               sep = ", "),
+               strsplit(apa_results$statistic$ConditionMulti_consistent, ",")[[1]][2],
+               sep = ", "), #print without t-values, otherwise use apa_results$full_result
          paste(apa_results$estimate$ConditionMulti_inconsistent,
-               apa_results$statistic$ConditionMulti_inconsistent,
+               strsplit(apa_results$statistic$ConditionMulti_inconsistent, ",")[[1]][2],
                sep = ", ")
          )
+
 }
 
 # Post-hoc t-test
 df_multiconsistent <- df %>% 
   filter(Condition == "Multi-consistent")
 
-t_test <- t.test(df_multiconsistent$Final_beliefs, df_multiconsistent$Prior_beliefs, paired = TRUE)
-t_apa <- apa_print(t_test)
+t_test <- apa_print(t.test(df_multiconsistent$Final_beliefs, df_multiconsistent$Prior_beliefs, paired = TRUE))
+
+t_apa <- paste(t_test$estimate, 
+               strsplit(t_test$statistic, ",")[[1]][2], #take out t-value
+               sep = ", ")
 ```
 
 After two weeks of data collection, we recorded `r n_recorded` responses in Qualtrics. We excluded `r n_more_than_once` observations from participants who attempted to take the survey more than once, `r n_screened_out` participants who were screened out prior to starting the survey or did not consent, and `r n_failed_attention` participants who failed the attention check. This left us with a total sample of `r nrow(df)` participants (`r ns_bycondition[1]`, `r ns_bycondition[2]`, and `r ns_bycondition[3]` in the single-analyst, multi-consistent, and multi-inconsistent condition, respectively).     
-Our main findings are displayed in Figure 1. Controlling for prior beliefs and comparing to the single-analyst condition, we found that (1) reported posterior beliefs were significantly lower in both the multi-consistent condition, `r results(Final_beliefs)`, and the multi-inconsistent condition, `r results(Final_beliefs, "Inconsistent")`; (2) ratings of credibility were significantly lower in the multi-inconsistent condition, `r results(Credibility, "Inconsistent")`, while they were not significantly different in the multi-consistent condition, `r results(Credibility)`; (3) confidence in the effect size estimate was significantly lower in the multi-inconsistent condition, `r results(Confidence, "Inconsistent")`, while it was not significantly different in the multi-consistent condition, `r results(Confidence)`; (4) ratings of bias were significantly greater in the multi-inconsistent condition, `r results(Bias, "Inconsistent")`, while they were not significantly different in the multi-consistent condition, `r results(Bias)`; and (5) ratings of error were significantly greater in both the multi-consistent condition, `r results(Error)`, and the multi-inconsistent condition, `r results(Error, "Inconsistent")`. For our exploratory measure of discretion, we found that ratings of researcher degrees of freedom were significantly greater in both the multi-consistent condition, `r results(Discretion)`, and the multi-inconsistent condition, `r results(Discretion, "Inconsistent")`.   
+Figure 1 displays the main findings of our linear regression models, which compare each condition to the single-analyst condition and control for prior beliefs. For the multi-inconsistent condition, we found significantly lower (a) posterior beliefs, `r results(Final_beliefs, "Inconsistent")`; (b) ratings of credibility, `r results(Confidence, "Inconsistent")`; and (c) confidence in the effect size estimate, `r results(Confidence, "Inconsistent")`; and significantly higher (d) ratings of bias, `r results(Bias, "Inconsistent")`; (e) error, `r results(Error, "Inconsistent")`; and (f) discretion, `r results(Discretion, "Inconsistent")`.  
+For the multi-consistent condition, we found significantly lower (a) posterior beliefs, `r results(Final_beliefs)`; significantly higher (b) ratings of error, `r results(Error)`; and (c) discretion, `r results(Discretion)`, and no significant effects on (d) ratings of credibility, `r results(Credibility)`, (e) confidence in the effect size estimate, `r results(Confidence)`, or (f) ratings of bias, `r results(Bias)`.     
 **[Insert Figure 1 here]**  
 In line with our hypotheses, lay consumers of multi-analyst studies with inconsistent results (compared to single-analyst studies) have lower posterior beliefs, find the results less credible, have less confidence in the average effect size estimate, and believe the results are more likely to stem from bias and error. Contrary to our hypotheses, we do not find that lay consumers of multi-analyst studies with consistent results (compared to single-analyst studies) have higher posterior beliefs, find the results more credible, have less confidence in the average effect size estimate, and believe the results are less likely to stem from bias and error: instead, they report significantly lower posterior beliefs and are more likely to believe the results stem from error (we did not find significant effects on ratings of credibility, confidence, or bias). Figure 2 further clarifies the sway of multi-analyst vs. single-analyst studies, by displaying the distribution of prior and posterior beliefs across the three conditions.  
 **[Insert Figure 2 here]**  
-It is worth noting on the basis of Figure 2 and a post-hoc, paired *t*-test that, while multi-analyst studies with consistent results perform worse or no better than single-analyst studies on all measures, there is a significant, positive effect of the findings on posterior beliefs *within* the multi-consistent condition: i.e., beliefs in the research hypothesis are greater after reading the multi-consistent study results, `r t_apa$full_result`. This finding clarifies that multi-analyst studies are not necessarily bad in absolute terms --- however, when comparing to conventional, single-analyst scientific research, crowdsourced data analysis does not seem to provide an improvement in the sway and credibility of scientific research to lay consumers.  
+It is worth noting on the basis of Figure 2 and a post-hoc, paired *t*-test that, while multi-analyst studies with consistent results perform worse or no better than single-analyst studies on all measures, there is a significant, positive effect of the findings on posterior beliefs *within* the multi-consistent condition: i.e., beliefs in the research hypothesis are greater after reading the multi-consistent study results, `r t_apa`. This finding clarifies that multi-analyst studies are not necessarily bad in absolute terms --- however, when comparing to conventional, single-analyst scientific research, crowdsourced data analysis does not seem to provide an improvement in the sway and credibility of scientific research to lay consumers.  
 
 # Discussion
 
@@ -201,12 +207,12 @@ The data that support the findings of this study are openly available on GitHub 
 
 | Measure | Multi-consistent | Multi-inconsistent |
 | ------------- |  ------------- | ------------- | 
-| 1. Posterior beliefs | `r icon_style(icons::fontawesome("user-plus"), scale = 1.5, fill = "green")`  | `r icon_style(icons::fontawesome("user-minus"), scale = 1.5, fill = "red")` |
-|2. Credibility | `r icon_style(icons::fontawesome("user-plus"), scale = 1.5, fill = "green")` | `r icon_style(icons::fontawesome("user-minus"), scale = 1.5, fill = "red")` |
-| 3. Confidence  | `r icon_style(icons::fontawesome("user-minus"), scale = 1.5, fill = "red")`  | `r icon_style(icons::fontawesome("user-minus"), scale = 1.5, fill = "red")` | 
-| 4. Bias | `r icon_style(icons::fontawesome("user-minus"), scale = 1.5, fill = "red")` | `r icon_style(icons::fontawesome("user-plus"), scale = 1.5, fill = "green")` |
-| 5. Error | `r icon_style(icons::fontawesome("user-minus"), scale = 1.5, fill = "red")` | `r icon_style(icons::fontawesome("user-plus"), scale = 1.5, fill = "green")` |
-| 6. Discretion | No prediction | No prediction |
+| 1. Posterior beliefs | $~~~~~~~~~~$ `r icon_style(icons::fontawesome("user-plus"), scale = 1.5, fill = "green")`  | $~~~~~~~~~~$ `r icon_style(icons::fontawesome("user-minus"), scale = 1.5, fill = "red")` |
+|2. Credibility of the results | $~~~~~~~~~~$ `r icon_style(icons::fontawesome("user-plus"), scale = 1.5, fill = "green")` | $~~~~~~~~~~$ `r icon_style(icons::fontawesome("user-minus"), scale = 1.5, fill = "red")` |
+| 3. Confidence in precise estimate  | $~~~~~~~~~~$ `r icon_style(icons::fontawesome("user-minus"), scale = 1.5, fill = "red")`  | $~~~~~~~~~~$ `r icon_style(icons::fontawesome("user-minus"), scale = 1.5, fill = "red")` | 
+| 4. Researcher bias | $~~~~~~~~~~$ `r icon_style(icons::fontawesome("user-minus"), scale = 1.5, fill = "red")` | $~~~~~~~~~~$ `r icon_style(icons::fontawesome("user-plus"), scale = 1.5, fill = "green")` |
+| 5. Researcher error | $~~~~~~~~~~$ `r icon_style(icons::fontawesome("user-minus"), scale = 1.5, fill = "red")` | $~~~~~~~~~~$ `r icon_style(icons::fontawesome("user-plus"), scale = 1.5, fill = "green")` |
+| 6. Researcher discretion | $~~~$ No prediction | $~~~$ No prediction |
 *Note*. Table 2 indicates the predicted direction of the effect for all dependent variables, compared to the single-analyst condition and controlling for prior beliefs (a green plus stands for a positive prediction, and a red minus stands for a negative prediction). For example, we hypothesized that, compared to a single-analyst study and controlling for prior beliefs, ratings of credibility would be greater in the multi-consistent condition and lower in the multi-inconsistent condition.  
 
 \newpage
@@ -214,7 +220,7 @@ The data that support the findings of this study are openly available on GitHub 
 # Figures
 
 ## Figure 1
-*Estimates and 95% Confidence Intervals for all outcomes*
+*Estimates relative to the single-analyst condition*
 \noindent
 ```{r fig-1, echo=FALSE}
 tidy_df <- function(Predictor) {

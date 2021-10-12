@@ -48,12 +48,12 @@ We explore **the effects of scientific findings emerging from a crowd of researc
 
 | Measure | Multi-consistent | Multi-inconsistent |
 | ------------- |  ------------- | ------------- | 
-| 1. Posterior beliefs | `r icon_style(icons::fontawesome("user-plus"), scale = 1.5, fill = "green")`  | `r icon_style(icons::fontawesome("user-minus"), scale = 1.5, fill = "red")` |
-|2. Credibility | `r icon_style(icons::fontawesome("user-plus"), scale = 1.5, fill = "green")` | `r icon_style(icons::fontawesome("user-minus"), scale = 1.5, fill = "red")` |
-| 3. Confidence  | `r icon_style(icons::fontawesome("user-minus"), scale = 1.5, fill = "red")`  | `r icon_style(icons::fontawesome("user-minus"), scale = 1.5, fill = "red")` | 
-| 4. Bias | `r icon_style(icons::fontawesome("user-minus"), scale = 1.5, fill = "red")` | `r icon_style(icons::fontawesome("user-plus"), scale = 1.5, fill = "green")` |
-| 5. Error | `r icon_style(icons::fontawesome("user-minus"), scale = 1.5, fill = "red")` | `r icon_style(icons::fontawesome("user-plus"), scale = 1.5, fill = "green")` |
-| 6. Discretion | No prediction | No prediction |
+| 1. Posterior beliefs | $~~~~~~~~~~$ `r icon_style(icons::fontawesome("user-plus"), scale = 1.5, fill = "green")`  | $~~~~~~~~~~$ `r icon_style(icons::fontawesome("user-minus"), scale = 1.5, fill = "red")` |
+|2. Credibility of the results | $~~~~~~~~~~$ `r icon_style(icons::fontawesome("user-plus"), scale = 1.5, fill = "green")` | $~~~~~~~~~~$ `r icon_style(icons::fontawesome("user-minus"), scale = 1.5, fill = "red")` |
+| 3. Confidence in precise estimate  | $~~~~~~~~~~$ `r icon_style(icons::fontawesome("user-minus"), scale = 1.5, fill = "red")`  | $~~~~~~~~~~$ `r icon_style(icons::fontawesome("user-minus"), scale = 1.5, fill = "red")` | 
+| 4. Researcher bias | $~~~~~~~~~~$ `r icon_style(icons::fontawesome("user-minus"), scale = 1.5, fill = "red")` | $~~~~~~~~~~$ `r icon_style(icons::fontawesome("user-plus"), scale = 1.5, fill = "green")` |
+| 5. Researcher error | $~~~~~~~~~~$ `r icon_style(icons::fontawesome("user-minus"), scale = 1.5, fill = "red")` | $~~~~~~~~~~$ `r icon_style(icons::fontawesome("user-plus"), scale = 1.5, fill = "green")` |
+| 6. Researcher discretion | $~~~$ No prediction | $~~~$ No prediction |
 *Note*. Table 1 indicates the predicted direction of effects for all outcomes, **compared to the single-analyst condition** and **controlling for prior beliefs** (a green plus/red minus indicates a positive/negative prediction, respectively). For example, we hypothesized that, compared to a single-analyst study and controlling for prior beliefs, ratings of credibility would be greater in the multi-consistent condition and lower in the multi-inconsistent condition.  
 
 
@@ -75,7 +75,7 @@ knitr::include_graphics("mermaid.png")
 
 # Results
 
-**Figure 1**: *Estimates (and 95% CIs) for all outcomes*
+**Figure 1**: *Estimates relative to the single-analyst condition*
 ```{r, echo = FALSE, out.width='95%', fig.retina=3, fig.align='left'}
 knitr::include_graphics("Figure1.jpg")
 ```
@@ -108,12 +108,12 @@ knitr::include_graphics("Figure2.jpg")
 # Discussion  
 **Conclusion**  
 `r icon_style(icons::fontawesome("sitemap"), scale = 1.4, fill = "#035AA6")` $~$ Crowdsourced data analysis has **many worthy uses**, but...    
+`r icon_style(icons::fontawesome("hand-holding-usd"), scale = 1.4, fill = "#035AA6")` $~~$ It's highly **resource-intensive**, and...    
 `r icon_style(icons::fontawesome("exclamation-triangle"), scale = 1.4, fill = "#035AA6")` $~~$ **Variability** and  **lack of consensus** may evoke negative responses   
 
 **Future Directions**  
 `r icon_style(icons::fontawesome("flask"), scale = 1.5, fill = "#035AA6")` $~~~$ Perceptions of **scientists**?  
 `r icon_style(icons::fontawesome("comments"), scale = 1.5, fill = "#035AA6")` $~~$ **Science communication** and **communicating uncertainty**  
-`r icon_style(icons::fontawesome("lightbulb"), scale = 1.5, fill = "#035AA6")` $~~~~$ Other **suggestions**?  
 
 **Open Science Statement**  
 The preregistration, survey materials, data, and code that support the findings of this study are openly available on GitHub and the OSF.  
