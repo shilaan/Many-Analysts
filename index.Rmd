@@ -139,7 +139,7 @@ First, I'll share a brief open science statement and links to all the available 
 `r icon_style(icons::fontawesome("chart-bar"), scale = 2, fill = "#035AA6")` $~~~$ [**Crowdsourcing Data Analysis**](#crowddata)  
 --
 
-`r icon_style(icons::fontawesome("question-circle"), scale = 2, fill = "#035AA6")` $~~~$ [**Lay Perceptions: Are Crowd-Scientific Findings More Credible?**](#lay)   
+`r icon_style(icons::fontawesome("question-circle"), scale = 2, fill = "#035AA6")` $~~~$ [**Lay Perceptions of Crowd-Scientific Findings**](#lay)   
 --
 
 `r icon_style(icons::fontawesome("tools"), scale = 2, fill = "#035AA6")` $~~~$ [**Method**](#method)  
@@ -386,6 +386,116 @@ DT::datatable(t1, fillContainer = FALSE, options = list(pageLength = 2))
 3 papers published in 2021, one looking at variability in the analysis of replications, another one at opinions about different social policies, and one OBHDP looking at the effects of scientists’ gender and professional status on verbosity during group meetings. Two papers in 2020, one looking at variability in the analysis of fmri (neuroimaging datasets), another in applied microeconomics. One paper from 2019 that evaluated the extent to which clinical psychologists analyzing the same experience sampling data come to different conclusions about symptoms to target for treatment. And one really famous study in 2018, that looked at discrimination against darker skin toned soccer players, and arguably started the recent crowd science movement in behavioral science. 
 
 ---
+# The Rationale of Crowdsourced Data Analysis
+
+???
+
+What is the rationale of crowdsourced data analysis - why should we be convinced by its findings?
+
+--
+
+### **The Wisdom of the Crowd**
+
+--
+
+`r icon_style(icons::fontawesome("volume-up"), scale = 1.5, fill = "#035AA6")` $~~~$ Individual judgments are associated with **idiosyncratic noise**  
+--
+
+`r icon_style(icons::fontawesome("microphone-alt-slash"), scale = 1.5, fill = "#035AA6")` $~~$ Averaging over many judgments can **cancel** some of that noise
+
+
+---
+background-image: url("talk/ox.png")
+background-position: 99% 60%
+background-size: 35%
+
+# The Rationale of Crowdsourced Data Analysis
+
+### **The Wisdom of the Crowd**
+
+`r icon_style(icons::fontawesome("volume-up"), scale = 1.5, fill = "#035AA6")` $~~~$ Individual judgments are associated with **idiosyncratic noise**  
+
+
+`r icon_style(icons::fontawesome("microphone-alt-slash"), scale = 1.5, fill = "#035AA6")` $~~$ Averaging over many judgments can **cancel** some of that noise
+
+
+
+$~~$  
+
+In 1906, 787 people guessed the weight of an ox at a farmers' fair...
+
+`r icon_style(icons::fontawesome("angle-right"), scale = 1.5, fill = "#035AA6")` $~~$ The **mean** of all guesses was exactly **equal to the true value**
+
+`r icon_style(icons::fontawesome("angle-right"), scale = 1.5, fill = "#035AA6")` $~~$ The mean **outperformed** the estimates of **experts**  
+
+`r icon_style(icons::fontawesome("angle-right"), scale = 1.5, fill = "#035AA6")` $~~$ The mean **outperformed** the individual **best guesser**  
+
+
+???
+
+The true weight, and the mean of all guesses was 1197 pounds. This may seem unsurprising now, but it wasn't back then. Back then, the fact that crowds were wise was a surprise. Crowds mostly had negative associations, were referred to as mobs, and there was heated intellectual debate about restricting the right to vote to intellectuals, rather than democratizing society. 
+
+To benefit from the wisdom of crowds several conditions must be in place. First each individual member of the crowd must have their own independent source of information. Second they must make individual decisions and not be swayed by the decisions of those around them. And third, there must be a mechanism in place that can collate these diverse opinions.
+
+---
+# Benefits of Crowdsourced Data Analysis  
+
+### **Crowdsourced data analysis can help to...**
+
+???
+
+I'll mention some benefits, most of which are intimately related with each other, some of them will overlap. 
+
+--
+`r icon_style(icons::fontawesome("users"), scale = 1.5, fill = "#035AA6")` $~~$   **Diversify** contributions to research 
+
+???
+
+Promote inclusivity, include researchers from underrepresented institutions. This comes with all the benefits of diversity. 
+Allows us to leverage under-used resources and skills. We can't all be an expert on everything. If we recruit a diverse sample of data analysts, some may have expertise on a certain statistical method that is most appropriate for the data at hand, whereas others do not
+
+--
+
+`r icon_style(icons::fontawesome("bezier-curve"), scale = 1.5, fill = "#035AA6")` $~~$   Expose the **inherent variability** of results
+
+???
+
+Helps to acknowledge that results are very variable, and depend on idiosyncratic choices we have to make among multiple valid approaches, sometimes even choices we make unconsciously, such as the version of statistical software we rely on or the different defaults in for instance SPSS and R: the many-analyst approach does not *create* variability in results, it simply *exposes* it. that should give us pause and epistemic humility when we assess conventional scientific research: the particular outcome you're looking at is one from a distribution of outcomes that could have been possible, if the analyst had made different choices
+
+--
+
+
+`r icon_style(icons::fontawesome("route"), scale = 1.5, fill = "#035AA6")` $~~~$ Assess the **impact of individual analytic choices** on the results  
+
+???
+
+Can we explain the strength of the evidence obtained by the individual decisions researchers make? Does the choice to include or exclude a certain control variable, to run a certain statistical model, to exclude or include certain participants, impact the results? Do people who obtain positive findings use more controls or exclude more participants? Do people who obtain negative findings use more complex statistical models?
+
+Shows us *the garden of forking paths*
+--
+
+`r icon_style(icons::fontawesome("dumbbell"), scale = 1.4, fill = "#035AA6")` $~~$ Assess the overall **analytic robustness** of a finding  
+
+???
+
+To what extent does a finding hold across many different analytic specifications? Do the results come it consistently positive, or consistently negative, across different independent analyses?
+--
+
+`r icon_style(icons::fontawesome("vials"), scale = 1.5, fill = "#035AA6")` $~~$  **Increase confidence** when independent analyses yield the same conclusion  
+
+???
+
+● Converging conclusions increase confidence in the analytical robustness of a finding
+● Diverging conclusions decrease confidence in the analytical robustness of a finding and prompt an examination of the reasons for the divergence"
+
+--
+
+`r icon_style(icons::fontawesome("divide"), scale = 1.5, fill = "#035AA6")` $~~~~$  Average across idiosyncratic analytic choices to obtain **more accurate parameter estimates**  
+
+--
+`r icon_style(icons::fontawesome("balance-scale"), scale = 1.5, fill = "#035AA6")` $~~$   ... and to **balance out individual biases and errors** in the aggregate  
+
+---
 class: inverse, center, middle
 name: lay
 
@@ -393,9 +503,9 @@ name: lay
 
 
 ---
-# Credibility of Crowd-Scientific Findings
+# Lay Perceptions of Crowd-Scientific Findings
 
-According to science reformers, crowd-scientific findings should **increase the credibility of scientific research**
+According to its proponents, crowdsourcing data analysis should **improve lay perceptions of scientific findings**  
 --
 
 $~~$  
@@ -453,7 +563,7 @@ name: method
 
 ---
 
-## Are Crowd-Scientific Findings More Credible `r icon_style(icons::fontawesome("question-circle"), scale = 1, fill = "#035AA6")`
+# Method
 
 --
 
@@ -478,7 +588,7 @@ Three scenarios
 --
 
 $~~$  
-In all three conditions, the given estimates average to 5%. We study the **effects on** 
+In all three conditions, the given estimates average to 5%. We study the **effects on**
 
 .pull-left[
 `r icon_style(icons::fontawesome("angle-right"), scale = 1.5, fill = "#035AA6")` **Posterior beliefs** about the reported phenomenon  
@@ -984,20 +1094,24 @@ name: discussion
 
 ---
 
+
 # Conclusion
 
-`r icon_style(icons::fontawesome("sitemap"), scale = 1.5, fill = "#035AA6")`   $~$ Crowdsourced data analysis has **many worthy uses**  
+`r icon_style(icons::fontawesome("sitemap"), scale = 1.5, fill = "#035AA6")`   $~$ Crowdsourced data analysis has **many worthy uses**, but...  
 
 ???
 
-From the proliferation of big team science and large-scale replication initiatives to preregistration and registered reports, several scientific fields have undergone significant reform with the well-intended goal of improving the reliability of scientific research. However, as with any real-world intervention, scientific reform can impose high costs, lack effectiveness, or have unintended consequences. 
+From the proliferation of big team science and large-scale replication initiatives to preregistration and registered reports, several scientific fields have undergone significant reform with the well-intended goal of improving the reliability of scientific research. The multi-analyst approach has many worthy uses, from demonstrating the arbitrariness and impact of individual analytic choices to acknowledging the inherent variability of results and averaging across idiosyncratic analytic choices to obtain more accurate parameter estimates. However, as with any real-world intervention, scientific reform can have unintended consequences. Here, we focus on the effects of crowdsourcing data analysis, and find that the multi-analyst approach may have an unintended consequence.  
 While partly instituted with the goal of improving the credibility of scientific research, lay consumers appear to resist the inherent variability and lack of consensus that often reflect the reality of multi-analyst research. To our surprise, even when results generated by independent analysts are largely consistent, lay consumers are less likely to believe in the reported phenomenon and more likely to think that the findings stem from error or idiosyncratic choices. Given the resource-intensity of crowdsourced data analysis (Silberzahn & Uhlmann, 2015), our findings suggest that scientists who hope to improve lay perceptions of scientific findings may need to think twice before implementing multi-analyst studies. 
 --
 
-`r icon_style(icons::fontawesome("exclamation-triangle"), scale = 1.5, fill = "#035AA6")` $~~$ However, scientific reform may have **unintended consequences**   
+`r icon_style(icons::fontawesome("hand-holding-usd"), scale = 1.5, fill = "#035AA6")` $~~$ It's highly **resource-intensive**  
 --
 
-`r icon_style(icons::fontawesome("users-slash"), scale = 1.4, fill = "#035AA6")` $~~$ Lay consumers may respond negatively to **variability** and  **lack of consensus**   
+`r icon_style(icons::fontawesome("exclamation-triangle"), scale = 1.5, fill = "#035AA6")` $~~$ Lay consumers may respond negatively to **variability** and  **lack of consensus**     
+--
+
+`r icon_style(icons::fontawesome("question-circle"), scale = 1.6, fill = "#035AA6")` $~~$ Surprisingly, even **multiple, consistent estimates may backfire**   
 --
 
 ## Future directions
@@ -1008,7 +1122,6 @@ While partly instituted with the goal of improving the credibility of scientific
 --
 
 `r icon_style(icons::fontawesome("lightbulb"), scale = 1.5, fill = "#035AA6")` $~~~$ Other **suggestions**?
-
 
 
 ---
