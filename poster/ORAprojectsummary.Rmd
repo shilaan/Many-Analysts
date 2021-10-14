@@ -24,7 +24,7 @@ abstract: |
 keywords          : "Crowd science, Many analysts, Multi-analyst, Variability, Research credibility"
 wordcount         : "Abstract: 383, Project summary: x"
 
-bibliography      : ["r-references.bib", "references.bib"]
+bibliography      : ["references.bib"]
 
 floatsintext      : no
 figurelist        : no
@@ -53,7 +53,6 @@ library(rmarkdown)
 library(here)
 library(icons)
 library(rsvg)
-r_refs("r-references.bib")
 ```
 
 The credibility of scientific research is in doubt, among lay consumer [@hornsey2017] and scientist [@pashler2012] alike. Several tools have been proposed to combat this "crisis of confidence" (Ibid., p. 528). One such tool is the crowd science approach: "the organization of scientific research in open and collaborative projects"  [@franzoni2014, p. 1]. We focus on crowdsourced data analysis, also known as the 'many analysts' or 'multi-analyst' approach: a crowd of scientists independently analyzes the same dataset to estimate and report on a parameter of interest.  
