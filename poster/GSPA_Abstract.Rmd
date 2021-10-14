@@ -9,13 +9,13 @@ output: pdf_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-Word count: 699
+Word count: 696
 
 # Introduction
 
 Crowd science is on the rise in behavioral science and aims to increase its credibility. Whether it does, however, remains untested: does crowd science improve lay perceptions of scientific findings?  
- $~~~~~~~$ We focus on crowdsourced data analysis: independent analysts estimate a parameter from the same dataset. We compare the effects of providing lay consumers with a single parameter estimate vs. multiple consistent (inconsistent) parameter estimates that show low (high) variance and high (low) consensus.  
- $~~~~~~~$ Table 1 reports our preregistered hypotheses: when laypeople observe multiple consistent (inconsistent) estimates from independent scientists, we expect -- compared to one estimate from a single team -- an increase (decrease) in posterior beliefs and credibility of the results, and a decrease (increase) in ratings of bias and error. In addition, we expect that the act of providing multiple estimates decreases confidence in the aggregate parameter estimate in both multi-estimate conditions.
+ $~~~~~~~$ We focus on crowdsourced data analysis: independent scientists estimate and report a parameter from the same dataset. We compare the effects of providing lay consumers with a single parameter estimate vs. multiple consistent (inconsistent) parameter estimates that show low (high) variance and high (low) consensus.  
+ $~~~~~~~$ Table 1 reports our preregistered hypotheses: when laypeople observe multiple consistent (inconsistent) estimates from a crowd of independent scientists, we expect -- compared to a single, non-crowdsourced estimate -- higher (lower) posterior beliefs and credibility of the results, and lower (greater) ratings of bias and error. In addition, we expect that observing differing estimates decreases confidence in the precise average parameter estimate in both multi-estimate conditions.
 
 # Methods
 

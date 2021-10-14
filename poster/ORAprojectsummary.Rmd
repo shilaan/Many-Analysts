@@ -1,0 +1,209 @@
+---
+title             : "Lay Perceptions of Scientific Findings: The Risks of Variability and Lack of Consensus"
+shorttitle        : "Lay Perceptions of Scientific Findings"
+
+author:
+  - name          : "Insert first author name here"
+    affiliation   : "1"
+    corresponding : no    # Define only one corresponding author
+    address       : ""
+    email         : ""
+  - name          : "Insert second author name here"
+    affiliation   : "1"
+
+affiliation:
+  - id            : "1"
+    institution   : "Insert affiliation here"
+    
+abstract: |
+  Crowd science is on the rise in behavioral science and aims to increase the credibility of scientific research. Whether it does, however, remains untested. We run an experiment to study whether crowd science improves lay perceptions of scientific findings. We focus on crowdsourced data analysis: a crowd of scientists independently analyzes the same dataset to estimate and report on a parameter of interest.  
+  We compare the effects of providing lay consumers (*N* = 1,498) with a single non-crowdsourced parameter estimate (the single-analyst condition) vs. multiple crowdsourced parameter estimates that (a) vary slightly and are all positive, leading to the same qualitative conclusion (the "multi-consistent" condition) or (b) vary widely and are of both signs, leading to differing qualitative conclusions (the "multi-inconsistent" condition). In the single-analyst condition, a single team of six researchers reports a 5% estimate; in the multi-consistent condition, six independent researchers report six low variance, high consensus estimates (2%, 4%, 5%, 5%, 6%, 8%; $M = 5\%, \sigma = 2\%$); in the multi-inconsistent condition, six independent researchers report six high variance, low consensus estimates (-6%, -2%, 5%, 5%, 12%, 16%; $M = 5\%, \sigma = 8.25\%$).  
+  According to our preregistered hypotheses and in line with social norm theory, when laypeople observe multiple consistent (inconsistent) estimates from independent scientists rather than a single estimate, we expect an increase (decrease) in posterior beliefs and credibility of the results, and a decrease (increase) in ratings of bias and error. In addition, we expect that observing differing estimates decreases confidence in the precise average estimate in both multi-estimate conditions.  `r knitr::load_cache("results")`
+  In line with our hypotheses, we find that lay consumers of multiple, inconsistent (high variance, low consensus) crowdsourced estimates have lower posterior beliefs, `r final_inconsistent`; find the results less credible, `r credibility_inconsistent`; have less confidence in the average effect size estimate, `r confidence_inconsistent`; and believe the results are more likely to stem from bias, `r bias_inconsistent`, and error, `r error_inconsistent`, than consumers of a single, non-crowdsourced estimate. Contrary to our hypotheses, we do not find that consuming multiple, consistent (low variance, high consensus) crowdsourced estimates improves lay perceptions of scientific findings: instead, to our surprise, it leads to lower posterior beliefs, `r final`, and higher ratings of error, `r error`, than a single, non-crowdsourced estimate. 
+  
+keywords          : "Crowd science, Many analysts, Multi-analyst, Variability, Research credibility"
+wordcount         : "Abstract: 383, Project summary: x"
+
+bibliography      : ["r-references.bib", "references.bib"]
+
+floatsintext      : no
+figurelist        : no
+tablelist         : no
+footnotelist      : no
+linenumbers       : yes
+mask              : no
+draft             : no
+
+documentclass     : "apa6"
+classoption       : "man"
+output            : papaja::apa6_word
+---
+
+```{r setup, include = FALSE}
+# devtools::install_github("crsh/papaja@devel")
+library(papaja)
+library(raincloudplots)
+library(ggplot2)
+library(broom)
+library(purrr)
+library(glue)
+library(readr)
+library(dplyr)
+library(rmarkdown)
+library(here)
+library(icons)
+library(rsvg)
+r_refs("r-references.bib")
+```
+
+The credibility of scientific research is in doubt, among lay consumer [@hornsey2017] and scientist [@pashler2012] alike. Several tools have been proposed to combat this "crisis of confidence" (Ibid., p. 528). One such tool is the crowd science approach: "the organization of scientific research in open and collaborative projects"  [@franzoni2014, p. 1]. We focus on crowdsourced data analysis, also known as the 'many analysts' or 'multi-analyst' approach: a crowd of scientists independently analyzes the same dataset to estimate and report on a parameter of interest.  
+According to some of its proponents, crowdsourced data analysis should increase the credibility of scientific findings to lay consumers. In the preregistration of an ongoing many-analysts study, Arbon et al. [-@arbon2019] justify their use of the novel approach by referring to the need for "the public to have faith in the conclusions of scientists". In a preprint of a conducted multi-analyst study, Breznau et al. [-@breznau2021, p. 3] argue that independent data analyses with converging findings should offer "consumers of scientific findings assurance that they are not arbitrary flukes". In a commentary on the many analysts approach, Breznau [-@breznau2021a, p. 311], offers the hopeful view that crowdsourcing is a new way to "increase public, private, and government views of social science" and to "increase credibility for political and social research---in both sample populations and among the researchers themselves." Does crowd science meet this promise -- to improve lay perceptions of scientific findings -- in reality?  
+We explore the effects of scientific findings emerging from a crowd of researchers (vs. a typical research collaboration) on lay consumers' posterior beliefs, perceptions of credibility, confidence in an aggregate effect size estimate, and ratings of bias and error. We compare the effects of providing lay consumers with a single parameter estimate (the single-analyst condition) vs. multiple crowdsourced parameter estimates that (a) vary slightly and are all positive, leading to the same qualitative conclusion (the "multi-consistent" condition) or (b) vary widely and are of both signs, leading to differing qualitative conclusions (the "multi-inconsistent" condition).    
+In line with social norm theory [@miller2016], we expect an individual who observes a crowd of scientists reach identical (differing) qualitative conclusions to be more (less) likely to conform in opinion, and be more (less) swayed by the scientific findings, than an individual who observes the conclusion of a single scientist. However, regardless of the presence or absence of consensus in conclusions, we expect that observing (slightly to widely) varying estimates decreases lay confidence in the precise average estimate. In sum, our preregistered hypotheses are as follows: when laypeople observe multiple consistent (inconsistent) estimates from a crowd of independent scientists, we expect -- compared to a single, non-crowdsourced estimate -- higher (lower) posterior beliefs and credibility of the results, lower (lower) confidence in the precise average parameter estimate, and lower (greater) ratings of bias and error. 
+
+# Methods
+All relevant materials -- including the preregistration, survey materials, data, and code -- are openly available on the OSF at [insert link]. We report how we determined our sample size, all data exclusions (if any), all manipulations, and all measures in the study. We sampled UK- and US-based participants from the Prolific participant pool (native English speakers, over 18 years old). We excluded participants who failed an attention check or attempted to take the survey more than once. Our target sample size was 1,500 participants after exclusions. 
+After a brief introduction to a research question ("Do religious people report higher well-being?"), participants were asked to report their prior beliefs ("How likely do you think it is that people who are more religious generally report higher well-being?") on a slider from 0% (not likely at all) to 100% (extremely likely).  
+After reporting their prior beliefs, participants were randomly allocated to one of three experimental conditions in which they learned about the approach and findings of a scientific study. In the single-analyst condition, a single team of six researchers reports a 5% increase in well-being among religious people; in the multi-consistent condition, six independent researchers report six  consistent estimates (2%, 4%, 5%, 5%, 6%, and 8%, respectively) that average to 5% (SD = 2); and in the multi-inconsistent condition, six independent researchers report six inconsistent estimates (-6%, -2%, 5%, 5%, 12%, and 16%, respectively) that average to 5% (SD = 8.25).     
+Afterwards, participants rated (1) their posterior beliefs, (2) the credibility of the results, (3) their confidence in the effect size estimate, and how likely it is that the estimate was influenced by (4) bias, (5) error, and (6) researcher degrees of freedom. All questions were answered on a slider from 0% (not likely/credible/confident at all) to 100% (extremely likely/credible/confident). 
+
+## Data analysis
+For all six measures, we run linear regression models with condition as the independent variable (with the single-analyst condition as the reference category) and prior beliefs as a covariate. All hypotheses, statistical models, and code were preregistered. We did not preregister any hypotheses for the last measure; the findings concerning the impact of experimental condition on ratings of researcher degrees of freedom are exploratory, and should be treated as such. Because we test five separate hypotheses using two comparisons each (one comparison of the single-analyst vs. the multi-consistent condition, and one comparison of the single-analyst vs. the multi-inconsistent condition), we use the Bonferroni method to correct for multiple comparisons. Thus, our preregistered threshold for statistical significance is $\displaystyle \alpha = \frac{.05}{2} = .025$.  
+
+# Results
+
+```{r results, include = FALSE, cache = TRUE}
+df <- read.csv(here("data/data.csv"))
+df <- df[3:nrow(df),]
+n_recorded <- nrow(df)
+
+df <- df %>% #take out participants who attempted to take the survey more than once
+  filter(!PROLIFIC_PID %in% df$PROLIFIC_PID[duplicated(df$PROLIFIC_PID)])
+n_more_than_once <- n_recorded - nrow(df)
+
+df <- df %>% #take out participants who were screened out or did not consent
+  filter(Consent == "I agree to participate in this research project")
+n_screened_out <- n_recorded - n_more_than_once - nrow(df)
+
+df <- df %>% #take out participants who failed or did not complete the attention check
+  filter(Condition == Attention_check & Attention_check != "") 
+n_failed_attention <- n_recorded - n_more_than_once - n_screened_out - nrow(df)
+ns_bycondition <- table(df$Condition)
+
+df <- df %>% 
+  mutate(
+    ID = 1:nrow(df),
+    Condition = factor(Condition, #set reference category
+                       levels = c("Single",           
+                                  "Multi-consistent", 
+                                  "Multi-inconsistent"))
+  ) %>% 
+  rename(
+    Prior_beliefs = Prior.beliefs_1,
+    Final_beliefs = Final.beliefs_1,
+    Credibility = Credibility_1,
+    Confidence = Confidence_1,
+    Bias = Sources.Variability_1,
+    Error = Sources.Variability_4,
+    Discretion = Sources.Variability_5
+  ) %>% 
+  select(ID, Condition, Attention_check, Prior_beliefs:Discretion)
+
+df[,4:ncol(df)] <- sapply(df[,4:ncol(df)], as.numeric) #recode variables to numeric
+
+# Function to show inline results
+results <- function(Predictor, Multi_Condition = "Consistent") {
+  linear_mod <- lm(
+    pull(df, {{ Predictor }}) ~ Condition + Prior_beliefs, data = df)
+  
+  apa_results <- apa_print(linear_mod)
+
+
+  ifelse(Multi_Condition == "Consistent",
+         paste(apa_results$estimate$ConditionMulti_consistent,
+               strsplit(apa_results$statistic$ConditionMulti_consistent, ",")[[1]][2],
+               sep = ", "), #print without t-values, otherwise use apa_results$full_result
+         paste(apa_results$estimate$ConditionMulti_inconsistent,
+               strsplit(apa_results$statistic$ConditionMulti_inconsistent, ",")[[1]][2],
+               sep = ", ")
+         )
+
+}
+
+# Cache results in objects for abstract
+final <- results(Final_beliefs)
+final_inconsistent <- results(Final_beliefs, "Inconsistent")
+credibility <- results(Credibility)
+credibility_inconsistent <- results(Credibility, "Inconsistent")
+confidence <- results(Confidence)
+confidence_inconsistent <- results(Confidence, "Inconsistent")
+bias <- results(Bias)
+bias_inconsistent <- results(Bias, "Inconsistent")
+error <- results(Error)
+error_inconsistent <- results(Error, "Inconsistent")
+discretion <- results(Discretion)
+discretion_inconsistent <- results(Discretion, "Inconsistent")
+
+# Post-hoc t-test
+df_multiconsistent <- df %>% 
+  filter(Condition == "Multi-consistent")
+
+t_test <- apa_print(t.test(df_multiconsistent$Final_beliefs, df_multiconsistent$Prior_beliefs, paired = TRUE))
+
+t_apa <- paste(t_test$estimate, 
+               strsplit(t_test$statistic, ",")[[1]][2], #take out t-value
+               sep = ", ")
+```
+
+After two weeks of data collection, we recorded `r n_recorded` responses in Qualtrics. We excluded `r n_more_than_once` observations from participants who attempted to take the survey more than once, `r n_screened_out` participants who were screened out prior to starting the survey or did not consent, and `r n_failed_attention` participants who failed the attention check. This left us with a total sample of `r nrow(df)` participants (`r ns_bycondition[1]`, `r ns_bycondition[2]`, and `r ns_bycondition[3]` in the single-analyst, multi-consistent, and multi-inconsistent condition, respectively).     
+Figure 1 displays the main findings of our linear regression models, which compare each condition to the single-analyst condition and control for prior beliefs. For the multi-inconsistent condition, we found significantly lower (a) posterior beliefs, `r results(Final_beliefs, "Inconsistent")`; (b) ratings of credibility, `r results(Credibility, "Inconsistent")`; and (c) confidence in the effect size estimate, `r results(Confidence, "Inconsistent")`; and significantly higher (d) ratings of bias, `r results(Bias, "Inconsistent")`; (e) error, `r results(Error, "Inconsistent")`; and (f) discretion, `r results(Discretion, "Inconsistent")`.  
+For the multi-consistent condition, we found significantly lower (a) posterior beliefs, `r results(Final_beliefs)`; significantly higher (b) ratings of error, `r results(Error)`; and (c) discretion, `r results(Discretion)`, and no significant effects on (d) ratings of credibility, `r results(Credibility)`, (e) confidence in the effect size estimate, `r results(Confidence)`, or (f) ratings of bias, `r results(Bias)`.     
+**[Insert Figure 1 here]**  
+In line with our hypotheses, lay consumers of multi-analyst studies with inconsistent results (compared to single-analyst studies) have lower posterior beliefs, find the results less credible, have less confidence in the average effect size estimate, and believe the results are more likely to stem from bias and error. Contrary to our hypotheses, we do not find that lay consumers of multi-analyst studies with consistent results (compared to single-analyst studies) have higher posterior beliefs, find the results more credible, have less confidence in the average effect size estimate, and believe the results are less likely to stem from bias and error: instead, they report significantly lower posterior beliefs and are more likely to believe the results stem from error (we did not find significant effects on ratings of credibility, confidence, or bias). Figure 2 further clarifies the sway of multi-analyst vs. single-analyst studies, by displaying the distribution of prior and posterior beliefs across the three conditions.  
+**[Insert Figure 2 here]**  
+It is worth noting on the basis of Figure 2 and a post-hoc, paired *t*-test that, while multi-analyst studies with consistent results perform worse or no better than single-analyst studies on all measures, there is a significant, positive effect of the findings on posterior beliefs *within* the multi-consistent condition: i.e., beliefs in the research hypothesis are greater after reading the multi-consistent study results, `r t_apa`. This finding clarifies that multi-analyst studies are not necessarily bad in absolute terms --- however, when comparing to conventional, single-analyst scientific research, crowdsourced data analysis does not seem to provide an improvement in the sway and credibility of scientific research to lay consumers.  
+
+# Discussion
+
+From the proliferation of big team science and large-scale replication initiatives to preregistration and registered reports, several scientific fields have undergone significant reform with the well-intended goal of improving the reliability of scientific research. The multi-analyst approach has many worthy uses, from demonstrating the arbitrariness and impact of individual analytic choices to acknowledging the inherent variability of results and averaging across idiosyncratic analytic choices to obtain more accurate parameter estimates. However, as with any real-world intervention, scientific reform can have unintended consequences. Here, we focus on the effects of crowdsourcing data analysis, and find that the multi-analyst approach may have an unintended consequence.  
+While partly instituted with the goal of improving the credibility of scientific research, lay consumers appear to resist the variability and lack of consensus that often comes with multi-analyst research. To our surprise, even when results generated by independent analysts are largely consistent, lay consumers are less likely to believe in the reported phenomenon and more likely to think that the findings stem from error and researcher degrees of freedom. 
+
+\newpage
+
+# References
+
+\begingroup
+\setlength{\parindent}{-0.5in}
+\setlength{\leftskip}{0.5in}
+
+<div id="refs" custom-style="Bibliography"></div>
+\endgroup
+
+\newpage
+
+# Figures
+
+## Figure 1
+*Estimates relative to the single-analyst condition*
+\noindent
+```{r fig-1, echo=FALSE}
+knitr::include_graphics("Figure1.jpg", dpi = 1200)
+```
+*Note.* Figure 1 displays coefficient estimates (and 95% confidence intervals) of posterior beliefs, credibility, confidence, bias, error, and discretion in the two multi-analyst conditions, compared to the single-analyst condition (and controlling for prior beliefs). Green/red/gray error bars indicate positive/negative/insignificant findings, respectively.   
+
+\newpage
+
+## Figure 2
+
+*Individual data points, quartiles, and distributions of prior and posterior beliefs in the single-analyst, multi-consistent, and multi-inconsistent conditions*  
+\noindent
+```{r raincloud, echo=FALSE}
+knitr::include_graphics("Figure2.jpg", dpi = 1200)
+```
+*Note. * Prior beliefs are displayed in blue; posterior beliefs are displayed in orange. The respective boxes display the lower quartiles, medians, and upper quartiles of prior and posterior beliefs by condition.
+
+<!-- Given the existing huge inefficiencies, substantial improvements are almost certainly feasible...but neither presence nor absence of revolutionary intent should be taken as a reliable surrogate for actual impact…  -->
+
+<!-- Interventions to change the current system should not be accepted without proper scrutiny, even when they are reasonable and well-intended.” -->
+
+<!-- John Ioannidis -->

@@ -508,8 +508,6 @@ name: lay
 According to its proponents, crowdsourcing data analysis should **improve lay perceptions of scientific findings**  
 --
 
-$~~$  
-
 ```{r, echo = FALSE}
 t2 <- data.frame(
   Author = c(
