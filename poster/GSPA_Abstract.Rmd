@@ -1,35 +1,58 @@
 ---
-title: |
-  | Lay Perceptions of Scientific Findings:
-  | The Risks of Variability and Lack of Consensus
-output: pdf_document
+title: "Lay Perceptions of Scientific Findings: Swayed by the Crowd?"
+shorttitle        : "Lay Perceptions of Scientific Findings"
+
+author:
+  - name          : "First author name here"
+    affiliation   : "1"
+    corresponding : no    # Define only one corresponding author
+    address       : ""
+    email         : ""
+  - name          : "Second author name here"
+    affiliation   : "1"
+
+affiliation:
+  - id            : "1"
+    institution   : "Insert affiliation here"
+    
+abstract: | 
+     
+  
+keywords          : "Crowd science, Many analysts, Multi-analyst, Variability, Research credibility"
+wordcount         : "700"
+
+bibliography      : ["references.bib"]
+
+floatsintext      : no
+figurelist        : no
+tablelist         : no
+footnotelist      : no
+linenumbers       : yes
+mask              : no
+draft             : no
+
+documentclass     : "apa6"
+classoption       : "man"
+output            : papaja::apa6_word
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-Word count: 696
-
-# Introduction
-
-Crowd science is on the rise in behavioral science and aims to increase its credibility. Whether it does, however, remains untested: does crowd science improve lay perceptions of scientific findings?  
- $~~~~~~~$ We focus on crowdsourced data analysis: independent scientists estimate and report a parameter from the same dataset. We compare the effects of providing lay consumers with a single parameter estimate vs. multiple consistent (inconsistent) parameter estimates that show low (high) variance and high (low) consensus.  
- $~~~~~~~$ Table 1 reports our preregistered hypotheses: when laypeople observe multiple consistent (inconsistent) estimates from a crowd of independent scientists, we expect -- compared to a single, non-crowdsourced estimate -- higher (lower) posterior beliefs and credibility of the results, and lower (greater) ratings of bias and error. In addition, we expect that observing differing estimates decreases confidence in the precise average parameter estimate in both multi-estimate conditions.
+Crowd science is on the rise in behavioral science and aims to increase its credibility. Whether it does, however, remains untested: does crowd science improve lay perceptions of scientific findings? We draw from theories on social norms and numerical cognition to hypothesize that consistent (inconsistent) crowd estimates will lead to higher (lower) posterior beliefs and credibility of the results, lower confidence in the precise average parameter estimate, and lower (higher) ratings of bias and error, than a single estimate. 
 
 # Methods
 
-After participants report their prior beliefs about a research question ("Do religious people report higher well-being?"), we randomly allocate them to one of three conditions. In the single-analyst condition, a single team of six researchers reports a 5% increase in well-being among religious people; in the multi-consistent condition, six independent researchers report six low variance, high consensus estimates (2%, 4%, 5%, 5%, 6%, 8%; $M = 5\%, \sigma = 2\%$); in the multi-inconsistent condition, six independent researchers report six high variance, low consensus estimates (-6%, -2%, 5%, 5%, 12%, 16%; $M = 5\%, \sigma = 8.25\%$).  
- $~~~~~~~$ Afterwards, participants rate -- on a slider from 0% to 100% -- their posterior beliefs, the credibility of the results, their confidence in the aggregate 5% estimate, and the likelihood of researcher bias, error, and discretion.
+After participants report their prior beliefs about a research question ("Do religious people report higher well-being?"), we randomly allocate them to one of three conditions. In the single estimate condition, a single team of six researchers reports a 5% increase in well-being among religious people; in the consistent crowd condition, six independent researchers report six low variance, high consensus estimates (2%, 4%, 5%, 5%, 6%, 8%; $M = 5\%, \sigma = 2\%$); in the inconsistent crowd condition, six independent researchers report six high variance, low consensus estimates (-6%, -2%, 5%, 5%, 12%, 16%; $M = 5\%, \sigma = 8.25\%$).   
+Afterwards, participants rate -- on a slider from 0% to 100% -- their posterior beliefs, the credibility of the results, their confidence in the aggregate 5% estimate, and the likelihood of researcher bias, error, and discretion.
 
 # Results
 
-We sampled 1,498 participants from Prolific (native English speakers from the US and UK, over 18 years old). As preregistered, we regressed all outcomes on prior beliefs and condition (with the single-analyst condition as the reference category). Figure 1 displays the main findings. The multi-inconsistent condition decreased posterior beliefs, ratings of credibility, and confidence in the parameter estimate (standardized effect size *b* = -22.80, -6.54, and -9.09, respectively, all *p*s < .001), and increased ratings of bias, error, and discretion  (*b* = 6.68, 5.89, and 9.22, respectively, all *p*s < .001). The multi-consistent condition decreased posterior beliefs (*b* = -5.71, *p* < .001) and increased ratings of error (*b* = 3.59, *p* = .016) and discretion (*b* = 5.14, *p* < .001); we found no significant effects on ratings of credibility (*b* = 1.24, *p* = .380), confidence in the parameter estimate (*b* = 0.49, *p* = .749), or ratings of bias (*b* = 2.13, *p* = .192).     
- $~~~~~~~~$ As hypothesized, consuming multiple, inconsistent estimates decreases lay posterior beliefs, credibility of the results, confidence in the average parameter estimate, and increases ratings of bias and error. Unexpectedly, consuming multiple, consistent estimates lowers lay posterior beliefs and increases ratings of error. Although the multi-consistent condition performs worse or no better than the single-analyst condition for all outcomes, there is a significant, positive *absolute* effect on posterior beliefs within the multi-consistent condition ($M_d$ = 4.75, *p* < .001; see Figure 2). This finding clarifies that multi-analyst studies with consistent outcomes can potentially be convincing in their own right -- however, relative to conventional, single-analyst research, crowdsourced data analysis does not seem to improve lay perceptions of scientific findings.
+We sampled 1,498 participants from Prolific (native English speakers from the US and UK, over 18 years old). As preregistered, we regressed all outcomes on prior beliefs and condition (with the single estimate condition as the reference category). Compared to the single estimate condition, inconsistent crowd estimates decreased posterior beliefs (*b* = -22.80, *p* < .001, Cohen's *d* = -0.72), ratings of credibility (*b* = -6.54, *p* < .001, *d* = -0.21), and confidence in the parameter estimate (*b* = -9.09, *p* < .001, *d* = -0.26), and increased ratings of bias (*b* = 6.68, *p* < .001, *d* = 0.18), error (*b* = 5.89, *p* < .001, *d* = 0.18), and discretion (*b* = 9.22, *p* < .001, *d* = 0.29). Compared to the single estimate condition, consistent crowd estimates decreased posterior beliefs (*b* = -5.71, *p* < .001, *d* = -0.18) and increased ratings of error (*b* = 3.59, *p* = .016, *d* = 0.11) and discretion (*b* = 5.14, *p* < .001, *d* = 0.16); we found no significant effects on ratings of credibility (*b* = 1.24, *p* = .380, *d* = 0.04), confidence in the average parameter estimate (*b* = 0.49, *p* = .749, *d* = 0.01), or ratings of bias (*b* = 2.13, *p* = .192, *d* = 0.06).     
+As hypothesized, inconsistent crowd estimates lead to lower posterior beliefs, credibility of the results, and confidence in the average parameter estimate, and higher ratings of bias and error, than a single estimate. Unexpectedly, consistent crowd estimates lead to lower posterior beliefs and higher ratings of error than a single estimate. On all outcomes, consuming consistent crowd estimates performs worse or no better than consuming a single estimate. However, it is worth noting that there is a positive difference between prior and posterior beliefs within the consistent crowd condition ($M_d$ = 4.75, *d* = 0.19, *p* < .001; see Figure 2). This finding clarifies that a consistent crowd may sway observers --- however, relative to the conventional reporting of non-crowdsourced estimates, crowd estimates do not seem to improve lay perceptions of scientific findings.  
 
 # Discussion and Impact
 
-From the proliferation of big team science and large-scale replication initiatives to preregistration and registered reports, several scientific fields have undergone significant reform with the well-intended goal of improving the reliability of scientific research. However, as with any real-world intervention, scientific reform can impose high costs, lack effectiveness, or have unintended consequences.  
- $~~~~~~~~$ While partly instituted with the goal of improving the credibility of scientific research, lay consumers appear to resist the inherent variability and lack of consensus that often reflect the reality of multi-analyst research. To our surprise, even when results generated by independent analysts are largely consistent, lay consumers are less likely to believe in the reported phenomenon and more likely to think that the findings stem from error or idiosyncratic choices. Given the resource-intensity of crowdsourced data analysis (Silberzahn & Uhlmann, 2015), our findings suggest that scientists who hope to improve lay perceptions of scientific findings may need to think twice before implementing multi-analyst studies. 
-
-
+From the proliferation of big team science and large-scale replication initiatives to preregistration and registered reports, several scientific fields have undergone significant reform with the well-intended goal of improving the reliability of scientific research. However, as with any real-world intervention, scientific reform can have unintended consequences.   
+While partly instituted with the goal of improving the credibility of scientific research, lay consumers appear to resist the inherent variability and lack of consensus that often reflect the reality of crowd science. To our surprise, even when the results generated by an independent crowd are largely consistent and lead to the same qualitative conclusion, lay consumers seem to respond negatively to observing multiple, variable estimates. In the future, it is important for crowd scientists to consider how -- e.g., by drawing from research on science communication -- to effectively communicate variable estimates while preserving or perhaps even improving the credibility of scientific research.  
