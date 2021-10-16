@@ -35,7 +35,7 @@ library(rsvg)
 # Introduction
 
 Every day, important scientific findings are rejected at large. From man-made climate change to the safety and efficacy of Covid-19 vaccinations, **science skepticism** has run rampant among lay consumers in modern society (Hornsey & Fielding, 2017). To **increase public faith in science**, some have proposed the use of **crowd science** (Silberzahn et al., 2018; Uhlmann et al., 2019).  
- $~~~~~$ We explore whether high consensus and low variance in parameter estimates among a **crowd** (the **consistent crowd** condition) can improve **lay perceptions of scientific findings**. In line with **social norm theory** (Miller & Prentice, 2016), we expect that **observing consensus among a crowd** will -- compared to the conclusion of a single scientist (the **single estimate** condition) -- increase conformity in opinion. Drawing from work on **intuitive statistics** (Gigerenzer & Murray, 2015), we also expect laypeople to intuitively follow the logic of the **wisdom of crowds**: the ability of an **aggregate of estimates** (rather than a single estimate) to **reduce noise** stemming from individual bias or error (Schweinsberg et al., 2021).  
+ $~~~~~$ We explore the effects of scientific findings emerging from a **crowd** of researchers (vs. a typical research collaboration) on **lay perceptions of scientific findings**. In line with **social norm theory** (Miller & Prentice, 2016), we expect that observing **consensus** among a crowd (the **consistent crowd** condition) will -- compared to the conclusion of a single scientist (the **single estimate** condition) -- increase conformity in opinion. Drawing from work on **intuitive statistics** (Gigerenzer & Murray, 2015), we also expect laypeople to intuitively accord to logic of the **wisdom of crowds**: the ability of an **aggregate of multiple estimates** (rather than a single estimate) to **reduce noise** stemming from individual bias or error (Schweinsberg et al., 2021).  
   $~~~~~$ In contrast, when crowd estimates show low consensus and high variance (the **inconsistent crowd** condition), we predict that observers will be less swayed and more likely to **attribute** the findings to **bias** and **error**. In addition, due to the difficulty of lay reasoning about variation (Ben-Zvi & Garfield, 1999), we predict an **aversion to variability**: i.e., we expect that observing variable estimates will decrease lay **confidence** in the precise average parameter estimate in both crowd conditions.   
  
 # Hypotheses
@@ -75,7 +75,7 @@ knitr::include_graphics("mermaid.png")
 
 **Figure 1**: *Estimates of differences with the single estimate condition*
 ```{r, echo = FALSE, out.width='93%', fig.retina=3, fig.align='left'}
-knitr::include_graphics("Figure1.jpg")
+knitr::include_graphics("Figure1c.jpg")
 ```
 **In line with our hypotheses**, lay consumers of **inconsistent crowd estimates** (vs. a single estimate)...  
 `r icon_style(icons::fontawesome("arrow-circle-down"), scale = 1.5, fill = "red")` $~~$ Have lower posterior beliefs about the reported phenomenon  
@@ -109,7 +109,7 @@ In terms of **belief updating**, Figure 2 shows a positive difference within the
  $~~$ **Compared to providing a single estimate, we find no evidence that**   
  $~~~~~~~$ **crowd estimates improve lay perceptions of scientific findings**
 
-**Future Directions**  
+**Future directions**  
 `r icon_style(icons::fontawesome("question-circle"), scale = 1.5, fill = "#035AA6")` $~~$ Does **variability aversion** explain the findings?  
 `r icon_style(icons::fontawesome("flask"), scale = 1.5, fill = "#035AA6")` $~~~$ Perceptions of **scientists**  
 `r icon_style(icons::fontawesome("comments"), scale = 1.5, fill = "#035AA6")` $~~$ **Science communication** and **communicating uncertainty**

@@ -342,6 +342,12 @@ p1b <- p1 +
 ggsave(here("talk/Figure1b.jpg"), p1b, 
        width = 7, height = 5, units = "in") #save to talk folder
 
+p1c <- p1 + 
+  scale_x_discrete(labels = c("Consistent\ncrowd", "Inconsistent\ncrowd"))
+
+ggsave(here("poster/Figure1c.jpg"), p1c, 
+       width = 7, height = 5, units = "in") #save to poster folder
+
 knitr::include_graphics("Figure1.jpg", dpi = 1200)
 ```
 *Note.* Figure 1 displays coefficient estimates (and 95% confidence intervals) of posterior beliefs, credibility, confidence, bias, error, and discretion in the two multi-analyst conditions, compared to the single-analyst condition (and controlling for prior beliefs). Green/red/gray error bars indicate positive/negative/insignificant findings, respectively.   
