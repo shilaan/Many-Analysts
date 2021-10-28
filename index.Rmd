@@ -121,6 +121,11 @@ $~~$
 [`r icon_style(icons::fontawesome("paper-plane"), scale = 2, fill = "#035AA6")` $~~$ shilaan@stanford.edu](mailto:shilaan@stanford.edu)
 
 ]
+
+???
+
+Hi, thank you for being here. Today  I'll present some recent findings on crowdsourcing data analysis that I've been working on in collaboration with my co-author Professor Benoit Monin. 
+
 ---
 # Outline 
 
@@ -132,7 +137,11 @@ First, I'll share a brief open science statement and links to all the available 
 `r icon_style(icons::fontawesome("lock-open"), scale = 2, fill = "#035AA6")` $~~$ [**Open Science Statement**](#openscience)   
 --
 
-`r icon_style(icons::fontawesome("users"), scale = 2, fill = "#035AA6")` $~$ [**Crowdsourcing Science**](#crowdscience)  
+`r icon_style(icons::fontawesome("users"), scale = 2, fill = "#035AA6")` $~$ [**Crowdsourcing Science**](#crowdscience) 
+
+???
+
+Then, I'll define crowd science and crowdsourced data analysis and introduce our question of interest, which is "does crowdsourcing data analysis improve lay perceptions of scientific findings?".
 --
 
 `r icon_style(icons::fontawesome("chart-bar"), scale = 2, fill = "#035AA6")` $~~~$ [**Crowdsourcing Data Analysis**](#crowddata)  
@@ -145,10 +154,18 @@ First, I'll share a brief open science statement and links to all the available 
 --
 
 `r icon_style(icons::fontawesome("chart-line"), scale = 2, fill = "#035AA6")` $~~~$ [**Results**](#results)  
+
+???
+
+Afterwards we'll briefly talk about the methods and results of an experiment, and hopefully we'll have some time at the end for some discussion.
+
 --
 
 `r icon_style(icons::fontawesome("comment"), scale = 2, fill = "#035AA6")` $~~~$ [**Discussion**](#discussion)
 
+???
+
+If you have any questions, thoughts, comments, please feel free to raise your hand or unmute yourself and jump in. We have quite some time today for this session, so I'd be happy to make this as interactive as you'd like it to be. 
 
 ---
 class: inverse, middle, center
@@ -194,6 +211,12 @@ background-size: 50%
 Artwork by [@allison_horst](https://github.com/allisonhorst/stats-illustrations)
 ]
 
+???
+
+???
+
+In terms of the materials, these are all available online, including a preregistration, the survey, data and code, and a fully reproducible manuscript. You can find all these materials on the OSF and on Github, and you can also find these slides online if you want to have them in front of you at bit.ly/many-analysts. 
+
 ---
 class: inverse, center, middle
 name: crowdscience
@@ -217,6 +240,9 @@ From highly **inclusive** (sourcing citizens) to highly **selective** (sourcing 
 
 Used at different **stages** of the research process  
 
+???
+
+You may have already heard of crowdfunding, which uses the crowd for funding, but you can also use a crowd of individuals for generating research ideas, designing studies, collecting data, and analyzing data, which is what I'll be talking about today.
 --
 
 
@@ -322,6 +348,10 @@ name: crowddata
 
 ]
 
+???
+
+Involves giving different teams of scientists the same dataset, who independently analyze it to answer the same research question or estimate and report on a parameter of interest.
+
 --
 
 ### Different teams of scientists independently analyze the same dataset
@@ -382,14 +412,14 @@ DT::datatable(t1, fillContainer = FALSE, options = list(pageLength = 2))
 
 ???
 
-3 papers published in 2021, one looking at variability in the analysis of replications, another one at opinions about different social policies, and one OBHDP looking at the effects of scientists’ gender and professional status on verbosity during group meetings. Two papers in 2020, one looking at variability in the analysis of fmri (neuroimaging datasets), another in applied microeconomics. One paper from 2019 that evaluated the extent to which clinical psychologists analyzing the same experience sampling data come to different conclusions about symptoms to target for treatment. And one really famous study in 2018, that looked at discrimination against darker skin toned soccer players, and arguably started the recent crowd science movement in behavioral science. 
+I'm including an interactive table with 7 papers that have recently been published in the social and behavioral science that use the many-analyst approach. They include interesting topics such as variability in replications, opinions about different social policies, the effects of the gender and professional status of scientists on their verbosity during group meetings, variability in the analysis of fmri (so neuroimaging datasets), and we can scroll back all the way to 2018, to a quite well-known study that looked at discrimination against darker skin toned soccer players, and arguably started the recent crowd science movement in behavioral science. 
 
 ---
 # The Rationale of Crowdsourced Data Analysis
 
 ???
 
-What is the rationale of crowdsourced data analysis - why should we be convinced by its findings?
+What is the rationale of crowdsourced data analysis - why should we be convinced by its findings? The phenomenon that underlies crowd science in general is known as the wisdom of the crowd.
 
 --
 
@@ -432,7 +462,11 @@ In 1906, 787 people guessed the weight of an ox at a farmers' fair...
 
 ???
 
-The true weight, and the mean of all guesses was 1197 pounds. This may seem unsurprising now, but it wasn't back then. Back then, the fact that crowds were wise was a surprise. Crowds mostly had negative associations, were referred to as mobs, and there was heated intellectual debate about restricting the right to vote to intellectuals, rather than democratizing society. 
+???
+
+Perhaps the first documented case of the wisdom of the crowd was back in 1906, when... 1197 pounds, cattle experts, individual best guesser who took home the grand prize that day. 
+
+This may seem unsurprising now, but it wasn't back then. Back then, the fact that crowds were wise was a surprise. Crowds mostly had negative associations, were referred to as mobs, and there was heated intellectual debate about restricting the right to vote to intellectuals, rather than democratizing society. 
 
 To benefit from the wisdom of crowds several conditions must be in place. First each individual member of the crowd must have their own independent source of information. Second they must make individual decisions and not be swayed by the decisions of those around them. And third, there must be a mechanism in place that can collate these diverse opinions.
 
@@ -443,15 +477,14 @@ To benefit from the wisdom of crowds several conditions must be in place. First 
 
 ???
 
-I'll mention some benefits, most of which are intimately related with each other, some of them will overlap. 
+I'll mention some benefits, some of which will overlap, and most of them are intimately related with each other. 
 
 --
 `r icon_style(icons::fontawesome("users"), scale = 1.5, fill = "#035AA6")` $~~$   **Diversify** contributions to research 
 
 ???
 
-Promote inclusivity, include researchers from underrepresented institutions. This comes with all the benefits of diversity. 
-Allows us to leverage under-used resources and skills. We can't all be an expert on everything. If we recruit a diverse sample of data analysts, some may have expertise on a certain statistical method that is most appropriate for the data at hand, whereas others do not
+First, crowdsourced data analysis can help to diversify contributions to research. I will say that this benefit is not specific to crowdsourcing data analysis, but a property of crowd science and big team science in general. A goal of crowd science and big team science is to promote inclusivity and include researchers from underrepresented institutions. This comes with all the benefits of diversity. It allows us to leverage under-used resources and skills. We of course can't all be an expert on everything. If we recruit a diverse sample of data analysts, some may have expertise, for example, on a certain statistical method that is most appropriate for the data at hand, or they'll have some other expertise that may benefit the data analysis. 
 
 --
 
@@ -459,7 +492,7 @@ Allows us to leverage under-used resources and skills. We can't all be an expert
 
 ???
 
-Helps to acknowledge that results are very variable, and depend on idiosyncratic choices we have to make among multiple valid approaches, sometimes even choices we make unconsciously, such as the version of statistical software we rely on or the different defaults in for instance SPSS and R: the many-analyst approach does not *create* variability in results, it simply *exposes* it. that should give us pause and epistemic humility when we assess conventional scientific research: the particular outcome you're looking at is one from a distribution of outcomes that could have been possible, if the analyst had made different choices
+Second, the many-analyst approach helps to acknowledge that results in social science tend to be very variable, and can depend on idiosyncratic choices we have to make among multiple valid approaches, sometimes even choices we make unconsciously, such as the version of statistical software we rely on or the different defaults in for instance SPSS and R: it is important to note that the many-analyst approach does not *create* this variability in results, it simply *exposes* it. that should give us pause and epistemic humility when we assess conventional scientific research, which is often done by a single analyst or a single team: the particular outcome you're looking at is one from a distribution of outcomes that could have been possible, if the analyst had made different choices.
 
 --
 
@@ -468,29 +501,30 @@ Helps to acknowledge that results are very variable, and depend on idiosyncratic
 
 ???
 
-Can we explain the strength of the evidence obtained by the individual decisions researchers make? Does the choice to include or exclude a certain control variable, to run a certain statistical model, to exclude or include certain participants, impact the results? Do people who obtain positive findings use more controls or exclude more participants? Do people who obtain negative findings use more complex statistical models?
+Third, we can assess the impact of individual analytic choices on the results. Here, we can ask if we can explain the strength of the evidence obtained by the specific individual decisions that researchers make. For instance, we can asses the impact of including or excluding certain control variables, the impact of running a certain statistical model such as a t-test or a mixed effects model, or the impact of excluding or including certain participants or outliers. We could ask, for example, if people who obtain stronger evidence are more likely to do one or the other, and vice versa. 
 
-Shows us *the garden of forking paths*
 --
 
 `r icon_style(icons::fontawesome("dumbbell"), scale = 1.4, fill = "#035AA6")` $~~$ Assess the overall **analytic robustness** of a finding  
 
 ???
 
-To what extent does a finding hold across many different analytic specifications? Do the results come it consistently positive, or consistently negative, across different independent analyses?
+Fourth, the many-analyst approach can help us assess the overall analytic robustness of a finding. We can assess to what extent a finding holds across many different analytic specification. We can ask: do the results come out consistently positive, or consistently negative, across different independent analyses? 
 --
 
 `r icon_style(icons::fontawesome("vials"), scale = 1.5, fill = "#035AA6")` $~~$  **Increase confidence** when independent analyses yield the same conclusion  
 
 ???
 
-● Converging conclusions increase confidence in the analytical robustness of a finding
-● Diverging conclusions decrease confidence in the analytical robustness of a finding and prompt an examination of the reasons for the divergence"
+And when we do find that the result come out consistently positive or negative, then this can increase our confidence in the specific conclusion we're drawing. 
 
 --
 
 `r icon_style(icons::fontawesome("divide"), scale = 1.5, fill = "#035AA6")` $~~~~$  Average across idiosyncratic analytic choices to obtain **more accurate parameter estimates**  
 
+???
+
+And going back to the wisdom of the crowd phenomenon that we discussed, another benefit is that we can average across all these idiosyncratic analytic choices to obtain more accurate parameter estimates and to balance out individual biases and errors in the aggregate
 --
 `r icon_style(icons::fontawesome("balance-scale"), scale = 1.5, fill = "#035AA6")` $~~$   ... and to **balance out individual biases and errors** in the aggregate  
 
@@ -500,7 +534,9 @@ name: lay
 
 # Lay Perceptions
 
+???
 
+Now I'd like to move on to talking about lay perceptions. One of the reasons crowdsourced data analysis was proposed, was to increase the credibility of scientific research. Now, we know there's quite a great deal of science skepticism in some public circles, so we want scientific research to become more credible not just to ourselves as academics, but to lay people as well. 
 ---
 # Lay Perceptions of Crowd-Scientific Findings
 
@@ -541,8 +577,7 @@ DT::datatable(t2,
 
 ???
 
-Normatively, we expect laypeople who observe several scientists independently come to the same qualitative conclusions – compared to a single research team that comes to a single, joint conclusion – to be more swayed by the findings, as it seems to reflect consensus between various approaches. After all, it’s a hallmark of rigorous research to triangulate various methodological approaches and provide converging evidence, and to provide a “sensitivity analysis” or “robustness checks” to examine whether and how the findings change as a result of alternative analytic specifications. As argued in Aczel et al., “The main argument for the importance of performing robustness checks over reasonable variations in modelling choices is to increase confidence in the obtained results: ideally, results should be reasonably unaffected by a researcher’s idiosyncratic choice (…) when reasonable alternatives exist.” The same argument has been made for triangulation, which, according to Jick, “allows researchers to be more confident of their results.”
-We similarly expect readers of multi-analyst reports that yield consistent findings to be more confident in the results. Although lay observers, in such cases, may be less certain that the precise aggregate parameter estimate is exactly correct, they should be more likely to positively update their beliefs about the reported phenomenon, and less likely to assume that the overall estimate stems from bias or error. Thus, when the results generated by independent analysts are largely consistent, we expect an increase in the sway of scientific findings. However, when laypeople observe several scientists independently come to differing qualitative conclusions, we expect the multi-analyst method to backfire; when results across many analysts vary widely and lack consensus in their qualitative conclusions (which, arguably, often reflects the reality of large-scale science collaborations), we expect a decrease in the sway of scientific findings.
+I'm including here another table with three quotes. The first one is from a preregistration, in which the authors justify their use of the many-analyst approach by referring to the public needing to have faith in the conclusions of scientists. The second one is from a commentary on the many-analyst approach, in which the author provides the hopeful view that crowdsourcing provides a new way to increase credibility for social research, not just among researchers themselves, but in sample populations as well; and that it's hoped that the many-analyst approach will increase public views of social science. The third one is from a preprint relying on the many-analyst approach, in which the authors argue that many-analyst studies that generate consistent results across independent analysis should offer consumers of scientific findings assurance that they are not arbitrary flukes. 
 
 ---
 class: inverse, center, middle
@@ -551,7 +586,7 @@ class: inverse, center, middle
 
 ???
 
-Lofty statements and worthy goals - empirical claim, but no evidence yet. that's what we'll be looking at today.
+Now, these quotes describe a worthy goal: improving the credibility of scientific findings through crowdsourcing data analysis. However, this is also an empirical claim, and as far as we know there is no evidence yet that crowdsourcing data analysis can indeed achieve this goal. So that's what we'll be looking at today: does crowdsourcing data analysis improve lay perceptions of scientific findings?
 ---
 class: inverse, center, middle
 name: method
@@ -568,15 +603,22 @@ We run an experiment with **three conditions**
 
 ???
 
-Three scenarios
+Three scenarios. The first condition is a conventional, single-analyst condition where a single team of six scientists analyzes the same dataset and reports a single, aggregrate parameter estimate of 5% for the relationship between two variables that I'll introduce shortly.
 
 --
 
 `r icon_style(icons::fontawesome("dice-one"), scale = 1.5, fill = "#035AA6")` $~~$ **Single-analyst** $~~~~~~~~~~~$ a *single, aggregate parameter estimate*
 
+???
+
+We contrast this condition with two multi-analyst conditions. In the multi-consistent conditon, six independent teams of scientists report six independent estimates that show low variance and high consensus: they all agree in their conclusion, and the spread in their effect size estimate is small.
 --
 
 `r icon_style(icons::fontawesome("dice-two"), scale = 1.5, fill = "#035AA6")` $~~$ **Multi-consistent** $~~~~~~~$ *multiple parameter estimates* with *low variance* and *high consensus* 
+
+???
+
+In the multi-consistent condition, six independent teams of scientists report six independent estimates that show high variance and low consensus. There is a large spread between the estimates, and the qualitative conclusions differ: two of the scientists find a negative relationship, and four of the scientists find a positive relationship. 
 
 --
 
@@ -613,7 +655,58 @@ class: left
 knitr::include_graphics("talk/mermaid.png")
 ```
 
+???
+
+In terms of the experimental design, participants are first introduced to a research question - do religious people report higher well-being - and then report their prior beliefs about this research question. They are then allocated to one of the three conditions, and afterwards report the outcomes that I just described. 
 ---
+
+.center[
+
+# Hypotheses
+
+]
+
+
+### **Social norms theory**
+Observing consensus among a crowd increases **conformity** in opinion
+
+???
+
+We based our hypotheses on three lines of thought. First, in line with social norms theory, we expect that observing consensus among a crowd (the consistent crowd condition) will -- compared to the conclusion of a single scientist (the single estimate condition) -- increase conformity in opinion. 
+
+--
+
+### **Intuitive statistics **
+Observers intuitively accord to the logic of **the wisdom of crowds**:  
+The ability of an aggregate of estimates to reduce noise stemming from individual bias or error
+
+???
+
+We based our hypotheses on three lines of thought. First, in line with social norms theory, we expect that observing consensus among a crowd (the consistent crowd condition) will -- compared to the conclusion of a single scientist (the single estimate condition) -- increase conformity in opinion. 
+
+Second, Drawing from work on intuitive statistics, we also expect laypeople to intuitively accord to the logic of "the wisdom of crowds": the ability of an aggregate of estimates (rather than a single estimate) to reduce noise stemming from individual bias or error.  
+
+In contrast, when crowd estimates show low consensus and high variance (the inconsistent crowd condition), we predict that observers will be less swayed and more likely to attribute the findings to bias and error. 
+
+--
+
+### **Aversion to variability**
+Observing **variable estimates** decreases confidence in the overall estimate 
+
+???
+
+We based our hypotheses on three lines of thought. First, in line with social norms theory, we expect that observing consensus among a crowd (the consistent crowd condition) will -- compared to the conclusion of a single scientist (the single estimate condition) -- increase conformity in opinion. 
+
+Second, Drawing from work on intuitive statistics, we also expect laypeople to intuitively accord to the logic of "the wisdom of crowds": the ability of an aggregate of estimates (rather than a single estimate) to reduce noise stemming from individual bias or error.  
+
+In contrast, when crowd estimates show low consensus and high variance (the inconsistent crowd condition), we predict that observers will be less swayed and more likely to attribute the findings to bias and error. 
+
+Third, due to the difficulty of lay reasoning about variation, we predict an aversion to variability: i.e., we expect that observing variable estimates will decrease lay confidence in the precise average parameter estimate in both crowd conditions. This is based on the idea that it may be completely foreign to lay consumers that analyzing the dataset can lead to different estimates in the first place. If we report one estimate, this is taken to be the "one true" estimate -- if we report several variable estimates, the consumer in question may no longer be so certain that any of the estimates, or the overall average estimate, is precisely correct.
+
+In sum, our preregistered hypotheses are as follows: when laypeople observe multiple consistent estimates from a crowd of independent scientists, we expect -- compared to a single estimate and controlling for prior beliefs -- higher posterior beliefs and credibility of the results, lower confidence in the precise average parameter estimate, and lower ratings of bias and error. When laypeople observe multiple inconsistent estimates from a crowd of independent scientists, we expect -- compared to a single estimate and controlling for prior beliefs -- lower posterior beliefs and credibility of the results, lower confidence in the precise average parameter estimate, and greater ratings of bias and error.  
+
+---
+
 
 .center[
 
@@ -649,8 +742,15 @@ $~~$
 
 *Note*. Table indicates the predicted direction of the effect for all dependent variables, compared to the single-analyst condition and controlling for prior beliefs. For example, we hypothesized that, compared to a single-analyst study and controlling for prior beliefs,  ratings of credibility would be greater in the multi-analyst: consistent condition and lower in the multi-analyst: inconsistent condition.  
 
-Normatively, we expect laypeople who observe several scientists independently come to the same qualitative conclusions – compared to a single research team that comes to a single, joint conclusion – to be more swayed by the findings, as it seems to reflect consensus between various approaches. After all, it’s a hallmark of rigorous research to triangulate various methodological approaches and provide converging evidence, and to provide a “sensitivity analysis” or “robustness checks” to examine whether and how the findings change as a result of alternative analytic specifications. As argued in Aczel et al., “The main argument for the importance of performing robustness checks over reasonable variations in modelling choices is to increase confidence in the obtained results: ideally, results should be reasonably unaffected by a researcher’s idiosyncratic choice (…) when reasonable alternatives exist.” The same argument has been made for triangulation, which, according to Jick, “allows researchers to be more confident of their results.”
-We similarly expect readers of multi-analyst reports that yield consistent findings to be more confident in the results. Although lay observers, in such cases, may be less certain that the precise aggregate parameter estimate is exactly correct, they should be more likely to positively update their beliefs about the reported phenomenon, and less likely to assume that the overall estimate stems from bias or error. Thus, when the results generated by independent analysts are largely consistent, we expect an increase in the sway of scientific findings. However, when laypeople observe several scientists independently come to differing qualitative conclusions, we expect the multi-analyst method to backfire; when results across many analysts vary widely and lack consensus in their qualitative conclusions (which, arguably, often reflects the reality of large-scale science collaborations), we expect a decrease in the sway of scientific findings.
+???
+
+We based our hypotheses on three lines of thought. First, in line with social norms theory, we expect that observing consensus among a crowd (the consistent crowd condition) will -- compared to the conclusion of a single scientist (the single estimate condition) -- increase conformity in opinion. 
+
+Second, Drawing from work on intuitive statistics, we also expect laypeople to intuitively accord to the logic of "the wisdom of crowds": the ability of an aggregate of estimates (rather than a single estimate) to reduce noise stemming from individual bias or error.  
+
+In contrast, when crowd estimates show low consensus and high variance (the inconsistent crowd condition), we predict that observers will be less swayed and more likely to attribute the findings to bias and error. 
+
+Third, due to the difficulty of lay reasoning about variation, we predict an aversion to variability: i.e., we expect that observing variable estimates will decrease lay confidence in the precise average parameter estimate in both crowd conditions. In sum, our preregistered hypotheses are as follows: when laypeople observe multiple consistent estimates from a crowd of independent scientists, we expect -- compared to a single estimate and controlling for prior beliefs -- higher posterior beliefs and credibility of the results, lower confidence in the precise average parameter estimate, and lower ratings of bias and error. When laypeople observe multiple inconsistent estimates from a crowd of independent scientists, we expect -- compared to a single estimate and controlling for prior beliefs -- lower posterior beliefs and credibility of the results, lower confidence in the precise average parameter estimate, and greater ratings of bias and error.  
 
 ---
 .center[
@@ -864,9 +964,7 @@ knitr::include_graphics("talk/introduction.png")
 ]
 ]
 
-???
 
-Participants had to wait 30 seconds before proceeding to the next slide. 
 ---
 .panelset.sideways[
 .panel[.panel-name[Study design & research approach (Single-analyst)]
@@ -884,7 +982,7 @@ knitr::include_graphics("talk/design_multi.png")
 
 ???
 
-Importantly, in both the single-analyst and the multi-analyst conditions we emphasize that there are a lot of choices to be made. 
+Participants are first introduced to the research question and research approach. In the single-analyst condition, a single team of six researchers analyzes the same dataset, and in the two multi-analyst conditions, six independent researchers analyze the same dataset. Importantly, in all conditions we emphasize in the last paragraph that there are a lot of choices to be made. Participants had to wait 30 seconds before proceeding to the next slide. 
 
 ---
 
@@ -907,6 +1005,10 @@ knitr::include_graphics("talk/results_multi-inconsistent.png")
 ```
 ]
 ]
+
+???
+
+Here are the results we show participants. In the single-analyst condition, the team of six researchers concludes that religious people do indeed report higher well-being, and they find a 5% increase in well-being for every one point increase in religiosity. In the multi-consistent condition, the six independent researchers show consensus in that they all report a positive relationship, and the spread in their estimates is quite small; they range from 2% to 8%. In the multi-inconsistent condition, the six independent researchers do not show consensus, in that two of the scientists conclude that the relationship is negative, and four of the scientists conclude that the relationship is positive, and we can see that the spread in their estimates is quite large, ranging from -6% to 16%. 
 
 ---
 
@@ -985,8 +1087,7 @@ background-position: 50% 50%
 background-size: 78%
 
 ???
-
-Our main findings are displayed in Figure 1. Controlling for prior beliefs and comparing to the single-analyst condition, we found that (1) reported posterior beliefs were significantly lower in both the multi-consistent condition, b=-5.71, and the multi-inconsistent condition, b=-22.80; (2) ratings of credibility were significantly lower in the multi-inconsistent condition, b=-6.54, while they were not significantly different in the multi-consistent condition, b=1.24 (3) confidence in the effect size estimate was significantly lower in the multi-inconsistent condition, b=-9.09, while it was not significantly different in the multi-consistent condition, b=0.49; (4) ratings of bias were significantly greater in the multi-inconsistent condition, b=6.68, while they were not significantly different in the multi-consistent condition, b=2.13; and (5) ratings of error were significantly greater in both the multi-consistent condition, b=3.59, and the multi-inconsistent condition, b=5.89. For our exploratory measure of discretion, we found that ratings of experimenter degrees of freedom were significantly greater in both the multi-consistent condition, b=5.14, and the multi-inconsistent condition, b=9.22.
+For the results, we regressed all outcomes on prior beliefs and condition, with the single-analyst condition as the reference category. So all results that I will show you control for prior beliefs and show the results for the two multi-analyst conditions compared to the single-analyst condition. I will now walk you through each individual aspect of this Figure.  
 
 ---
 background-image: url("talk/Figure1.jpg")
@@ -1026,7 +1127,10 @@ For the additional **exploratory measure**, lay consumers of multi-analyst studi
 
 ???
 
-In line with our hypotheses, lay consumers of multi-analyst studies with inconsistent results (compared to single-analyst studies) have lower posterior beliefs, find the results less credible, have less confidence in the average effect size estimate, and believe the results are more likely to stem from bias and error. Contrary to our hypotheses, we do not find that lay consumers of multi-analyst studies with consistent results (compared to single-analyst studies) have higher posterior beliefs, find the results more credible, have less confidence in the average effect size estimate, and believe the results are less likely to stem from bias and error: instead, they report significantly lower posterior beliefs and are more likely to believe the results stem from error (we did not find significant effects on ratings of credibility, confidence, or bias). 
+???
+
+In line with out hypotheses, we find that lay consumers of multi-analyst studies with inconsistent results have lower posterior beliefs (you can see this estimate here), find the results less credible, have less confidence in the aggregate estimate of 5%, and believe this estimate is more likely to stem from bias, error, and discretion (which we define as idiosyncratic choices among multiple valid approaches, or what we researchers often refer to as researcher degrees of freedom). 
+
 ---
 background-image: url("talk/Figure1.jpg")
 background-position: 95% 57%
@@ -1069,7 +1173,7 @@ For the additional **exploratory measure**, lay consumers of multi-analyst studi
 
 ???
 
-In line with our hypotheses, lay consumers of multi-analyst studies with inconsistent results (compared to single-analyst studies) have lower posterior beliefs, find the results less credible, have less confidence in the average effect size estimate, and believe the results are more likely to stem from bias and error. Contrary to our hypotheses, we do not find that lay consumers of multi-analyst studies with consistent results (compared to single-analyst studies) have higher posterior beliefs, find the results more credible, have less confidence in the average effect size estimate, and believe the results are less likely to stem from bias and error: instead, they report significantly lower posterior beliefs and are more likely to believe the results stem from error (we did not find significant effects on ratings of credibility, confidence, or bias). 
+Contrary to our hypotheses, we find that lay consumers of multi-analyst studies with consistent results also have lower beliefs and believe the 5% estimate is more likely to stem from error or from idiosyncratic choices. We found no significant effects on the credibility of the results, confidence in the aggregate parameter estimate of 5%,  and the perceived impact of bias on the estimate. 
 
 ---
 background-image: url("talk/Figure2.jpg")
@@ -1102,8 +1206,10 @@ $~~$
 
 ???
 
+We conclude that, compared to a single estimate, we do not find evidence that crowd estimates improve lay perceptions of scientific findings. In the future, we are curious to explore whether it might be aversion to variability that explains these findings, and what the perceptions of scientists are. We also believe that in the future it is important for crowd scientists to consider how -- for example, by drawing from research on science communication -- to tackle science skepticism and effectively communicate variable crowd estimates to lay consumers.  
+
 From the proliferation of big team science and large-scale replication initiatives to preregistration and registered reports, several scientific fields have undergone significant reform with the well-intended goal of improving the reliability of scientific research. The multi-analyst approach has many worthy uses, from demonstrating the arbitrariness and impact of individual analytic choices to acknowledging the inherent variability of results and averaging across idiosyncratic analytic choices to obtain more accurate parameter estimates. However, as with any real-world intervention, scientific reform can have unintended consequences. Here, we focus on the effects of crowdsourcing data analysis, and find that the multi-analyst approach may have an unintended consequence.  
-While partly instituted with the goal of improving the credibility of scientific research, lay consumers appear to resist the inherent variability and lack of consensus that often reflect the reality of multi-analyst research. To our surprise, even when results generated by independent analysts are largely consistent, lay consumers are less likely to believe in the reported phenomenon and more likely to think that the findings stem from error or idiosyncratic choices. Given the resource-intensity of crowdsourced data analysis (Silberzahn & Uhlmann, 2015), our findings suggest that scientists who hope to improve lay perceptions of scientific findings may need to think twice before implementing multi-analyst studies. 
+While partly instituted with the goal of improving the credibility of scientific research, lay consumers appear to resist the inherent variability and lack of consensus that often reflect the reality of multi-analyst research. To our surprise, even when results generated by independent analysts are largely consistent, lay consumers are less likely to believe in the reported phenomenon and more likely to think that the findings stem from error or idiosyncratic choices. 
 --
 
 ## Future directions
