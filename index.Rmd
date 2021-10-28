@@ -494,6 +494,8 @@ First, crowdsourced data analysis can help to diversify contributions to researc
 
 Second, the many-analyst approach helps to acknowledge that results in social science tend to be very variable, and can depend on idiosyncratic choices we have to make among multiple valid approaches, sometimes even choices we make unconsciously, such as the version of statistical software we rely on or the different defaults in for instance SPSS and R: it is important to note that the many-analyst approach does not *create* this variability in results, it simply *exposes* it. that should give us pause and epistemic humility when we assess conventional scientific research, which is often done by a single analyst or a single team: the particular outcome you're looking at is one from a distribution of outcomes that could have been possible, if the analyst had made different choices.
 
+Like Nicholas said in his opening talk, approaches like this allow us to explore the size of the multiverse.  
+
 --
 
 
