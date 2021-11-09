@@ -1,0 +1,62 @@
+---
+title             : "Lay Perceptions of Scientific Findings: Swayed by the Crowd?"
+shorttitle        : "The Sway of Crowd Science"
+
+author: 
+  - name          : "Shilaan Alzahawi"
+    affiliation   : "1"
+    corresponding : yes    # Define only one corresponding author
+    address       : "655 Knight Way, Stanford, CA 94305"
+    email         : "shilaan@stanford.edu"
+  - name          : "Benoît Monin"
+    affiliation   : "1"
+
+affiliation:
+  - id            : "1"
+    institution   : "Stanford University, Graduate School of Business"
+
+abstract: |
+  Every day, important scientific findings are rejected at large. To increase public faith in science, some have proposed the use of crowd science. Drawing from theories on social norms and numerical cognition, we test whether crowd science improves lay perceptions of scientific findings. We run an experiment (N = 2,019; preregistration, data, code, and materials at [osf.io/vedb4](osf.io/vedb4)) to study the effects of scientific findings emerging from a crowd of researchers (vs. a typical research collaboration) on lay consumers’ posterior beliefs, confidence in an aggregate effect size estimate, and ratings of credibility, bias, and error. We focus on crowdsourced data analysis: a crowd of scientists who independently analyze the same data to estimate and report a parameter of interest. Contrary to our hypotheses, we do not find that consistent crowd estimates increase the sway and credibility of scientific findings to lay consumers: instead, to our surprise, they lead to lower posterior beliefs and higher ratings of error. In the future, it is important for crowd scientists to consider how to tackle science skepticism and effectively communicate variable crowd estimates to lay consumers.
+  
+keywords          : "Crowd science, Variability aversion, Science skepticism"
+wordcount         : "181"
+
+bibliography      : ["r-references.bib", "references.bib"]
+
+floatsintext      : no
+figurelist        : no
+tablelist         : no
+footnotelist      : no
+linenumbers       : yes
+mask              : no
+draft             : no
+
+documentclass     : "apa6"
+classoption       : "man"
+output            : papaja::apa6_word
+---
+
+```{r setup, include = FALSE}
+# devtools::install_github("crsh/papaja@devel")
+library(papaja)
+library(raincloudplots)
+library(ggplot2)
+library(broom)
+library(purrr)
+library(glue)
+library(readr)
+library(dplyr)
+library(rmarkdown)
+library(here)
+library(icons)
+library(rsvg)
+r_refs("r-references.bib")
+```
+
+## Figure 1
+*Estimates of differences with the single estimate condition*
+\noindent
+```{r fig-1, echo=FALSE}
+knitr::include_graphics(here("poster/Figure1c.jpg"), dpi = 1200)
+```
+*Note.* We regressed all outcomes on prior beliefs and condition (with the single estimate condition as the reference category). Figure 1 displays coefficient estimates (and 95% confidence intervals) of posterior beliefs, credibility, confidence, bias, error, and discretion in the two crowd conditions – the consistent crowd and the inconsistent crowd – compared to the single-analyst condition and controlling for prior beliefs. Green/red/gray error bars indicate positive/negative/insignificant findings, respectively.

@@ -16,7 +16,7 @@ affiliation:
     institution   : "Stanford University, Graduate School of Business"
 
 abstract: |
-  A recent movement towards crowd science has emerged in the behavioral sciences. One of the aims of crowd science is to increase the credibility of scientific research. Does it meet this promise in reality? We run an experiment to study the effects of scientific findings emerging from a crowd of researchers (vs. a typical research collaboration) on lay consumers' posterior beliefs and ratings of credibility, confidence in an aggregate effect size estimate, bias, and error. We focus on crowdsourced data analysis, also known as the 'many analysts' or 'multi-analyst' approach: giving the same dataset to different teams of scientists, who independently analyze the data to estimate and report a parameter of interest. We compare the effects of providing a single, aggregate parameter estimate (the single estimate condition) vs. multiple parameter estimates that (a) vary slightly and are all positive, leading to the same qualitative conclusion (the consistent crowd condition) or (b) vary widely and are of both signs, leading to differing qualitative conclusions (the inconsistent crowd condition). In line with our hypotheses, we find that lay consumers of multi-analyst studies with inconsistent results (compared to single-analyst studies) have lower posterior beliefs, find the results less credible, have less confidence in the average effect size estimate, and believe the results are more likely to stem from bias and error. Contrary to our hypotheses, we do not find that multi-analyst studies with consistent results (compared to single-analyst studies) increase the sway and credibility of scientific findings to lay consumers: instead, to our surprise, they lead to lower posterior beliefs and higher ratings of error. 
+  A recent movement towards crowd science has emerged in the behavioral sciences. One of the aims of crowd science is to increase the credibility of scientific research. Does it meet this promise in reality? We run an experiment to study the effects of scientific findings emerging from a crowd of researchers (vs. a typical research collaboration) on lay consumers' posterior beliefs, confidence in an aggregate effect size estimate, and ratings of credibility, bias, and error. We focus on crowdsourced data analysis, also known as the 'many analysts' or 'multi-analyst' approach: giving the same dataset to different teams of scientists, who independently analyze the data to estimate and report a parameter of interest. We compare the effects of providing a single, aggregate parameter estimate (the single estimate condition) vs. multiple parameter estimates that (a) vary slightly and are all positive, leading to the same qualitative conclusion (the consistent crowd condition) or (b) vary widely and are of both signs, leading to differing qualitative conclusions (the inconsistent crowd condition). In line with our hypotheses, we find that lay consumers of multi-analyst studies with inconsistent results (compared to single-analyst studies) have lower posterior beliefs, find the results less credible, have less confidence in the average effect size estimate, and believe the results are more likely to stem from bias and error. Contrary to our hypotheses, we do not find that multi-analyst studies with consistent results (compared to single-analyst studies) increase the sway and credibility of scientific findings to lay consumers: instead, to our surprise, they lead to lower posterior beliefs and higher ratings of error. 
   
 keywords          : "Crowd science, Many analysts, Multi-analyst, Variability, Research credibility"
 wordcount         : "2,222"
@@ -306,9 +306,16 @@ p1c <- p1 +
 ggsave(here("poster/Figure1c.jpg"), p1c, 
        width = 7, height = 5, units = "in") #save to poster folder
 
+p1d <- p1c + 
+  ggtitle("Differences from the single estimate condition") +
+  theme(plot.title = element_text(hjust = 0.5))
+
+ggsave(here("poster/Figure1d.jpg"), p1d, 
+       width = 7, height = 5, units = "in") #save to poster folder
+
 knitr::include_graphics(here("poster/Figure1c.jpg"), dpi = 1200)
 ```
-*Note.* Figure 1 displays coefficient estimates (and 95% confidence intervals) of posterior beliefs, credibility, confidence, bias, error, and discretion in the two multi-analyst conditions, compared to the single-analyst condition (and controlling for prior beliefs). Green/red/gray error bars indicate positive/negative/insignificant findings, respectively.   
+*Note.* We regressed all outcomes on prior beliefs and condition (with the single estimate condition as the reference category). Figure 1 displays coefficient estimates (and 95% confidence intervals) of posterior beliefs, credibility, confidence, bias, error, and discretion in the two crowd conditions – the consistent crowd and the inconsistent crowd – compared to the single-analyst condition and controlling for prior beliefs. Green/red/gray error bars indicate positive/negative/insignificant findings, respectively. 
 
 \newpage
 
