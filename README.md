@@ -1,2 +1,2 @@
-# Lay Perceptions of Crowd-Scientific Findings: The Risks of Variability and Lack of Consensus
+# Lay Perceptions of Scientific Findings: Swayed by the Crowd?
 Manuscript in preparation for submission.
