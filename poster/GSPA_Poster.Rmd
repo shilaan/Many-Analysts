@@ -3,14 +3,14 @@ title: |
   | Lay Perceptions of Scientific Findings:
   | Swayed by the Crowd?
 author:
-  - name: Insert first author name here 
+  - name: Shilaan Alzahawi
     affil: 1
     orcid: ''
-  - name: Insert second author name here
+  - name: Benoît Monin
     affil: 1
 affiliation:
   - num: 1
-    address: Insert affiliation here
+    address: Stanford University, Graduate School of Business
 column_numbers: 3
 #logoright_name: https&#58;//raw.githubusercontent.com/brentthorne/posterdown/master/images/betterhexlogo.png
 #logoleft_name: https&#58;//raw.githubusercontent.com/brentthorne/posterdown/master/images/betterhexlogo.png
@@ -35,7 +35,7 @@ library(rsvg)
 # Introduction
 
 Every day, important scientific findings are rejected at large. From man-made climate change to the safety and efficacy of Covid-19 vaccinations, **science skepticism** has run rampant among lay consumers in modern society (Hornsey & Fielding, 2017). To **increase public faith in science**, some have proposed the use of **crowd science** (Silberzahn et al., 2018; Uhlmann et al., 2019).  
- $~~~~~$ We explore the effects of scientific findings emerging from a **crowd** of researchers (vs. a typical research collaboration) on **lay perceptions of scientific findings**. In line with **social norm theory** (Miller & Prentice, 2016), we expect that observing **consensus** among a crowd (the **consistent crowd** condition) will -- compared to the conclusion of a single scientist (the **single estimate** condition) -- increase conformity in opinion. Drawing from work on **intuitive statistics** (Gigerenzer & Murray, 2015), we also expect laypeople to intuitively accord to logic of the **wisdom of crowds**: the ability of an **aggregate of multiple estimates** (rather than a single estimate) to **reduce noise** stemming from individual bias or error (Schweinsberg et al., 2021).  
+ $~~~~~$ We explore the effects of scientific findings emerging from a **crowd** of researchers (vs. a typical research collaboration) on **lay perceptions of scientific findings**. In line with **social norm theory** (Miller & Prentice, 2016), we expect that observing **consensus** among a crowd (the **consistent crowd** condition) will -- compared to the conclusion of a single scientist (the **single estimate** condition) -- increase conformity in opinion. Drawing from work on **intuitive statistics** (Gigerenzer & Murray, 2015), we also expect laypeople to intuitively accord to the logic of the **wisdom of crowds**: the ability of an **aggregate of multiple estimates** (rather than a single estimate) to **reduce noise** stemming from individual bias or error (Schweinsberg et al., 2021).  
   $~~~~~$ In contrast, when crowd estimates show low consensus and high variance (the **inconsistent crowd** condition), we predict that observers will be less swayed and more likely to **attribute** the findings to **bias** and **error**. In addition, due to the difficulty of lay reasoning about variation (Ben-Zvi & Garfield, 1999), we predict an **aversion to variability**: i.e., we expect that observing variable estimates will decrease lay **confidence** in the precise average parameter estimate in both crowd conditions.   
  
 # Hypotheses
@@ -46,14 +46,14 @@ Every day, important scientific findings are rejected at large. From man-made cl
 | 1. Posterior beliefs in the phenomenon | $~~~~~~~~~~$ `r icon_style(icons::fontawesome("user-plus"), scale = 1.5, fill = "green")`  | $~~~~~~~~~~$ `r icon_style(icons::fontawesome("user-minus"), scale = 1.5, fill = "red")` |
 |2. Credibility of the results | $~~~~~~~~~~$ `r icon_style(icons::fontawesome("user-plus"), scale = 1.5, fill = "green")` | $~~~~~~~~~~$ `r icon_style(icons::fontawesome("user-minus"), scale = 1.5, fill = "red")` |
 | 3. Confidence in the precise estimate  | $~~~~~~~~~~$ `r icon_style(icons::fontawesome("user-minus"), scale = 1.5, fill = "red")`  | $~~~~~~~~~~$ `r icon_style(icons::fontawesome("user-minus"), scale = 1.5, fill = "red")` | 
-| 4. Bias | $~~~~~~~~~~$ `r icon_style(icons::fontawesome("user-minus"), scale = 1.5, fill = "red")` | $~~~~~~~~~~$ `r icon_style(icons::fontawesome("user-plus"), scale = 1.5, fill = "green")` |
-| 5. Error | $~~~~~~~~~~$ `r icon_style(icons::fontawesome("user-minus"), scale = 1.5, fill = "red")` | $~~~~~~~~~~$ `r icon_style(icons::fontawesome("user-plus"), scale = 1.5, fill = "green")` |
-| 6. Discretion | $~~~$ No prediction | $~~~$ No prediction |  
+| 4. Researcher bias | $~~~~~~~~~~$ `r icon_style(icons::fontawesome("user-minus"), scale = 1.5, fill = "red")` | $~~~~~~~~~~$ `r icon_style(icons::fontawesome("user-plus"), scale = 1.5, fill = "green")` |
+| 5. Researcher error | $~~~~~~~~~~$ `r icon_style(icons::fontawesome("user-minus"), scale = 1.5, fill = "red")` | $~~~~~~~~~~$ `r icon_style(icons::fontawesome("user-plus"), scale = 1.5, fill = "green")` |
+| 6. Researcher discretion | $~~~$ No prediction | $~~~$ No prediction |  
 *Note.* We regress each outcome on **prior beliefs** and **condition** (with the **single estimate condition** as the **reference category**). When laypeople observe multiple consistent (inconsistent) estimates from a crowd, we expect -- compared to a single estimate and controlling for prior beliefs -- higher (lower) **posterior beliefs** and **credibility** of the results, lower **confidence** in the precise average parameter estimate, and lower (higher) ratings of **bias** and **error**.  
 
 **Open Science:** Preregistration, survey, data, and code available at        
-`r icon_style(icons::fontawesome("github"), scale = 1.3, fill = "#035AA6")` $~~$ [Insert GitHub link here]   
-`r icon_style(icons::academicons("osf"), scale = 1.3, fill = "#035AA6")` $~~$ [Insert OSF link here]
+`r icon_style(icons::fontawesome("github"), scale = 1.3, fill = "#035AA6")` $~~$ [**github.com/shilaan/many-analysts**](http://github.com/shilaan/many-analysts)   
+`r icon_style(icons::academicons("osf"), scale = 1.3, fill = "#035AA6")` $~~$ [**osf.io/vedb4**](https://osf.io/vedb4) 
 
 # Methods
 
@@ -61,9 +61,9 @@ We ran an experiment (*N* = 1,498; UK/US Prolific) with **three conditions**
 `r icon_style(icons::fontawesome("dice-one"), scale = 1.5, fill = "#035AA6")` $~$ **Single estimate**  
 A single parameter estimate (5%)   
 `r icon_style(icons::fontawesome("dice-two"), scale = 1.5, fill = "#035AA6")` $~$ **Consistent crowd**  
-Multiple crowd estimates: low variance, high consensus (M = 5%)  
+Multiple crowd estimates: low variance, high consensus (*M* = 5%)  
 `r icon_style(icons::fontawesome("dice-three"), scale = 1.5, fill = "#035AA6")` $~$ **Inconsistent crowd**  
-Multiple crowd estimates: high variance, low consensus (M = 5%) 
+Multiple crowd estimates: high variance, low consensus (*M* = 5%) 
 
 **Experimental Design**  
 

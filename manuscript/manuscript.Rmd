@@ -276,10 +276,11 @@ p1 <- ggplot(mapping = aes(x = term,
   facet_wrap(~ Measure, 
              labeller = labeller(Measure = Measure.label)) + 
   theme_bw() + 
-  theme(strip.background = element_rect(fill = "white"),
-        legend.position = "",
-        text = element_text(size = 16, 
-                            family = "serif")) +
+  theme(
+    strip.background = element_rect(fill = "white"),
+    legend.position = "",
+    text = element_text(size = 16, family = "serif")
+    ) +
   labs(x = "Condition", y = "Estimate and 95% Confidence Interval") +
    scale_x_discrete(labels = c("Multi-\nconsistent", "Multi-\ninconsistent"))  +
   scale_color_discrete(type = c("darkgrey", "red", "green4"))
@@ -301,7 +302,10 @@ ggsave(here("talk/Figure1b.jpg"), p1b,
        width = 7, height = 5, units = "in") #save to talk folder
 
 p1c <- p1 + 
-  scale_x_discrete(labels = c("Consistent\ncrowd", "Inconsistent\ncrowd"))
+  scale_x_discrete(labels = c("Consistent\ncrowd", "Inconsistent\ncrowd")) +
+  theme(
+    strip.text = element_text(face="bold")
+  )
 
 ggsave(here("poster/Figure1c.jpg"), p1c, 
        width = 7, height = 5, units = "in") #save to poster folder
