@@ -46,9 +46,9 @@ Every day, important scientific findings are rejected at large. From man-made cl
 | 1. Posterior beliefs in the phenomenon | $~~~~~~~~~~$ `r icon_style(icons::fontawesome("user-plus"), scale = 1.5, fill = "green")`  | $~~~~~~~~~~$ `r icon_style(icons::fontawesome("user-minus"), scale = 1.5, fill = "red")` |
 |2. Credibility of the results | $~~~~~~~~~~$ `r icon_style(icons::fontawesome("user-plus"), scale = 1.5, fill = "green")` | $~~~~~~~~~~$ `r icon_style(icons::fontawesome("user-minus"), scale = 1.5, fill = "red")` |
 | 3. Confidence in the precise estimate  | $~~~~~~~~~~$ `r icon_style(icons::fontawesome("user-minus"), scale = 1.5, fill = "red")`  | $~~~~~~~~~~$ `r icon_style(icons::fontawesome("user-minus"), scale = 1.5, fill = "red")` | 
-| 4. Researcher bias | $~~~~~~~~~~$ `r icon_style(icons::fontawesome("user-minus"), scale = 1.5, fill = "red")` | $~~~~~~~~~~$ `r icon_style(icons::fontawesome("user-plus"), scale = 1.5, fill = "green")` |
-| 5. Researcher error | $~~~~~~~~~~$ `r icon_style(icons::fontawesome("user-minus"), scale = 1.5, fill = "red")` | $~~~~~~~~~~$ `r icon_style(icons::fontawesome("user-plus"), scale = 1.5, fill = "green")` |
-| 6. Researcher discretion | $~~~$ No prediction | $~~~$ No prediction |  
+| 4. Scientific bias | $~~~~~~~~~~$ `r icon_style(icons::fontawesome("user-minus"), scale = 1.5, fill = "red")` | $~~~~~~~~~~$ `r icon_style(icons::fontawesome("user-plus"), scale = 1.5, fill = "green")` |
+| 5. Scientific error | $~~~~~~~~~~$ `r icon_style(icons::fontawesome("user-minus"), scale = 1.5, fill = "red")` | $~~~~~~~~~~$ `r icon_style(icons::fontawesome("user-plus"), scale = 1.5, fill = "green")` |
+| 6. Scientific discretion | $~~~$ No prediction | $~~~$ No prediction |  
 *Note.* We regress each outcome on **prior beliefs** and **condition** (with the **single estimate condition** as the **reference category**). When laypeople observe multiple consistent (inconsistent) estimates from a crowd, we expect -- compared to a single estimate and controlling for prior beliefs -- higher (lower) **posterior beliefs** and **credibility** of the results, lower **confidence** in the precise average parameter estimate, and lower (higher) ratings of **bias** and **error**.  
 
 **Open Science:** Preregistration, survey, data, and code available at        
